@@ -60,8 +60,13 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 14,
     spaceBetween: 10,
     centeredSlides:true,
+    slideToClickedSlide : true,
     navigation:{
       nextEl:".swiper-button-next",
       prevEl:".swiper-button-prev",
   },
 });
+
+//스와이퍼 이미지 변경
+//1.btn2클릭 시 .lookbook-left img의 경로가 ../images/lookbook-main2.png로 변경
+//2.btn2클릭 시 .lookbook-right li 속의 모든 img의 경로가 끝에 _2가 붙음

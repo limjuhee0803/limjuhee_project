@@ -1,0 +1,97 @@
+@charset "utf-8";
+.swiper {
+    width: 100%;
+    height: 100%;
+    padding: 80px 0 20px;
+    /* position: sticky;
+    top: 0; */
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide h3{
+    margin-top: 10px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    object-fit: cover;
+    width: 80px;
+    filter: grayscale(1);
+  }
+
+  .swiper-slide.swiper-slide-active img {filter: grayscale(0);}
+
+
+  /* .lookbook-img {display: flex; width: 90%; margin: 0 auto; justify-content: center; gap: 5%; margin-top: 100px;}
+  .lookbook-img .lookbook-lt {width: 40%; border-right: 1px solid #000;} 
+  .lookbook-img .lookbook-lt img{width: 80%; margin: 0 auto;}
+  .lookbook-img .lookbook-rt {width: 60%; position: sticky; top: 200px;}
+  .lookbook-img .lookbook-rt .lookbook-rt-img{}
+  .lookbook-img .lookbook-rt .lookbook-rt-img li{margin-bottom: 50px} */
+
+  /***** lookbook *****/
+.lookbook {
+  width: 97vw;
+  margin: 0 auto;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+.lookbook h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.lookbook h1 strong {
+  font-weight: 400;
+  background: url(./images/silver-tape2.png) no-repeat 50% / cover;
+}
+.lookbook .lookbook-img {
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+}
+.lookbook .lookbook-img .lookbook-left {
+  padding-right: 50px;
+  border-right: 1px solid #000;
+  width: 30%;
+}
+
+.lookbook .lookbook-img .lookbook-left img {
+  width: 25vw;
+}
+.lookbook .lookbook-img .lookbook-rt {
+  height: 95vh;
+  width: 70%;
+  margin-left: 10%;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.lookbook .lookbook-img .lookbook-rt::-webkit-scrollbar {
+  display: none;
+}
+
+.lookbook .lookbook-img .lookbook-rt .lookbook-right {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+.lookbook .lookbook-img .lookbook-rt .lookbook-right li {
+  padding-bottom: 50px;
+  position: relative;
+  /* border-bottom: 1px solid #000; */
+}
+
+.headerP {background-color: #ddd;}

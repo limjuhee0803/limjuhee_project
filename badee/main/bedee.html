@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Badee</title>
+
     <!-- open graph -->
     <meta property="og:title" content="Badee Redesign">
     <meta property="og:description" content="Badee 사이트 리디자인 이벤트 페이지입니다.">
-    <meta property="og:image" content="./images/open-graph.jpg">
+    <meta property="og:image" content="../images/open-graph.jpg">
     <meta property="og:url" content="https://limjuhee0803.github.io/limjuhee-portfolio/project/badee/bedee.html">
 
     <!-- reset -->
@@ -18,11 +19,12 @@
     <!-- font-family: 'Noto Sans KR','Russo One'-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Russo+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Russo+One&display=swap" rel="stylesheet">
 
     <!-- common -->
     <link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="../../common/swiper-bundle.min.css">
+
     <!-- 내가 작성한 css -->
     <link rel="stylesheet" href="../main/badee.css">
 
@@ -33,6 +35,8 @@
 
     <!-- jQuery -->
     <script src="../../common/jquery-3.7.0.min.js"></script>
+    <script src="../../common/swiper-bundle.min.js"></script>
+
     <!-- 내가 작성한 js -->
     <script defer src="./badee.js"></script>
 </head>
@@ -41,18 +45,18 @@
     <!-- header -->
     <header>
         <a href="./bedee.html"><img src="../images/header-logo.png" alt="logo" class="header-logo"></a>
-        <ul class="header-icon">
-            <li><img src="../images/header_icon01.png" alt="header-icon1"></li>
-            <li><img src="../images/header_icon02.png" alt="header-icon2"></li>
-            <li><img src="../images/header_icon03.png" alt="header-icon3"></li>
-            <li><img src="../images/header_icon04.png" alt="header-icon4"></li>
-        </ul>
-
-        <p class="headerP"><a href="./badee-lookbook.html">lookbook</a></p>
-        <p><a href="#">notice</a></p>
-
-        <div class="hambuger">
-            hambuger
+        <div class="header_rt">
+            <ul class="header-icon">
+                <li><img src="../images/header_icon01.png" alt="header-icon1"></li>
+                <li><img src="../images/header_icon02.png" alt="header-icon2"></li>
+                <li><img src="../images/header_icon03.png" alt="header-icon3"></li>
+                <li><img src="../images/header_icon04.png" alt="header-icon4"></li>
+            </ul>
+            <div class="lookbook_notice">
+                <p class="headerP"><a href="./badee-lookbook.html">lookbook</a></p>
+                <p><a href="#">notice</a></p>
+            </div>
+            <div class="hambuger">hambuger</div>
         </div>
     </header>
     <!-- menu -->
@@ -84,22 +88,20 @@
         </div>
 
         <div class="main-white">
-
             <div class="banner-item">
                 <img src="../images/banner-item1.png" alt="banner-item1" class="item1">
                 <img src="../images/banner-item2.png" alt="banner-item2" class="item2">
                 <img src="../images/banner-item3.png" alt="banner-item3" class="item3">
                 <img src="../images/banner-item4.png" alt="banner-item4" class="item4">
             </div>
-
             <div class="glitch-wrapper">
                 <div class="glitch" data-text="Glitch Text">new season, new adventures</div>
             </div>
             <img src="../images/banner-logo.png" alt="badee logo" class="logo-main">
         </div>
 
-        <div class="main-banner-img">
-            main
+        <div class="main_banner">
+            <img src="../images/banner-img.png" alt="메인 배너 이미지">
         </div>
 
         <div class="flow-container">
@@ -127,7 +129,6 @@
                 <br>DIFFERENT <strong>BADEE</strong>
             </h1>
         </div>
-
         <div class="flow-container">
             <div class="flow-text">
                 <div class="flow-wrap">BADEE X MUSINSA COLLABORATION ᆞ </div>
@@ -145,11 +146,18 @@
 
     <!-- section2 -->
     <div class="section2 section">
-        <h1><strong>best</strong>model</h1>
+        <h1><strong>best</strong> model</h1>
 
         <div class="section2-img">
-            <div class="section2-left">
+            <!-- <div class="section2-left">
                 <img src="../images/fix-vertical.png" alt="누워있는 모델 이미지">
+            </div> -->
+            <div class="swiper mySwiper section2-left">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="../images/fix-vertical01.jpg"></div>
+                  <div class="swiper-slide"><img src="../images/fix-vertical02.jpg"></div>
+                  <div class="swiper-slide"><img src="../images/fix-vertical03.jpg"></div>
+                </div>
             </div>
 
             <div class="section-rt">
@@ -220,7 +228,7 @@
 
             <!-- <a href="#" class="portfolio">내 포트폴리오 바로가기</a> -->
 
-            <h4>© 2024 Design & Published By Lim Ju Hee. All Rights Reserved.</h4>
+            <h4>©2024 Design & Published By Lim Juhee. All Rights Reserved.</h4>
         </div>
 
         <div class="flow-container">

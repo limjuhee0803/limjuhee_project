@@ -40,7 +40,6 @@ $('.up').on('click', () => {
 });
 
 // banner 마우스 이벤트
-
 const img1 = document.querySelector('.item1');
 const img2 = document.querySelector('.item2');
 const img3 = document.querySelector('.item3');
@@ -57,12 +56,6 @@ addEventListener('mousemove', (evt) => {
   img4.style.transform = `translate(${50 - x / 80}px,${-y / 20}px)`;
 });
 
-// 내 포트폴리오 바로가기
-/*
-$('.footer-butterfly').on('click', () => {
-  $('.footer-butterfly').addClass('active-portfolio');
-});
-*/
 
 $('.footer-butterfly').hover(
   (e) => {
@@ -79,3 +72,14 @@ $('.footer-butterfly.active-portfolio').on('click', () => {
     'https://limjuhee0803.github.io/limjuhee-portfolio/index.html'
   );
 });
+
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView : 'auto',
+  loop : true,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+});
+

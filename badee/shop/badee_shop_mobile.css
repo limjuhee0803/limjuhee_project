@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+header .header-icon, .lookbook_notice {display: none;}
+header {height: 80px; line-height:80px;}
+.header-icon {display: flex; position: absolute; bottom: 50px; right: 50px; gap: 20px;}
+
+/***** menu *****/
+.menu {width: 45vw; right: -45vw;}
+.menu menu {width: 40vw;}
+.menu menu li {font-size: 2rem; height: 80px; line-height: 80px;}

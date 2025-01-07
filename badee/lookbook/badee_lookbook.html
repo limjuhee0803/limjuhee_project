@@ -26,8 +26,12 @@
     <link rel="stylesheet" href="../../common/swiper-bundle.min.css">
 
     <!-- 내가 작성한 css -->
-    <link rel="stylesheet" href="../main/badee.css">
-    <link rel="stylesheet" href="./badee_lookbook.css">
+    <!-- <link rel="stylesheet" href="./badee_lookbook.css"> -->
+    <!-- 모바일 버전 -->
+    <link rel="stylesheet" href="./badee_lookbook_mobile.css">
+    <!-- pc 버전-->
+    <link rel="stylesheet" href="./badee_lookbook.css" media="(width >=1200px)">
+    
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
@@ -40,19 +44,18 @@
 
     <!-- 내가 작성한 js -->
     <script defer src="./badee_lookbook.js"></script>
-    <!-- <script defer src="../main/badee.js"></script> -->
 </head>
 
 <body>
     <!-- header -->
     <header>
-        <a href="../main/bedee.html"><img src="../images/header-logo.png" alt="logo" class="header-logo"></a>
+        <a href="../main/bedee.html"><img src="../images/header-logo.png" alt="badee logo 이미지" class="header-logo"></a>
         <div class="header_rt">
             <ul class="header-icon">
-                <li><img src="../images/header_icon01.png" alt="header-icon1"></li>
-                <li><img src="../images/header_icon02.png" alt="header-icon2"></li>
-                <li><img src="../images/header_icon03.png" alt="header-icon3"></li>
-                <li><img src="../images/header_icon04.png" alt="header-icon4"></li>
+                <li><img src="../images/header_icon01.png" alt="search icon"></li>
+                <li><img src="../images/header_icon02.png" alt="heart icon"></li>
+                <li><img src="../images/header_icon03.png" alt="shop icon"></li>
+                <li><img src="../images/header_icon04.png" alt="user icon"></li>
             </ul>
             <div class="lookbook_notice">
                 <p class="headerP"><a href="./badee_lookbook.html">lookbook</a></p>
@@ -74,6 +77,12 @@
             <li><a href="./badee-detail.html">DRESSES</a></li>
             <li><a href="./badee-detail.html">ACCESSORIES</a></li>
         </menu>
+        <ul class="header-icon pc_blind">
+            <li><img src="../images/header_icon01.png" alt="search icon"></li>
+            <li><img src="../images/header_icon02.png" alt="heart icon"></li>
+            <li><img src="../images/header_icon03.png" alt="shop icon"></li>
+            <li><img src="../images/header_icon04.png" alt="user icon"></li>
+        </ul>
     </div>
 
     <!-- section1 -->
@@ -82,39 +91,54 @@
     </div>
 
     <!-- 탭메뉴 스와이퍼 -->
-    <div class="swiper mySwiper">
+    <div class="swiper mySwiper pc_blind">
         <div class="swiper-wrapper">
-          <div class="swiper-slide btn1"><img src="../images/collection-1.png" alt=""><h3>24 SS</h3></div>
-          <div class="swiper-slide btn2"><img src="../images/collection0.png" alt=""><h3>23 FW</h3></div>
-          <div class="swiper-slide btn3"><img src="../images/collection1.png" alt=""><h3>23 HS</h3></div>
-          <div class="swiper-slide btn4"><img src="../images/collection2.png" alt=""><h3>23 SS</h3></div>
-          <div class="swiper-slide btn5"><img src="../images/collection3.png" alt=""><h3>21 HS</h3></div>
-          <div class="swiper-slide btn6"><img src="../images/collection4.png" alt=""><h3>20 FW</h3></div>
-          <div class="swiper-slide btn7"><img src="../images/collection5.png" alt=""><h3>20 HS</h3></div>
-          <div class="swiper-slide btn8"><img src="../images/collection6.png" alt=""><h3>20 SS </h3></div>
-          <div class="swiper-slide btn9"><img src="../images/collection7.png" alt=""><h3>19 FW</h3></div>
-          <div class="swiper-slide btn10"><img src="../images/collection8.png" alt=""><h3>19 SS</h3></div>
+          <div class="swiper-slide btn1"><img src="../images/collection-1.png" alt="24ss 룩북 표지"><h3>24 SS</h3></div>
+          <div class="swiper-slide btn2"><img src="../images/collection0.png" alt="23fw 룩북 표지"><h3>23 FW</h3></div>
+          <div class="swiper-slide btn3"><img src="../images/collection1.png" alt="23hs 룩북 표지"><h3>23 HS</h3></div>
+          <div class="swiper-slide btn4"><img src="../images/collection2.png" alt="23ss 룩북 표지"><h3>23 SS</h3></div>
+          <div class="swiper-slide btn5"><img src="../images/collection3.png" alt="21hs 룩북 표지"><h3>21 HS</h3></div>
+          <div class="swiper-slide btn6"><img src="../images/collection4.png" alt="20fw 룩북 표지"><h3>20 FW</h3></div>
+          <div class="swiper-slide btn7"><img src="../images/collection5.png" alt="20hs 룩북 표지"><h3>20 HS</h3></div>
+          <div class="swiper-slide btn8"><img src="../images/collection6.png" alt="20ss 룩북 표지"><h3>20 SS </h3></div>
+          <div class="swiper-slide btn9"><img src="../images/collection7.png" alt="19fw 룩북 표지"><h3>19 FW</h3></div>
+          <div class="swiper-slide btn10"><img src="../images/collection8.png" alt="19ss 룩북 표지"><h3>19 SS</h3></div>
         </div>
     </div>
-    
+
+    <!-- pc 버튼 -->
+
+    <ul class="pc_btn mo_blind">
+        <li class="btn1 active_btn"><img src="../images/collection-1.png" alt="24ss 룩북 표지"><h3>24 SS</h3></li>
+        <li class="btn2"><img src="../images/collection0.png" alt="24ss 룩북 표지"><h3>23 FW</h3></li>
+        <li class="btn3"><img src="../images/collection1.png" alt="24ss 룩북 표지"><h3>23 HS</h3></li>
+        <li class="btn4"><img src="../images/collection2.png" alt="24ss 룩북 표지"><h3>23 SS</h3></li>
+        <li class="btn5"><img src="../images/collection3.png" alt="24ss 룩북 표지"><h3>21 HS</h3></li>
+        <li class="btn6"><img src="../images/collection4.png" alt="24ss 룩북 표지"><h3>20 FW</h3></li>
+        <li class="btn7"><img src="../images/collection5.png" alt="24ss 룩북 표지"><h3>20 HS</h3></li>
+        <li class="btn8"><img src="../images/collection6.png" alt="24ss 룩북 표지"><h3>20 SS</h3></li>
+        <li class="btn9"><img src="../images/collection7.png" alt="24ss 룩북 표지"><h3>19 FW</h3></li>
+        <li class="btn10"><img src="../images/collection8.png" alt="24ss 룩북 표지"><h3>19 FW</h3></li>
+    </ul>
+
     <!-- lookbook -->
     <div class="lookbook section">
       <div class="lookbook-img">
         <div class="lookbook-left">
-          <img src="../images/lookbook-main1.png" alt="콜라를 따르는 모델 이미지">
+          <img src="../images/lookbook_main_01.jpg" alt="24ss 메인 이미지">
         </div>
 
         <div class="lookbook-rt">
           <ul class="lookbook-right">
-            <li><img src="../images/lookbook1.png" alt="lookbook1"></li>
-            <li><img src="../images/lookbook2.png" alt="lookbook2"></li>
-            <li><img src="../images/lookbook3.png" alt="lookbook3"></li>
-            <li><img src="../images/lookbook4.png" alt="lookbook4"></li>
-            <li><img src="../images/lookbook5.png" alt="lookbook5"></li>
-            <li><img src="../images/lookbook6.png" alt="lookbook6"></li>
-            <li><img src="../images/lookbook7.png" alt="lookbook8"></li>
-            <li><img src="../images/lookbook9.png" alt="lookbook9"></li>
-            <li><img src="../images/lookbook10.png" alt="lookbook10"></li>
+            <li><img src="../images/lookbook01_01.jpg" alt="24ss 룩북 이미지01"></li>
+            <li><img src="../images/lookbook02_01.jpg" alt="24ss 룩북 이미지02"></li>
+            <li><img src="../images/lookbook03_01.jpg" alt="24ss 룩북 이미지03"></li>
+            <li><img src="../images/lookbook04_01.jpg" alt="24ss 룩북 이미지04"></li>
+            <li><img src="../images/lookbook05_01.jpg" alt="24ss 룩북 이미지05"></li>
+            <li><img src="../images/lookbook06_01.jpg" alt="24ss 룩북 이미지06"></li>
+            <li><img src="../images/lookbook07_01.jpg" alt="24ss 룩북 이미지07"></li>
+            <li><img src="../images/lookbook08_01.jpg" alt="24ss 룩북 이미지08"></li>
+            <li><img src="../images/lookbook09_01.jpg" alt="24ss 룩북 이미지09"></li>
           </ul>
         </div>
       </div>

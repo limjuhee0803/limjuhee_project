@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+.mo_blind {display: none!important;}
+
+.lookbook_notice p:last-child {background-color: #ddd;}

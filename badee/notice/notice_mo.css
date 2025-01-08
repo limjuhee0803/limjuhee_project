@@ -3,3 +3,30 @@
 .mo_blind {display: none!important;}
 
 .lookbook_notice p:last-child {background-color: #ddd;}
+
+.notice_title { margin-top: 100px; font-size: 26px; text-align: center; }
+
+.notice_box { font-family: var(--kr-font); width: 90%; margin: 50px auto 0;  }
+
+.notice_box .number{font-size: 24px; display: none;}
+.notice_box .title{font-size: 28px; width: 80%; font-weight: 500; text-wrap: nowrap; overflow: hidden; text-overflow: ellipsis;}
+.notice_box .date{font-size: 20px; color: #929292;}
+
+.notice_box li {display: flex; justify-content: space-between; height: 80px; line-height: 80px; border-bottom: 1px solid #929292;}
+
+.notice_pg { display: flex; justify-content: center; margin-top: 50px; align-items: center; gap: 20px; font-size: 22px; font-family: var(--kr-font);}
+.notice_pg svg{width: 30px;}
+.notice_pg h3{}
+
+.search_box { font-family: var(--kr-font); display: flex; justify-content: center;}
+.search_box h2{}
+
+.search_box {margin: 50px 0 60px;}
+.search_box h3{}
+.search_box svg{width: 40px;}
+.search_box .box_section:first-child {border: none;}
+.search_box .box_section {display: flex; margin-right: 20px; border: #929292 1px solid; height: 60px; line-height: 60px; font-size: 22px; padding: 0 20px; justify-content: space-between; align-items: center;} 
+.prompt {width: 20%; text-indent: -9999px;}
+.search {background-color: #555555; color: #fff;}
+
+footer {position: fixed; bottom: 0;}

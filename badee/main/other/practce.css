@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* 모바일 css */
+body {margin: 0;}
+.swiper-slide img{width: 100%;}
+
+/* pc css */
+@media (width >=1200px){
+    .mySwiper {margin-top: 50px;}
+}

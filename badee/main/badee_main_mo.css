@@ -1,0 +1,277 @@
+@charset "utf-8";
+
+/* banner */
+.main-banner .main-white {
+  width: 100%;
+  position: relative;
+  z-index: 999;
+  min-height: 600px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.main-white .banner-item img {
+  position: absolute;
+  width: 22vw;
+  min-width: 350px;
+}
+
+.main-white .banner-item img:nth-child(1) {
+  top: -50px;
+  left: 0;
+}
+.main-white .banner-item img:nth-child(2) {
+  bottom: 0;
+  right: 0;
+}
+
+.main-white .banner-item img:nth-child(3) {
+  top: -50px;
+  right: -100px;
+}
+
+.main-white .banner-item img:nth-child(4) {
+  bottom: 50px;
+  left: -150px;
+}
+.main-banner .main-white p {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 200px;
+}
+
+.main-banner .main-white .logo-main {
+  width: 55vw;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  min-width: 500px;
+}
+
+.main_banner {
+  position: relative;
+  z-index: 2;
+}
+
+.main_banner img {width: 100%; object-fit: contain; }
+
+/* 텍스트 글리치 효과 */
+.glitch-wrapper {
+  width: 100%;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.glitch {
+  position: relative;
+  font-size: 22px;
+  /* font-size: 1.5rem; */
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 3px;
+  z-index: 1;
+}
+
+/***** section1 *****/
+.section-line {
+  width: 97vw;
+  height: 90vh;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-indent: -9999px;
+}
+
+.section1 .section1-title {
+  margin-left: 50px;
+  font-size: 4rem;
+  padding: 50px 0;
+}
+
+.section1 .section1-title h1 strong {
+  font-weight: 400;
+  background: url(../images/silver-tape2.png) no-repeat 50% / cover;
+}
+
+/* flow text */
+.section1 .flow-text {
+  width: 95vw;
+  margin: 0 auto;
+  height: 80px;
+  line-height: 80px;
+  font-size: 1.2rem;
+  color: #000;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.section1 .flow-text:hover {
+  color: #00ffe9;
+}
+
+/***** section2 *****/
+.section2 {
+  width: 100%;
+  position: relative;
+}
+
+.section2 h1 {
+  width: 97vw;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 auto 50px;
+  padding: 30px 0;
+  border-bottom: 1px solid #000;
+}
+
+.section2 h1 strong {
+  font-weight: 400;
+}
+
+.section2 .section2-img .section2-left {
+  position: sticky;
+  top: 0;
+  border-right: 1px solid #000;
+  width: 40%;
+  margin-left: 100px;
+  display: none;
+}
+.section2 .section2-img .section2-left img {
+  width: 30vw;
+  min-width: 400px;
+}
+
+.section2 .section2-img {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.section2 .section2-img .section2-right {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section2 .section-rt {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  position: relative;
+  width: 95%;
+}
+.section2 .section-rt li {
+  position: relative;
+  width: 50%;
+}
+
+.section2 .section-rt li img {
+  width: 100%;
+  padding: 20px;
+}
+.section2 .section-rt li h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 60px;
+  width: 300px;
+  height: 60px;
+  background: url(../images/silver-tape2.png) no-repeat 50% / cover;
+  cursor: pointer;
+
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  opacity: 0;
+}
+
+/* flow text */
+.section2 .flow-text {
+  width: 95vw;
+  margin: 0 auto;
+  height: 80px;
+  line-height: 80px;
+  font-size: 1.2rem;
+  color: #000;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.section2 .flow-text:hover {
+  color: #ff39df;
+}
+
+/***** section3 *****/
+.section3 {
+  height: 500px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.section3 section {
+  display: grid;
+  place-items: center;
+  margin: 50px auto;
+  width: 45vw;
+  /* height: 80vh; */
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.section3 .lookbook,
+.section3 .notice {
+  position: relative;
+}
+
+.section3 .lookbook h4,
+.section3 .notice h4 {
+  position: relative;
+  z-index: 999;
+}
+.section3 .lookbook h4:hover,
+.section3 .notice h4:hover {
+  color: #ff2448;
+}
+
+.section3 .lookbook img,
+.section3 .notice img {
+  width: 45vw;
+  height: 500px;
+  object-fit: cover;
+  position: absolute;
+  z-index: 99;
+  bottom: -999px;
+  transition: 0.6s;
+}
+.section3 .lookbook:hover img,
+.section3 .notice:hover img {
+  bottom: 0;
+}
+
+.section3 .lookbook::after {
+  content: '';
+  width: 1px;
+  height: 80vh;
+  background-color: #000;
+  position: absolute;
+  right: -50px;
+}
+

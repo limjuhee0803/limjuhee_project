@@ -6,12 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Badee</title>
 
-    <!-- open graph -->
-    <meta property="og:title" content="Badee Redesign">
-    <meta property="og:description" content="Badee 사이트 리디자인 이벤트 페이지입니다.">
-    <meta property="og:image" content="../images/open-graph.jpg">
-    <meta property="og:url" content="https://limjuhee0803.github.io/limjuhee-portfolio/project/badee/bedee.html">
-
     <!-- reset -->
     <link rel="stylesheet" href="../../common/minireset.min.css">
 
@@ -21,47 +15,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Russo+One&display=swap" rel="stylesheet">
 
-    <!-- common -->
-    <link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="../common/badee_common.css">
     <link rel="stylesheet" href="../../common/swiper-bundle.min.css">
 
     <!-- 모바일 버전 -->
-    <link rel="stylesheet" href="./badee_shop_mobile.css">
-
+    <link rel="stylesheet" href="./shop_mo.css">
     <!-- pc 버전-->
-    <link rel="stylesheet" href="./badee_shop_pc.css" media="(width >=1200px)">
-
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-
+    <link rel="stylesheet" href="./shop_pc.css" media="(width >=1200px)">
+    
     <!-- jQuery -->
     <script src="../../common/jquery-3.7.0.min.js"></script>
     <script src="../../common/swiper-bundle.min.js"></script>
-
-    <!-- 내가 작성한 js -->
-    <script defer src="../shop/badee_shop.js"></script>
 </head>
 
 <body>
     <!-- header -->
     <header>
-        <a href="../main/bedee.html"><img src="../images/header-logo.png" alt="badee logo 이미지" class="header-logo"></a>
+        <a href="../main/badee_main.html"><img src="../images/header-logo.png" alt="badee logo 이미지" class="header-logo"></a>
         <div class="header_rt">
-            <ul class="header-icon">
+            <ul class="header-icon mo_blind">
                 <li><img src="../images/header_icon01.png" alt="search icon"></li>
                 <li><img src="../images/header_icon02.png" alt="heart icon"></li>
                 <li><img src="../images/header_icon03.png" alt="shop icon"></li>
                 <li><img src="../images/header_icon04.png" alt="user icon"></li>
             </ul>
-            <div class="lookbook_notice">
-                <p class="headerP"><a href="../lookbook/badee_lookbook.html">lookbook</a></p>
+            <div class="lookbook_notice mo_blind">
+                <p class="headerP"><a href="./badee_lookbook.html">lookbook</a></p>
                 <p><a href="#">notice</a></p>
             </div>
             <div class="hambuger">hambuger</div>
         </div>
     </header>
+
     <!-- menu -->
     <div class="menu">
         <menu>
@@ -74,7 +59,6 @@
             <li><a href="./badee-detail.html">DRESSES</a></li>
             <li><a href="./badee-detail.html">ACCESSORIES</a></li>
         </menu>
-
         <ul class="header-icon pc_blind">
             <li><img src="../images/header_icon01.png" alt="search icon"></li>
             <li><img src="../images/header_icon02.png" alt="heart icon"></li>
@@ -83,22 +67,19 @@
         </ul>
     </div>
 
+    <!-- section1 -->
+    <div class="section-line">
+        line
+    </div>
+
     <div class="same">
         <h1>same shit, different badee</h1>
     </div>
 
     <!-- footer -->
-    <div class="footer-logo">
-        <h1>logo</h1>
-    </div>
-
     <footer>
-
         <div class="footer-center">
             <a href="../../index.html" class="footer-butterfly">footer-butterfly</a>
-
-            <!-- <a href="#" class="portfolio">내 포트폴리오 바로가기</a> -->
-
             <h4>©2023 Design & Published By Lim Juhee. All Rights Reserved.</h4>
         </div>
 
@@ -125,6 +106,9 @@
             </svg>
         </a>
     </div>
+
+    <script src="../common/badee_common.js"></script>
+    <script src="./lookbook.js"></script>
 </body>
 
 </html>

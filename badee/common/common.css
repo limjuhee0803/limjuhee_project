@@ -97,6 +97,7 @@ header {
   header .hambuger.change-hambuger {
     background: url(../images/hambuger02.png) no-repeat 50% / contain;
   }
+  
   /***** menu *****/
   .menu {
     width: 20vw;

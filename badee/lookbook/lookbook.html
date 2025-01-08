@@ -6,12 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Badee</title>
 
-    <!-- open graph -->
-    <meta property="og:title" content="Badee Redesign">
-    <meta property="og:description" content="Badee 사이트 리디자인 이벤트 페이지입니다.">
-    <meta property="og:image" content="../images/open-graph.jpg">
-    <meta property="og:url" content="https://limjuhee0803.github.io/limjuhee-portfolio/project/badee/bedee.html">
-
     <!-- reset -->
     <link rel="stylesheet" href="../../common/minireset.min.css">
 
@@ -21,35 +15,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Russo+One&display=swap" rel="stylesheet">
 
-    <!-- common -->
-    <link rel="stylesheet" href="../common/common.css">
+
+    <link rel="stylesheet" href="../common/badee_common.css">
     <link rel="stylesheet" href="../../common/swiper-bundle.min.css">
 
-    <!-- 내가 작성한 css -->
-    <!-- <link rel="stylesheet" href="./badee_lookbook.css"> -->
     <!-- 모바일 버전 -->
-    <link rel="stylesheet" href="./badee_lookbook_mobile.css">
+    <link rel="stylesheet" href="./lookbook_mo.css">
     <!-- pc 버전-->
-    <link rel="stylesheet" href="./badee_lookbook.css" media="(width >=1200px)">
+    <link rel="stylesheet" href="./lookbook_pc.css" media="(width >=1200px)">
     
-
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-
     <!-- jQuery -->
     <script src="../../common/jquery-3.7.0.min.js"></script>
     <script src="../../common/swiper-bundle.min.js"></script>
-
-    <!-- 내가 작성한 js -->
-    <script defer src="./badee_lookbook.js"></script>
 </head>
 
 <body>
     <!-- header -->
     <header>
-        <a href="../main/bedee.html"><img src="../images/header-logo.png" alt="badee logo 이미지" class="header-logo"></a>
+        <a href="../main/badee_main.html"><img src="../images/header-logo.png" alt="badee logo 이미지" class="header-logo"></a>
         <div class="header_rt">
             <ul class="header-icon">
                 <li><img src="../images/header_icon01.png" alt="search icon"></li>
@@ -68,14 +51,14 @@
     <!-- menu -->
     <div class="menu">
         <menu>
-            <li><a href="./badee-detail.html">WEEKLY</a></li>
-            <li><a href="./badee-detail.html">ALL</a></li>
-            <li><a href="./badee-detail.html">OUTERWEAR</a></li>
-            <li><a href="./badee-detail.html">SETS</a></li>
-            <li><a href="./badee-detail.html">TOPS</a></li>
-            <li><a href="./badee-detail.html">BOTTOMS</a></li>
-            <li><a href="./badee-detail.html">DRESSES</a></li>
-            <li><a href="./badee-detail.html">ACCESSORIES</a></li>
+            <li><a href="../shop/shop.html">WEEKLY</a></li>
+            <li><a href="../shop/shop.html">ALL</a></li>
+            <li><a href="../shop/shop.html">OUTERWEAR</a></li>
+            <li><a href="../shop/shop.html">SETS</a></li>
+            <li><a href="../shop/shop.html">TOPS</a></li>
+            <li><a href="../shop/shop.html">BOTTOMS</a></li>
+            <li><a href="../shop/shop.html">DRESSES</a></li>
+            <li><a href="../shop/shop.html">ACCESSORIES</a></li>
         </menu>
         <ul class="header-icon pc_blind">
             <li><img src="../images/header_icon01.png" alt="search icon"></li>
@@ -107,7 +90,6 @@
     </div>
 
     <!-- pc 버튼 -->
-
     <ul class="pc_btn mo_blind">
         <li class="btn1 active_btn"><img src="../images/collection-1.png" alt="24ss 룩북 표지"><h3>24 SS</h3></li>
         <li class="btn2"><img src="../images/collection0.png" alt="24ss 룩북 표지"><h3>23 FW</h3></li>
@@ -178,6 +160,9 @@
             </svg>
         </a>
     </div>
+
+    <script src="../common/badee_common.js"></script>
+    <script src="./lookbook.js"></script>
 </body>
 
 </html>

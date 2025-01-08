@@ -2,14 +2,16 @@
 .mo_blind {display: flex!important;}
 .pc_blind {display: none!important;}
 
-.notice_box {width: 60%;}
+.notice_box {width: 55%;}
 .notice_box li {height: 70px; line-height: 70px; justify-content: left;}
 .notice_box .top_box{}
 .notice_box .top_box{ background-color: #000; color: #fff; padding: 10px 0;}
-.notice_box .number {display: block; width: 120px; font-size: 16px; text-indent: 30px; color: #929292;}
-.notice_box .title {font-size: 18px;}
+.notice_box .number {display: block; width: 100px; font-size: 12px; text-indent: 30px; color: #929292;}
+.notice_box .title {font-size: 16px;}
 .notice_box .date {font-size: 14px;}
 
 .notice_pg {font-size: 18px;}
 
-.search_box .box_section { height: 40px; line-height: 40px; font-size: 14px;} 
+
+.search_box .box_section { height: 40px; line-height: 40px; font-size: 14px; padding: 0 10px;} 
+.search_box svg {width: 20px; margin-left: 10px;}

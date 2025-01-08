@@ -156,6 +156,7 @@
   display: flex;
   justify-content: center;
   gap: 50px;
+  overflow: hidden;
 }
 
 .section2 .section2-img .section2-right {
@@ -167,10 +168,11 @@
   scrollbar-width: none;
   position: relative;
   width: 95%;
+  margin-bottom: 50px;
 }
 .section2 .section-rt li {
   position: relative;
-  width: 50%;
+  width: 33.3333%;
 }
 
 .section2 .section-rt li img {

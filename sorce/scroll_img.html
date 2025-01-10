@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>rococo web design</title>
+
+  <style>
+
+    header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    }
+
+    .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://2.bp.blogspot.com/-R-T9z4XhCFE/W87EN1hyorI/AAAAAAAAPYU/Df9oBQv2hvwPvwC8zOMagzJPwkNG5w7EwCLcBGAs/s1600/back-desktop%25401x.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    }
+
+    #header-front
+    {
+    top: 25.3125vw;
+        left: calc(52.65% - 65.98958333333333vw / 2);
+        width: 65.98958vw;
+        position: absolute;
+        z-index: 3;
+        height: auto;
+    }
+
+    #header-stones
+    {
+        position: absolute;
+        top: 35.08333vw;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    section {
+    width: 100%;
+    height: 1000px;
+    }
+  </style>
+
+  <!-- script-->
+  <script src="./common/jquery-3.7.0.min.js"></script>
+  <script src="./common/jquery-ui.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="inner"></div>
+    </header>
+    <section>
+        <img id="header-stones" src="https://4.bp.blogspot.com/-KXFN5VqNsaA/W87Dl_Yp7YI/AAAAAAAAPYI/1Z7qSrHg6Hks6agjqTW1fls0aUinJXXzACLcBGAs/s1600/stones.png" alt="Stones in the background">
+        <img id="header-front" src="https://3.bp.blogspot.com/--DQy6E0J_Q8/W87Dy-VOMvI/AAAAAAAAPYM/9aj6WEfjHRMLV8J_L_bysCur6bA0CoL0gCLcBGAs/s1600/fireplace.png">
+    </section>
+
+    <script> 
+        const inner = document.querySelector(".inner");
+        const section = document.querySelector("section");
+
+        window.onscroll = function() {
+        let value = window.pageYOffset / section.offsetTop + 1;
+        inner.style.transform = `scale(${value})`;
+        };
+
+    $(function(){
+    
+    var $window = $(window);    //Window object
+    
+    var scrollTime = 1.2;     //Scroll time
+    var scrollDistance = 170;   //Distance. Use smaller value for shorter scroll and greater value for longer scroll
+        
+    $window.on("mousewheel DOMMouseScroll", function(event){
+        
+        event.preventDefault(); 
+                        
+        var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+        var scrollTop = $window.scrollTop();
+        var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+        
+        TweenMax.to($window, scrollTime, {
+        scrollTo : { y: finalScroll, autoKill:true },
+            ease: Power1.easeOut,
+            autoKill: true,
+            overwrite: 5              
+        });
+            
+    });
+    
+    });
+    </script>
+</body>
+
+</html>

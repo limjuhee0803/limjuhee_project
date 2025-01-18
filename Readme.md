@@ -2,6 +2,7 @@
 - 의류 브랜드 badee 웹사이트 리디자인 프로젝트
 - 메인 페이지, 룩북, 상품, 노티스 페이지 제작
 - 2023년 제작 후 2025년 수정
+### https://limjuhee0803.github.io/limjuhee_project/badee/main/badee_main.html
 
 ### Publishing
 #### 1. 메인 페이지의 배너 이벤트

@@ -115,7 +115,7 @@
 .menu .pc_blind {display: none!important;}
 
 .pc_btn {justify-content: center; gap: 30px; background-color: #fff; border-bottom: 1px solid #000; padding-bottom: 20px; margin-top: 80px;}
-.pc_btn li{position: relative; filter: grayscale(1); position: relative;}
+.pc_btn li{position: relative; filter: grayscale(1); position: relative; cursor: pointer;}
 .pc_btn li.active_btn {filter: grayscale(0);}
 
 .pc_btn li img{ width: 80px;}

@@ -15,8 +15,11 @@
   <!-- 리셋 -->
   <link rel="stylesheet" href="../../common/minireset.min.css">
 
-  <!-- 폰트 -->
-  <!-- <link rel="stylesheet" href="../common/fonts.css"> -->
+  <!-- 폰트 "Adamina" "Noto Sans KR" -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Adamina&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  
 
   <!-- css -->
   <link rel="stylesheet" href="../common/rococo_common.css">
@@ -26,10 +29,7 @@
 
   <!-- script-->
   <script src="../../common/jquery-3.7.0.min.js"></script>
-  <script src="../../common/jquery-ui.min.js"></script>
-
-  <!-- script - pc(내가 적용한 js) -->
-  <!-- <script defer src="./main.js"></script> -->
+    <script src="../../common/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
   <!-- header -->
   <header>
     <div class="logo">
-      <img src="../image/lococo_logo.png" alt="rococo 로고 이미지">
+      <a href="#"><img src="../image/lococo_logo.png" alt="rococo 로고 이미지"></a>
     </div>
 
     <ul class="category mobile_blind">
@@ -59,18 +59,50 @@
 
 
   <!-- 메인 배너 -->
-   <div class="main_banner">
+  <div class="main_banner">
     <div class="main_top">
       <div class="inner"></div>
     </div>
 
     <section>
-      <img id="header-man" src="../image/main_sub.png">
-      <img id="header-front" src="../image/main_women.png">
+      <img id="header-man" src="../image/main_sub.png" class="mobile_blind">
+      <img id="header-front" src="../image/main_women.png" class="mobile_blind">
+      <img id="header-front" src="../image/main_women_mo.png" class="pc_blind">
       <img id="header-shoes" src="../image/main_shoes.png" alt="">
     </section>
-   </div>
+  </div>
 
+  <!-- what is rococo art? -->
+  <div class="section01 section">
+    <div class="section01_txt">
+      <h1>
+        What Is Rococo Art? <br>
+        A Look at Its Elegance
+      </h1>
+
+      <div class="section01_sub_txt">
+        <ul class="up_text">
+          <li><h2>Rococo art is an 18th-century style characterized by ornate detail, light colors, and playful, whimsical themes. Originating in France, it features elegant curves, soft pastels, and romantic or nature-inspired subjects. Rococo emphasizes decoration and elegance, contrasting with the grandeur of Baroque, favoring intimacy and refined beauty in design and painting.</h2></li>
+          <li><h2>Rococo art is characterized by a distinct lightness, both in its visual tone and thematic content. This is reflected in the pastel colors and soft, delicate brushstrokes commonly seen in the paintings of Jean-Honoré Fragonard and François Boucher. Unlike its predecessor, Baroque, which is heavier and more dramatic, Rococo moves towards a lighter, more playful interpretation of aristocratic life. There's a softness that pervades everything, from the flowing curved lines in paintings to the gentle asymmetry found in furniture and architecture.</h2></li>
+          <li><h2>This style frequently depicts fêtes galantes, or playful outdoor scenes, populated by aristocratic figures engaging in leisure activities.....</h2></li>
+        </ul>
+        <div class="more_view">
+          <div class="more more_arrow">
+            <h3>View More</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m531.69-480-184-184L376-692.31 588.31-480 376-267.69 347.69-296l184-184Z"/></svg>
+          </div>
+
+          <div class="service more_arrow">
+            <h3>Service</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m531.69-480-184-184L376-692.31 588.31-480 376-267.69 347.69-296l184-184Z"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <script src="../common/rococo_common.js"></script>
   <script src="./main.js"></script>
 
 </body>

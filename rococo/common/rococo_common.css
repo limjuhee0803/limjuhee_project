@@ -5,12 +5,11 @@
       Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
       'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
       sans-serif;
-    --en-font: 'Russo One', Arial, Helvetica, sans-serif;
+    --en-font: "Adamina", Arial, Helvetica, sans-serif;
   }
 
 /* 모바일 css */
 body::-webkit-scrollbar {display: none;}
-body {font-family: var(--en-font);}
 img {width: auto;}
 section {width: 95vw; margin: 0 auto;}
 
@@ -18,15 +17,9 @@ section {width: 95vw; margin: 0 auto;}
 body {background-color: #0E0E0E;}
 
 /****** header ******/
-header { position: fixed; z-index: 9999; top: 0; display: flex; align-items: center; width: 100%; height: 80px; line-height: 80px; transition: 0.3s;}
-
-/* header .header_rt { display: flex; align-items: center;}
-header .header-logo { width: 150px; margin-left: 30px; }
-header .header-icon li { display: grid; place-items: center; cursor: pointer;}
-header p { padding: 0 50px; height: 50px; line-height: 50px; text-align: center; border: 1px solid #000; cursor: pointer; }
-header .headerP { border-right: none; margin-left: 50px;}
-header .hambuger { width: 40px; height: 40px; text-indent: -9999px; background: url(../images/hambuger.png) no-repeat 50% / contain; cursor: pointer; margin: 0 30px;}
-header .hambuger.change-hambuger { background: url(../images/hambuger02.png) no-repeat 50% / contain;} */
+header { position: fixed; z-index: 9999; top: 0; display: flex; align-items: center; width: 100%; height: 100px; line-height: 100px; transition: 0.3s; justify-content: space-between; background: linear-gradient(#00000086, #00000000); font-family: var(--en-font);}
+header .logo {padding-left: 5%; height: 80px;}
+header .mo_category {padding-right: 5%;}
 
 
 /* pc css */
@@ -34,10 +27,12 @@ header .hambuger.change-hambuger { background: url(../images/hambuger02.png) no-
   .mobile_blind {display: block!important;}
   .pc_blind {display: none;}
 
-  header {padding: 0 3%; justify-content: space-between;}
-  header .logo img {width: 100px;}
-  header .category {color: #fff; display: flex!important; gap: 30px; width: 80%;}
-  header .category li {cursor: pointer; font-size: 18px;}
-  header .header_icon {display: flex!important; gap: 20px;}
-  header .header_icon img {width: 30px;}
+  header {padding: 0 3%; height: 80px; line-height: 80px;}
+  header .logo {padding-left: 0; margin-right: 5%; height: auto;}
+  header .logo img {height: 50px; display: block;}
+  header .category {display: flex!important; gap: 40px; width: 80%;}
+  header .category li {cursor: pointer; font-size: 18px; color: #ffffff9a; transition: 0.3s;}
+  header .category li:hover {color: #fff;} 
+  header .header_icon {display: flex!important; gap: 30px; cursor: pointer;}
+  header .header_icon img {width: 30px; height: 30px; display: block;}
 }

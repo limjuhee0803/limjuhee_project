@@ -14,22 +14,30 @@ body {font-family: var(--en-font);}
 img {width: auto;}
 section {width: 95vw; margin: 0 auto;}
 
-.mobile_blind {display: none;}
+.mobile_blind {display: none!important;}
+body {background-color: #0E0E0E;}
 
 /****** header ******/
-header { position: fixed; z-index: 9999; top: 0; display: flex; align-items: center; justify-content: space-between; width: 100%; height: 80px; line-height: 80px; background-color: #fff; border-bottom: 1px solid #000; transition: 0.3s; text-transform: uppercase;}
-header .header_rt { display: flex; align-items: center;}
+header { position: fixed; z-index: 9999; top: 0; display: flex; align-items: center; width: 100%; height: 80px; line-height: 80px; transition: 0.3s;}
+
+/* header .header_rt { display: flex; align-items: center;}
 header .header-logo { width: 150px; margin-left: 30px; }
 header .header-icon li { display: grid; place-items: center; cursor: pointer;}
 header p { padding: 0 50px; height: 50px; line-height: 50px; text-align: center; border: 1px solid #000; cursor: pointer; }
 header .headerP { border-right: none; margin-left: 50px;}
 header .hambuger { width: 40px; height: 40px; text-indent: -9999px; background: url(../images/hambuger.png) no-repeat 50% / contain; cursor: pointer; margin: 0 30px;}
-header .hambuger.change-hambuger { background: url(../images/hambuger02.png) no-repeat 50% / contain;}
+header .hambuger.change-hambuger { background: url(../images/hambuger02.png) no-repeat 50% / contain;} */
 
 
 /* pc css */
 @media (width >=1200px){
-  .mobile_blind {display: block;}
+  .mobile_blind {display: block!important;}
   .pc_blind {display: none;}
 
+  header {padding: 0 3%; justify-content: space-between;}
+  header .logo img {width: 100px;}
+  header .category {color: #fff; display: flex!important; gap: 30px; width: 80%;}
+  header .category li {cursor: pointer; font-size: 18px;}
+  header .header_icon {display: flex!important; gap: 20px;}
+  header .header_icon img {width: 30px;}
 }

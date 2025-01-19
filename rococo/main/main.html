@@ -4,36 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>rococo web design_main page</title>
+  <title>rococo web design</title>
 
   <!-- open graph -->
   <meta property="og:title" content="limjuhee's portfolio">
-  <meta property="og:description" content="'로코코 미술의 온라인 아트 갤러리'라는 컨셉으로 제작된 웹디자인의 메인 페이지입니다.">
+  <meta property="og:description" content="'로코코 미술의 온라인 아트 갤러리'라는 컨셉으로 제작된 웹디자인입니다">
   <meta property="og:image" content="./main-portfolio/main-images/ux_design1.png">
-  <meta property="og:url" content="https://limjuhee0803.github.io/limjuhee-portfolio/index.html">
+  <!-- <meta property="og:url" content="https://limjuhee0803.github.io/limjuhee-portfolio/index.html"> -->
 
   <!-- 리셋 -->
-  <link rel="stylesheet" href="../common/minireset.min.css">
+  <link rel="stylesheet" href="../../common/minireset.min.css">
 
   <!-- 폰트 -->
-  <link rel="stylesheet" href="../common/fonts.css">
+  <!-- <link rel="stylesheet" href="../common/fonts.css"> -->
 
   <!-- css -->
-  <link rel="stylesheet" href="./main-portfolio/main-css/common.css">
+  <link rel="stylesheet" href="../common/rococo_common.css">
+  <link rel="stylesheet" href="./main_mo.css">
+  <!-- pc 버전-->
+  <link rel="stylesheet" href="./main_pc.css" media="(width >=1200px)">
 
   <!-- script-->
-  <script src="./common/jquery-3.7.0.min.js"></script>
-  <script src="./common/jquery-ui.min.js"></script>
+  <script src="../../common/jquery-3.7.0.min.js"></script>
+  <script src="../../common/jquery-ui.min.js"></script>
 
   <!-- script - pc(내가 적용한 js) -->
-  <!-- <script defer src="./main-portfolio/main-js/pc_script.js"></script> -->
+  <!-- <script defer src="./main.js"></script> -->
 </head>
 
 <body>
 
   <!-- header -->
   <header>
+    <div class="logo">
+      <img src="../image/lococo_logo.png" alt="rococo 로고 이미지">
+    </div>
+
+    <ul class="category mobile_blind">
+      <li>About</li>
+      <li>Painting</li>
+      <li>Artist</li>
+      <li>Shop</li>
+    </ul>
+
+    <ul class="header_icon mobile_blind">
+      <li><img src="../image/header_search.png" alt="검색 아이콘"></li>
+      <li><img src="../image/header_heart.png" alt="하트 아이콘"></li>
+      <li><img src="../image/header_my.png" alt="마이 아이콘"></li>
+      <li><img src="../image/header_shop.png" alt="숍 아이콘"></li>
+    </ul>
+
+     <img src="../image/hader_category.png" alt="카테고리 아이콘" class="mo_category pc_blind">
   </header>
+
+
+  <!-- 메인 배너 -->
+   <div class="main_banner">
+    <div class="main_top">
+      <div class="inner"></div>
+    </div>
+
+    <section>
+      <img id="header-man" src="../image/main_sub.png">
+      <img id="header-front" src="../image/main_women.png">
+      <img id="header-shoes" src="../image/main_shoes.png" alt="">
+    </section>
+   </div>
+
+  <script src="./main.js"></script>
 
 </body>
 

@@ -17,7 +17,7 @@ section {width: 95vw; margin: 0 auto;}
 body {background-color: #0E0E0E;}
 
 /****** header ******/
-header { position: fixed; z-index: 9999; top: 0; display: flex; align-items: center; width: 100%; height: 60px; line-height: 60px; transition: 0.3s; justify-content: space-between; background: linear-gradient(#00000086, #00000000); font-family: var(--en-font);}
+header { position: fixed; z-index: 9999; top: 0; display: flex; align-items: center; width: 100%; height: 60px; line-height: 60px; transition: 0.3s; justify-content: space-between; background: linear-gradient(#000000b6, #00000000); font-family: var(--en-font);}
 header .logo {padding-left: 5%; height: 60px;}
 header .logo img {height: 40px;}
 header .logo a {display: flex; align-items: center; height: 60px; }

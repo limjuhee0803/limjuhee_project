@@ -4,7 +4,7 @@
 .main_top {height: 100vh;}
 .inner {height: 100vh; background-image: url(../image/main_background.jpg);} 
 #header-front { top: 0; left: calc(52.65% - 55% / 2); width: 55%; position: absolute; z-index: 3; height: auto; }
-#header-shoes { position: absolute; top: 10vw; left: 18vw; height: auto; }
+#header-shoes { position: absolute; top: 12vw; left: 18vw; height: auto; width: 50px; }
 
 .section01 {padding: 10% 0;}
 .section01 .section01_txt{display: flex; justify-content: space-between;}
@@ -16,6 +16,8 @@
 .section01 .more_view {justify-content: start; }
 
 .section01 .mySwiper {padding: 5% 8% 0;}
+.section01 .mySwiper img{transition: 0.3s;}
+.section01 .mySwiper img:hover {transform: scale(0.98)}
 
 .section02 {display: block;}
 .section02 .artist {padding-bottom: 10%;}

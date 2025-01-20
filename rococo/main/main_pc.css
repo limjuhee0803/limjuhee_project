@@ -4,9 +4,12 @@
 #header-front { top: 0; left: calc(52.65% - 55% / 2); width: 55%; position: absolute; z-index: 3; height: auto; }
 #header-shoes { position: absolute; top: 10vw; left: 18vw; height: auto; }
 
-.section01 {padding: 10% 8%;}
+.section01 {padding: 10% 0;}
 .section01 .section01_txt{display: flex; justify-content: space-between;}
 .section01 .section01_txt h1{width: 30%;}
 .section01 .section01_txt .section01_sub_txt{width: 60%;}
+.section01 .up_text {padding-right: 8%; padding-left: 0;}
 .section01 .up_text li {margin-bottom: 5%;}
-.section01 .more_view {justify-content: start;}
+.section01 .more_view {justify-content: start; }
+
+.section01 .mySwiper {padding: 5% 8%;}

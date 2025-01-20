@@ -11,12 +11,13 @@ section { width: 100%;}
 .section h1 {font-family: var(--en-font); font-size: 40px; line-height: 1.7;}
 .section .up_text{ font-family: var(--kr-font);}
 
-.section01 {padding: 15% 8%;}
-.section01 h1 {margin-bottom: 100px;}
-.section01 .up_text {font-weight: 200; color: #7f7f7f;}
+.section01 {padding: 15% 0;}
+.section01 h1 {margin-bottom: 100px; padding-left: 8%;}
+.section01 .up_text {font-weight: 200; color: #7f7f7f; padding: 0 8%;}
 .section01 .up_text li {margin-bottom: 10%; font-size: 22px; }
 .section01 .up_text li h2 { font-size: 18px; }
-.section01 .more_view {display: flex; justify-content: end; gap: 50px;}
+.section01 .more_view {display: flex; justify-content: end; gap: 50px; padding-right: 8%;}
+.section01 .mySwiper {padding: 10% 8%;}
 
 .more_arrow {display: flex; font-size: 18px; align-items: center;}
 .more_arrow svg {width: 25px; fill: #fff;}

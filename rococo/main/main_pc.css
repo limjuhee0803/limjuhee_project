@@ -16,10 +16,11 @@
 .section01 .mySwiper {padding: 5% 8% 0;}
 .section01 img {width: auto;}
 
+.section02 {display: block;}
 .section02 .artist li{width: 595px; padding-top: 8%;}
 .section02 .artist li img{width: 595px;}
 
-.section03 {width: 85%; margin: 0 auto;}
+.section03 {width: 85%; margin: 0 auto; padding: 15% 0;}
 .section03 h1 {font-size: 40px;}
 .section03 .point {flex-direction: row;}
 .section03 .point li {padding: 0 5%; width: 40%; margin: 0 auto;}

@@ -36,11 +36,12 @@ const inner = document.querySelector(".inner");
 //스와이퍼
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1.5, //모바일 설정
-    spaceBetween: 50,
+    spaceBetween: 15,
     slideToClickedSlide : true,
     breakpoints: {
       768: { 
         slidesPerView: 3.5, //브라우저가 768보다 클 때
+        spaceBetween: 30,
       }
   }
 });

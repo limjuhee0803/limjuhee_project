@@ -1,4 +1,6 @@
 @charset "utf-8";
+.mo_br{display: inline;}
+
 .main_top {height: 100vh;}
 .inner {height: 100vh; background-image: url(../image/main_background.jpg);} 
 #header-front { top: 0; left: calc(52.65% - 55% / 2); width: 55%; position: absolute; z-index: 3; height: auto; }
@@ -9,19 +11,19 @@
 .section01 .section01_txt h1{width: 30%; font-size: 36px;}
 .section01 .section01_txt .section01_sub_txt{width: 60%;}
 .section01 .up_text {padding-right: 8%; padding-left: 0;}
-.section01 .up_text li {margin-bottom: 5%;}
+.section01 .up_text li {margin-bottom: 5%; padding-top: 0;}
 .section01 .up_text li:nth-child(2) {display: block;}
 .section01 .more_view {justify-content: start; }
 
 .section01 .mySwiper {padding: 5% 8% 0;}
-.section01 img {width: auto;}
 
 .section02 {display: block;}
-.section02 .artist li{width: 595px; padding-top: 8%;}
-.section02 .artist li img{width: 595px;}
+.section02 .artist {padding-bottom: 10%;}
+.section02 .artist li{width: 30%; top: 7%;}
+.section02 .artist li img{width: 100%;}
 
 .section03 {width: 85%; margin: 0 auto; padding: 15% 0;}
 .section03 h1 {font-size: 40px;}
 .section03 .point {flex-direction: row;}
 .section03 .point li {padding: 0 5%; width: 40%; margin: 0 auto;}
-.section03 .point li:nth-child(2) { border-left: 1px solid #ffffff3b; border-right: 1px solid #ffffff3b;}
+.section03 .point li:nth-child(2) { border: none; border-left: 1px solid #ffffff3b; border-right: 1px solid #ffffff3b;}

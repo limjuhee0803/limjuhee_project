@@ -35,7 +35,7 @@ const inner = document.querySelector(".inner");
 
 //스와이퍼
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2.5, //모바일 설정
+    slidesPerView: 1.5, //모바일 설정
     spaceBetween: 50,
     slideToClickedSlide : true,
     breakpoints: {

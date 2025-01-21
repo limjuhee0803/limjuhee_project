@@ -23,6 +23,8 @@ header .logo img {height: 40px;}
 header .logo a {display: flex; align-items: center; height: 60px; }
 header .mo_category {padding-right: 5%; width: 50px;}
 
+footer {color: #666666; font-size: 0.8rem; display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20% 0 10%;}
+
 /* pc css */
 /* @media (width >=768px){
   .mobile_blind {display: block!important;}
@@ -53,4 +55,5 @@ header .mo_category {padding-right: 5%; width: 50px;}
   header .category li:hover {color: #fff;} 
   header .header_icon {display: flex!important; gap: 30px; cursor: pointer;}
   header .header_icon img {width: 30px; height: 30px; display: block;}
+  footer {padding: 10% 0 4%;}
 }

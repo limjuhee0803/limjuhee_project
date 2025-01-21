@@ -20,8 +20,8 @@
 .section01 .mySwiper img:hover {transform: scale(0.98)}
 
 .section02 {display: block;}
-.section02 .artist {padding-bottom: 10%;}
-.section02 .artist li{width: 30%; top: 7%;}
+.section02 .artist {padding-bottom: 0;}
+.section02 .artist li{width: 30%; top: 7%; padding-bottom: 30%;}
 .section02 .artist li img{width: 100%;}
 
 .section03 {width: 85%; margin: 0 auto; padding: 15% 0;}

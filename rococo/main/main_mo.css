@@ -1,5 +1,5 @@
 @charset "utf-8";
-.mo_br{display: block;}
+/* .mo_br{display: block;} */
 
 .main_banner {width: 100%;}
 .main_banner section{width: 100%; overflow: hidden;}
@@ -15,11 +15,11 @@ section { width: 100%;}
 .section .up_text{ font-family: var(--kr-font);}
 
 .section01 {padding: 15% 0;}
-.section01 h1 {margin-bottom: 40px; padding-left: 8%; font-size: 1.5rem;}
+.section01 h1 {margin-bottom: 40px; padding-left: 8%; font-size: 1.3rem;}
 .section01 .up_text {font-weight: 200; color: #7f7f7f; padding: 0 8%;}
 .section01 .up_text li {margin-bottom: 10%;}
 .section01 .up_text li:nth-child(2) {display: none;}
-.section01 .up_text li h2 { font-size: 1rem; }
+.section01 .up_text li h2 { font-size: 0.9rem; }
 .section01 .more_view {display: flex; justify-content: end; gap: 30px; padding-right: 8%;}
 .section01 .more_view h3 {font-size: 14px;}
 .section01 .mySwiper {padding: 10% 8% 0;}
@@ -33,7 +33,7 @@ section { width: 100%;}
 .section02 .scroll_down {border: 1px solid #fff; width: 120px; text-align: center; height: 30px; line-height: 30px; font-size: 12px; border-radius: 30px; font-family: var(--en-font); position: absolute; left: calc(50% - 120px/2); top: 6%; opacity: 0.7;}
 
 .section02 .artist {position: relative; display: flex; flex-direction: column; align-items: center; padding-bottom: 50%;}
-.section02 .artist li{width: 80%; padding-top: 3%; position: sticky; top: 15%;}
+.section02 .artist li{width: 80%; padding-top: 3%; position: sticky; top: 15%; padding-bottom: 50%;}
 .section02 .artist li img{width: 100%;}
 
 .section02 .artist li:nth-child(1) {}
@@ -43,9 +43,9 @@ section { width: 100%;}
 .section02 .artist li:nth-child(5) img{margin-top: 80px;}
 
 .section03 {padding: 15% 0;}
-.section03 h1{font-size: 30px; text-align: center; margin-bottom: 10%;}
+.section03 h1{font-size: 1.3rem; text-align: center; margin-bottom: 10%;}
 .section03 .point {display: flex; flex-direction: column;}
-.section03 .point li{text-align: center; width: 90%; margin: 0 auto; padding: 8% 0;}
+.section03 .point li{text-align: center; width: 85%; margin: 0 auto; padding: 8% 0;}
 .section03 .point li:nth-child(2) {border-top: 1px solid #ffffff3b; border-bottom: 1px solid #ffffff3b;}
-.section03 .point li h2{margin-bottom: 20px; font-size: 1.3rem; font-family: var(--en-font);}
-.section03 .point li h3{font-size: 1rem; line-height: 1.8; color: #cfcfcf;}
+.section03 .point li h2{margin-bottom: 20px; font-size: 1.2rem; font-family: var(--en-font);}
+.section03 .point li h3{font-size: 0.9rem; line-height: 1.8; color: #cfcfcf;}

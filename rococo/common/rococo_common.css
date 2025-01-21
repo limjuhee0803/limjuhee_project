@@ -24,6 +24,23 @@ header .logo a {display: flex; align-items: center; height: 60px; }
 header .mo_category {padding-right: 5%; width: 50px;}
 
 /* pc css */
+/* @media (width >=768px){
+  .mobile_blind {display: block!important;}
+  .pc_blind {display: none;}
+
+  header {padding: 0 3%; height: 80px; line-height: 80px;}
+  header .logo {padding-left: 0; margin-right: 5%; height: auto;}
+  header .logo img {height: 50px; display: block;}
+  header .category {display: flex!important; gap: 40px; width: 80%;}
+  header .category li {cursor: pointer; font-size: 18px; color: #ffffff9a; transition: 0.3s;}
+  header .category li:hover {color: #fff;} 
+  header .header_icon {display: flex!important; gap: 30px; cursor: pointer;}
+  header .header_icon img {width: 30px; height: 30px; display: block;}
+
+} */
+
+
+/* pc css */
 @media (width >=1200px){
   .mobile_blind {display: block!important;}
   .pc_blind {display: none;}

@@ -17,3 +17,15 @@
 
 #### 2. lookbook 페이지의 반복문 사용
 - 자바스크립트의 반복문 사용이 미숙해 반복을 사용하지 않아 불필요한 코드가 늘어남
+
+
+# **Rcoco Art Gallery**
+- 로코코 시대의 미술을 감상할 수 있는 온라인 아트갤러리
+- 2023년 디자인 후 2025년 수정 및 제작
+### https://limjuhee0803.github.io/limjuhee_project/rococo/main/main.html
+
+### Publishing
+#### 1. 스크롤에 따라 반응하는 이미지
+
+
+#### 2. 스크롤 기반 애니메이션

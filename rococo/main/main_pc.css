@@ -2,15 +2,16 @@
 .mo_br{display: inline;}
 
 .main_top {height: 100vh;}
-.inner {height: 100vh; background-image: url(../image/main_background.jpg);} 
-#header-front { top: 0; left: calc(52.65% - 55% / 2); width: 55%; position: absolute; z-index: 3; height: auto; }
+.inner {height: 100vh; background-image: url(../image/main_background02.jpg);} 
+#header-front { top: 0; left: calc(52.65% - 55% / 2); width: 58%; position: absolute; z-index: 3; height: auto; }
 #header-shoes { position: absolute; top: 12vw; left: 18vw; height: auto; width: 50px; }
 
 .section01 {padding: 10% 0;}
 .section01 .section01_txt{display: flex; justify-content: space-between;}
-.section01 .section01_txt h1{width: 30%; font-size: 36px;}
+.section01 .section01_txt h1{width: 30%; font-size: 2rem;}
 .section01 .section01_txt .section01_sub_txt{width: 60%;}
-.section01 .up_text {padding-right: 8%; padding-left: 0;}
+.section01 .up_text {padding-right: 15%; padding-left: 0;}
+.section01 .up_text li h2{font-size: 1rem;}
 .section01 .up_text li {margin-bottom: 5%; padding-top: 0;}
 .section01 .up_text li:nth-child(2) {display: block;}
 .section01 .more_view {justify-content: start; }
@@ -25,7 +26,18 @@
 .section02 .artist li img{width: 100%;}
 
 .section03 {width: 85%; margin: 0 auto; padding: 15% 0;}
-.section03 h1 {font-size: 40px;}
+.section03 h1 {font-size: 2.3rem; margin-bottom: 7%;}
 .section03 .point {flex-direction: row;}
 .section03 .point li {padding: 0 5%; width: 40%; margin: 0 auto;}
 .section03 .point li:nth-child(2) { border: none; border-left: 1px solid #ffffff3b; border-right: 1px solid #ffffff3b;}
+
+.section03 .point li h3 {font-size: 1rem;}
+.section04 .slide ul li img{height: auto;}
+
+.section04 .slide ul{height: auto;}
+.section04 .lt_slide{animation: mv_lt 20s linear infinite;}
+.section04 .rt_slide{ margin-top: 20px; animation: mv_rt 20s linear infinite;}
+
+.section04 .section04_txt  h2{ font-size: 2rem;}
+.section04 .section04_txt  .more_view {transition: 0.3s;}
+.section04 .section04_txt  .more_view:hover {transform: scale(0.95);}

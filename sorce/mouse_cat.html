@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>scroll size effect</title>
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+
+html, body, .wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  overflow: hidden;
+}
+
+.sq {
+  display: block;
+  width: 920px;
+  height: 920px;
+  background: rgba(0,0,0,0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.sq0 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/csZBTWg.png') center no-repeat;
+  z-index: 99;
+}
+
+.sq1 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Nx1ynN8.png') center no-repeat;
+  z-index: 98;
+}
+
+.sq2 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/mjxuojh.png') center no-repeat;
+  z-index: 97;
+}
+
+.sq3 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Lco4D68.png') center no-repeat;
+  z-index: 96;
+}
+
+.sq4 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/6ECfCYU.png') center no-repeat;
+  z-index: 95;
+}
+
+.sq5 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/69f1r1R.png') center no-repeat;
+  z-index: 94;
+}
+
+.sq6 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/T2aLa4j.png') center no-repeat;
+  z-index: 93;
+}
+
+.sq7 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/ZFeqswq.png') center no-repeat;
+  z-index: 92;
+}
+
+.sq8 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/pROjk3i.png') center no-repeat;
+  z-index: 91;
+}
+
+.sq9 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/CHTO2AD.png') center no-repeat;
+  z-index: 90;
+}
+
+.sq10 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/YWXzrsV.png') center no-repeat;
+  z-index: 89;
+}
+
+.sq11 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/whx7JDJ.png') center no-repeat;
+  z-index: 88;
+}
+
+.sq12 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/I4Y5DMd.png') center no-repeat;
+  z-index: 87;
+}
+
+.sq13 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/4oN40ZA.png') center no-repeat;
+  z-index: 86;
+}
+
+.sq14 {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/w6U9R8c.png') center no-repeat;
+  z-index: 85;
+}
+  </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sq sq0"></div>
+        <div class="sq sq1"></div>
+        <div class="sq sq2"></div>
+        <div class="sq sq3"></div>
+        <div class="sq sq4"></div>
+      
+        <div class="sq sq5"></div>
+        <div class="sq sq6"></div>
+        <div class="sq sq7"></div>
+        <div class="sq sq9"></div>
+        <div class="sq sq10"></div>
+      
+        <div class="sq sq11"></div>
+        <div class="sq sq12"></div>
+        <div class="sq sq13"></div>
+        <div class="sq sq14"></div>
+    </div>
+
+    <script>
+        var sqs = document.getElementsByClassName('sq');
+        var body = document.getElementsByTagName('body')[0];
+        var mousePos = {x: window.innerWidth/2, y: window.innerHeight/2};
+        var delay = 0.81;
+
+        body.addEventListener('mousemove', function(e){
+        mousePos.x = e.clientX;
+        mousePos.y = e.clientY;
+        },false);
+
+        body.addEventListener('touchstart', function(e){
+        mousePos.x = e.touches[0].clientX;
+        mousePos.y = e.touches[0].clientY;
+        })
+
+        body.addEventListener('touchmove', function(e){
+        mousePos.x = e.touches[0].clientX;
+        mousePos.y = e.touches[0].clientY;
+        })
+
+
+        function render() {
+        //console.log('render. mousePos.x=',mousePos.x)
+        for (var i = 0; i < sqs.length; i++) {
+            var elLeft = parseFloat(sqs[i].style.left||0);
+            var elTop = parseFloat(sqs[i].style.top||0);
+            var leftDist = elLeft + 460 - mousePos.x;
+            var topDist = elTop + 460 - mousePos.y;
+        //  console.log("leftDist: ", leftDist, 'mousePos.x',mousePos.x)
+            sqs[i].style.left = elLeft - (leftDist / ( 1 + i * delay)) + "px";
+            sqs[i].style.top = elTop - (topDist / (1 + i * delay)) + "px";
+        }
+        window.requestAnimationFrame(render);
+        }
+
+        window.requestAnimationFrame(render)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //polyfills
+
+        // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+        //  http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+        
+        // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
+        
+        // MIT license
+        
+        (function() {
+            var lastTime = 0;
+            var vendors = ['ms', 'moz', 'webkit', 'o'];
+            for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+                window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+                window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                        || window[vendors[x]+'CancelRequestAnimationFrame'];
+            }
+        
+            if (!window.requestAnimationFrame)
+                window.requestAnimationFrame = function(callback, element) {
+                    var currTime = new Date().getTime();
+                    var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+                    var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+                    timeToCall);
+                    lastTime = currTime + timeToCall;
+                    return id;
+                };
+        
+            if (!window.cancelAnimationFrame)
+                window.cancelAnimationFrame = function(id) {
+                    clearTimeout(id);
+                };
+        }());
+
+    </script>
+</body>
+
+</html>

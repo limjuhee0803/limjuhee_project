@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>cusor effect</title>
+
+  <style>
+    /* OPTIONAL / defining page color variables */
+    :root {
+    --black: #000000;
+    --grey1: #a3a3a3;
+    --grey2: #383838;
+    --white: #ffffff;
+    --green: #62Ba9B;
+    }
+
+
+    /* REQUIRED / without this, the cursor will still show */
+    * {
+    cursor: none;
+    }
+
+    /* OPTIONAL / prevents user from selecting texts */
+    ::selection {
+    user-select: none;
+    }
+
+    /* OPTIONAL / body styling */
+    body {
+    margin: 0;
+    background-color: var(--black);
+    font-family: 'DM Mono';
+    }
+
+    /* OPTIONAL - background texture styling */
+    .bg {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://www.transparenttextures.com/patterns/graphy.png);
+    position: absolute;
+    opacity: 30%;
+    
+    z-index: -5;
+    }
+
+    /* OPTIONAL / this class marks display as flex on the rest of the element's classlist */
+    .flex {
+    display: flex;
+    }
+
+    /* CUSTOMIZABLE / hyperlink styling */
+    a {
+    text-decoration: none;
+    color: var(--grey1);
+    padding: 5px 2%;
+    border: 2px solid var(--grey2);
+    border-radius: 50px;
+    
+    align-self: center;
+    text-align: center;
+    
+    transition: all ease-out 0.5s; /* for smooth transitions when cursor leaves the button */
+    
+    width: 100%;
+    max-width: 100%;
+    }
+
+    /* CUSTOMIZABLE / hyperlink on-hover styling */
+    a:hover {
+    padding: 5px 10%;
+    border: 2px solid var(--white);
+    color: var(--white);
+    
+    transition: all ease-out 0.5s; /* for smooth transitions when cursor enters the button */
+    
+    align-self: right;
+    
+    max-width: 100%;
+    }
+
+
+    /* OPTIONAL / webpage name  */
+    .name {
+    color: var(--white);
+    font-size: 20px;
+    }
+
+
+    /* OPTIONAL */
+    .container {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    }
+
+    /* OPTIONAL */
+    .nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    margin: 3em;
+    opacity: 100%;
+    }
+
+    /* OPTIONAL / keeps menu width fixed so the buttons can have a smooth transition back and forth */
+    .menu {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50vw;
+    max-width: 100vw;
+    gap: 1em;
+    }
+
+    /* REQUIRED / besides position, pointer-events, transform, and transition, the rest are customizable styling */
+    .small {
+    height: 10px;
+    width: 10px;
+    background-color: var(--green);
+    border-radius: 10px;
+    filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green));
+    
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: height 0.2s, width 0.2s;
+    }
+
+    /* REQUIRED / besides position, pointer-events, transform, and transition, the rest are customizable styling */
+    .big {
+    height: 50px;
+    width: 50px;
+    border: 3px solid var(--green);
+    border-radius: 100px;
+    filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green));
+    
+    position: fixed;
+    pointer-events: none;
+    transform: translate(calc(-50%), -50%);
+    transition: height 0.5s, width 0.5s, filter 0.5s;
+    }
+
+    /* REQUIRED / some styling is necessary for hover effect */
+    .hover__big {
+    height: 100px;
+    width: 100px;
+    filter: drop-shadow(0 0 5px var(--green)) drop-shadow(0 0 20px var(--green)) drop-shadow(0 0 40px var(--green));
+    
+    transition: height 0.5s, width 0.5s, filter 0.5s;
+    }
+
+    /* REQUIRED / some styling is necessary for hover effect */
+    .hover__small {
+    height: 8px;
+    width: 8px;
+    
+    transition: height 0.2s, width 0.2s;
+    }
+
+    /* OPTIONAL */
+    .hero {
+    margin: 3em;
+    color: var(--grey1);
+    
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    }
+
+
+    /* OPTIONAL / just an example button */
+    .example {
+    align-self: center;
+    max-width: 100%;
+    width: 80%;
+    }
+
+    .example:hover {
+    max-width: 100%;
+    width: 100%;
+    padding: 5px 0;
+    
+    }
+
+    /* OPTIONAL / HUD effects */
+    .hud__effects {
+    flex-direction: row;
+    gap: 10px;
+    margin: 1em 3em;
+    }
+
+    .effect__long {
+    height: 10px;
+    width: 30px;
+    border: 2px solid var(--grey2);
+    background-color: var(--grey2);
+    border-radius: 20px;
+    }
+
+    .effect__small {
+    height: 10px;
+    width: 10px;
+    border: 2px solid var(--grey2);
+    border-radius: 100%;
+    }
+
+
+    /* OPTIONAL / for device responsiveness */
+    @media only screen and (max-width: 850px) {
+    .nav {
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .menu {
+        width: 100%;
+    }
+    }
+  </style>
+
+  <!-- script-->
+  <script src="./common/jquery-3.7.0.min.js"></script>
+  <script src="./common/jquery-ui.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+
+</head>
+
+<body>
+    <!--  REQUIRED / the cursor is made of two circles: small and big -->
+      <div class="cursor small"></div>
+      <div class="cursor big"></div>
+    
+    <!--  OPTIONAL / background texture  -->
+      <div class="bg"></div>
+      
+    <!--  OPTIONAL / page container and navbar  -->
+      <div class="container flex">
+        <div class="nav flex">
+          <div class="name">TAR{GET}</div>
+          <div class="menu flex">
+    
+            <a href="https://www.youtube.com/@juxtopposed" target="_blank">YouTube</a>
+            <a href="https://codepen.io/Juxtopposed" target="_blank">Follow me</a>
+          </div>
+        </div>
+        
+    <!--  OPTIONAL / explanations and texts  -->
+        <div class="hero flex">
+          
+          <div>
+            <h1>Custom SciFi Cursor</h1>
+            <p>This is a custom cursor made with HTML, CSS, and Vanilla JavaScript.</p>
+          </div>
+          
+          <a href="#" class="example">Hover over me to see effect</a>
+          <div>
+            <h2>What to Copy?</h2>
+            <p>Check the comments for exactly what to copy and what you can customize yourself.</p>
+          </div>
+          
+        </div>
+        
+    <!--  OPTIONAL / HUD effects  -->
+        <div class="hud__effects flex">
+          <div class="effect__long"></div>
+          <div class="effect__small"></div>
+          <div class="effect__long"></div>
+          <div class="effect__small"></div>
+          <div class="effect__small"></div>
+      </div>
+
+    <script>
+        // declares variables for big circle and small circle in cursor
+        var cursorBig = document.querySelector('.big');
+        var cursorSmall = document.querySelector('.small');
+        var a = document.querySelectorAll('a');
+
+        // positions the two circles in a desired placement
+        document.addEventListener('mousemove', function(e){
+        var x = e.clientX;
+        var y = e.clientY;
+        cursorBig.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+        });
+
+        document.addEventListener('mousemove', function(e){
+        var x = e.clientX;
+        var y = e.clientY;
+        cursorSmall.style.left = x + 'px';
+        cursorSmall.style.top = y + 'px';
+        });
+
+        // adds class when cursor clicks
+        document.addEventListener('mousedown', function(){
+        cursorBig.classList.add('click');
+        cursorSmall.classList.add('hover__small')
+        });
+
+        // removes class when cursor stops clicking
+        document.addEventListener('mouseup', function(){
+        cursorBig.classList.remove('click')
+        cursorSmall.classList.remove('hover__small')
+        });
+
+        // adds and removes class when mouse hovers and stops hovering
+        a.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            cursorBig.classList.add('hover__big');
+            cursorSmall.classList.add('hover__small');
+        });
+        item.addEventListener('mouseleave', () => {
+            cursorBig.classList.remove('hover__big');
+            cursorSmall.classList.remove('hover__small');
+        });
+        })
+    </script>
+</body>
+
+</html>

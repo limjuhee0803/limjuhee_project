@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* 변수 설정 */
+:root {
+    --kr-font: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+      'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+      sans-serif;
+    --en-font: 'Russo One', Arial, Helvetica, sans-serif;
+    --white : rgba(255, 255, 255, 0.2);
+  }
+
+/* 모바일 css */
+body::-webkit-scrollbar {display: none;}
+body {font-family: var(--en-font); background-color: #08090B; color: #fff; --framer-will-change-override: none}
+img {width: auto;}
+
+.mo_blind {display: none;}
+
+.section {width: 90vw; margin: 0 auto;}
+
+/* pc css */
+@media (width >=1200px){
+  .mo_blind {display: block;}
+  .pc_blind {display: none;}
+
+
+}

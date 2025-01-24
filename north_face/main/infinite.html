@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>text_img</title>
+
+  <style>
+    :root {
+    --size: clamp(10rem, 1rem + 40vmin, 30rem);
+    --gap: calc(var(--size) / 14);
+    --duration: 60s;
+    --scroll-start: 0;
+    --scroll-end: calc(-100% - var(--gap));
+    }
+    
+    .marquee {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    }
+
+    .marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll-x var(--duration) linear infinite;
+    }
+
+
+    @keyframes scroll-x {
+    from {
+        transform: translateX(var(--scroll-start));
+    }
+    to {
+        transform: translateX(var(--scroll-end));
+    }
+    }
+
+    /* Parent wrapper */
+    .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    margin: auto;
+    max-width: 100vw;
+    }
+
+  </style>
+</head>
+
+<body>
+      <article class="wrapper">
+        <div class="marquee">
+          <div class="marquee__group">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+          </div>
+      
+          <div aria-hidden="true" class="marquee__group">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+            <img src="../images/test.png" alt="">
+          </div>
+        </div>
+      </article>
+<script> 
+    /*
+    JS to toggle scroll axis styles
+    */
+    const control = document.getElementById("direction-toggle");
+    const marquees = document.querySelectorAll(".marquee");
+    const wrapper = document.querySelector(".wrapper");
+
+    control.addEventListener("click", () => {
+    control.classList.toggle("toggle--vertical");
+    wrapper.classList.toggle("wrapper--vertical");
+    [...marquees].forEach((marquee) =>
+        marquee.classList.toggle("marquee--vertical")
+    );
+    });
+</script>
+
+</body>
+
+</html>

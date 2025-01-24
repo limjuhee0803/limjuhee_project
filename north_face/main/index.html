@@ -1,0 +1,1238 @@
+<meta name="viewport" content="width=750,viewport-fit=cover, user-scalable=no">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<!-- css import -->
+<link href="https://cdn-tgreen.bizhost.kr/showcase/css/scroll/basic_brand_18.css" rel="stylesheet" type="text/css">
+<link href="https://cdn-tgreen.bizhost.kr/showcase/css/scroll/basic_brand_m_33.css" media="screen and (max-width: 1023px)" rel="stylesheet" type="text/css">
+<link href="https://cdn-tgreen.bizhost.kr/showcase/css/css_clear.css" rel="stylesheet" type="text/css">
+<link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"> -->
+
+<!-- font-family: "Bebas Neue", sans-serif; -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+
+<!-- script -->
+<script src="https://cdn-tgreen.bizhost.kr/showcase/js/slick.min.js" type="text/javascript"></script>
+<script src="https://cdn-tgreen.bizhost.kr/showcase/js/common31.js" type="text/javascript"></script>
+<script src="https://cdn-tgreen.bizhost.kr/showcase/js/fullpage.3.1.2.min.js" type="text/javascript"></script>
+
+<!-- 개인 css import -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<style>
+    /* 댓글달기 영역 PC */
+    .event_area{ background:url("https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/event/img_event_bg.jpg") center/cover no-repeat;}
+    .event_area .txt_01{ color:#fff; font-size:10em; font-weight:900; line-height:85px; margin-bottom:60px;}
+    .event_area .txt_02{ color:#fff; font-size:1.6em; line-height:1.4; width:100%; box-sizing:border-box; margin-bottom:30px;}
+    .event_area .box_giftimg{ margin: 0 0 34px;}
+    .event_area .box_giftimg .giftimg_box{ font-size:2em; color:#fff; font-weight:900; margin-bottom:20px;}
+    .event_area .box_giftimg .giftimg_cont .giftimg{ width: 50%; padding: 0;}
+    .main_cont .brand_cont .brand_prd_box > div p{ position:absolute; top:25px; left:260px; background:#000; color:#fff; width:50px; height:50px; line-height:50px; text-align:center; border-radius:100px; margin-top:-10px;}
+
+    .main_cont .brand_cont .brand_txt .txt_sub { margin-bottom: 15px; }
+    .main_cont .brand_cont .brand_prd_box p { margin-top: -20px; }
+    .main_cont .brand_cont .brand_btn{padding: 20px 10px; border-radius: 0;}
+    .main_cont .brand_cont .brand_btn_con .btn_group{}
+    .main_cont .brand_cont .brand_btn_con .btn_group .btn_mg{ margin-left: -10px;}
+    .main_cont .brand_cont .brand_btn_con .btn_group .btn_mg .btn_flx{ display: flex;}
+    .main_cont .brand_cont .brand_btn_con .btn_group .btn_mg .btn_flx > *{ display: flex; align-self: stretch; justify-content: center; width: 33.33%; margin: 10px 0 0 10px;}
+
+    /* 댓글달기 영역 M */
+    /* .event_area .event_cont_sh .txt_box_m{ background:url("https://cdn-tgreen.bizhost.kr/showcase/ruggedhouse/23fall/gift/img_event_bg_mo.jpg") center/0 no-repeat;} */
+
+    /* 쇼케이스이벤트 페이지 이벤트 상품 옆 당첨자 인원 배경색 */
+    .event_area .box_giftimg .giftimg_cont .giftimg .gift_txt_sub { background: #000 !important;}
+
+    /* 쇼케이스이벤트 페이지 배경이미지에 따라 x버튼 색 선택(이미지 경로 뒤에 '_wh' 붙이면됨 */
+    .event_area .btn-x{ background:url(https://img-tgreen.bizhost.kr/showcase_b/ico-x.png) center no-repeat;}
+
+    /* 모바일 브랜드페이지 배경이미지에 따라 x버튼 색 (이미지 경로 뒤에 '_wh' 붙이면됨 */
+    .main_cont .brand_cont .btn-x{ background:url(https://img-tgreen.bizhost.kr/showcase_b/ico-x.png) center no-repeat;}
+
+    /* 모바일 브랜드페이지 배경이미지에 따라 x버튼 색 선택 (이미지 경로 뒤에 '_wh' 붙이면됨 */
+    .layer-goods .btn-x{ background:url(https://img-tgreen.bizhost.kr/showcase_b/ico-x.png) center no-repeat;}
+
+    /* 커스텀 시작 */
+    h1,h2,h3,h4,h5,h6{ line-height: 1.72em; text-transform: uppercase;}
+    h1{ font-size: 6.0em; font-weight: 700;} /*60px*/
+    h2{ font-size: 4.0em;} /*40px*/
+    h3{ font-size: 3.6em;} /*36px*/
+    h4{ font-size: 2.4em;} /*24px*/
+    h5{ font-size: 2.2em;} /*22px*/
+    h6{ font-size: 1.8em;} /*18px*/
+
+    .sections_ey{ position: relative;}
+    .col_gray{ color: #2d2d2d;}
+    .border_ey{ margin: 138px 0 0; border-bottom: 1px solid #000;}
+
+    .title_con *,
+    .pd_title_con *{ font-weight: 700;}
+
+    .title_con{ display: flex; align-items: center; margin: 0 0 84px; padding: 0 64px; transition: 0.5s; opacity: 0; transform: translateY(50px);}
+    .title_con.active{opacity: 1; transform: translateY(0px);}
+    .title_con h3{ margin: 0 auto 0 0;}
+    .title_con h6{ text-align: right; line-height: 1.25em;}
+
+    .pd_title_con{ padding: 100px 0 50px 30px; text-align: center;}
+    .pd_title_con *{ line-height: 1.25em;}
+    .pd_title_con h6{ margin: 0 0 20px;}
+    .pd_title_con h3{color: #fff; text-align: left; padding: 0 30px 0 0; font-size: 65px; font-family: "Bebas Neue", sans-serif; letter-spacing: 1px; text-shadow: 0 0 20px #ffffff82;}
+    .pd_title_con h4 {font-size: 18px; text-align: left; font-weight: 400; margin-top: 10px; color: #535353;}
+
+    .autoSwiper2, .autoSwiper{ margin: 0 auto; pointer-events: none;}
+    .autoSwiper .swiper-wrapper{ pointer-events: none;}
+    .autoSwiper2 .swiper-wrapper{ pointer-events: none;}
+    .autoSwiper .swiper-wrapper .swiper-slide{ pointer-events: none;}
+    .autoSwiper2 .swiper-wrapper .swiper-slide{ pointer-events: none;}
+    .autoSwiper .swiper-wrapper .swiper-slide img{ width: 100%;}
+    .autoSwiper2 .swiper-wrapper .swiper-slide img{ width: 100%;}
+
+    .swiper_01 .swiper-wrapper .swiper-slide img{ width: 100%; height: 100%; object-fit: cover;}
+
+    .slidePdSwiper{ margin: 0 0 138px; z-index: 2;}
+    .slidePdSwiper .swiper-wrapper{}
+    .slidePdSwiper .swiper-wrapper .swiper-slide{ text-align: center;}
+    .slidePdSwiper .swiper-wrapper .swiper-slide img{}
+    .slidePdSwiper .swiper-wrapper .swiper-slide h6{ margin: 33px 0 0; color: #fff;}
+    .slideSwiper .swiper-slide {margin-right: 0px!important;}
+	
+    h1.logo,
+    .header_sh .logo_m,
+    .header_sh .info_m{ font-size: 16px; font-weight: normal; line-height: 1;}
+    .main_cont { font-size: 10px; position:static; }
+    #wrap_sh { color: #FFF; background-color: #000; }
+    .slide_cont { font-family: 'Spoqa Han Sans Neo'; }
+
+    #visual.loading .text_con h1.rugged_ele{ opacity: 0; bottom: 100px;}
+    #visual.loading .text_con h1.house_ele{ opacity: 0; bottom: 0px;}
+    #visual{ position: relative; overflow: hidden;}
+    #visual .swiper_01{ height: 100%; margin: 0;}
+    #visual .autoSwiper{ height: 100%; margin: 0;}
+    #visual .autoSwiper2{ height: 100%; margin: 0;}
+    #visual .text_con img {position: absolute; z-index: 9; top: 0; pointer-events: none;}
+    #visual .text_con *{ position: absolute; color: #fff; line-height: 1.25em; z-index: 9;}
+    #visual .text_con h6.fall_ele{ bottom: 50px; left: 50%; transform: translateX(-50%); font-size: 1.4em; color: #fff;}
+    #visual .text_con h5{ font-size: 2.0em; font-weight: 500;}
+    #visual .text_con h1{ font-size: 11.0em; text-transform: initial; transition: all 500ms ease-in-out;}
+    #visual .text_con img.top_text{ top: 3%; left: 50%; transform: translateX(-50%);}
+    #visual .text_con img.main_text{ top: 55%; left: 50%; transform: translateX(-50%); width: 88%;}
+
+    /* 떠오르는 애니메이션 */
+    .img_fade {transition: 0.3s; opacity: 0; transform: translateY(100px); position: relative; z-index: 2;}
+    .img_fade.active {opacity: 1; transform: translateY(0); transition: all 450ms ease-in-out;}
+
+    #sub_01{ padding: 134px 0 112px; text-align: center; width: 100%; overflow: hidden;}
+    #sub_01 .sub_01_text {position: relative; z-index: 1;}
+    #sub_01 h4{ font-family: "Bebas Neue", sans-serif; font-size: 40px;}
+    #sub_01 h5{ margin-top: 20px; font-size: 20px;}
+    #sub_01 video{position: absolute; top: -14%; left: -19%; width: 140%; filter: brightness(0.4); pointer-events: none;}
+
+    #sub_02{}
+    #sub_02 .autoSwiper{ margin: 0;}
+    #sub_02 .autoSwiper .swiper-wrapper{}
+    #sub_02 .autoSwiper .swiper-wrapper .swiper-slide{}
+    #sub_02 .autoSwiper .swiper-wrapper .swiper-slide img{}
+
+    #sub_03{}
+
+    #sub_04{ padding: 100px 0;}
+    #sub_04 .slideSwiper{ opacity: 1; margin: 0 0 78px; transform: translateX(0); transition: all 500ms ease-in-out; transition-delay: 300ms; position: relative;}
+    #sub_04 .comment *{text-align: center;}
+    #sub_04 .comment h1{}
+    #sub_04 .comment h4{ margin: -9px 0 27px; font-weight: 500;}
+    #sub_04 .comment h5{font-size: 19px;}
+    #sub_04 .bk_bg01 {top: 65%;}
+    .sub_04_title {margin: 0 0 30px 30px;}
+    .sub_04_title h1{font-size: 8.5em; letter-spacing: 4.4px; line-height: 1.25em; color: #fff; font-family: "Bebas Neue", sans-serif; text-shadow: 0 0 20px #ffffff82;}
+
+    #sub_05{}
+    #sub_05 .sub_05_sticky {position: relative;}
+    #sub_05 .sub_05_sticky .sticky_box { position: sticky; top: 100px; margin-bottom: 100px;}
+    #sub_05 .img_fade img { box-shadow: 0 0 100px #ffffff36;}
+    #sub_05 .img_detail_01{margin-left: 200px;}
+    #sub_05 .img_detail_02{margin: 50px 0 0 30px;}
+    #sub_05 .img_detail_03{margin: -108px 0 80px 380px;}
+    #sub_05 .img_detail_04 {margin-bottom: 50px;}
+    
+    #sub_05 .border_ey {margin: 120px 0 0;}
+    #sub_05 .fade_img {position: relative; z-index: 2; padding-bottom: 150px;}
+    #sub_05 .fade_img img {box-shadow: 0 0 100px #ffffff36;}
+
+    #sub_06{ margin: 21px 0 0; padding: 0 30px 84px;}
+
+    /* 제품 소개 시작 */
+    .pd_main_title { display: flex; justify-content: space-between; align-items: center; width: 95%; margin: 0 auto; font-family: "Bebas Neue", sans-serif;}
+    .pd_main_title h2{ font-size: 26px;}
+    .pd_main_title h3{ font-size: 26px;}
+
+    #sub_07 .pd_title_con *{}
+    #sub_07 .pd_title_con h6{}
+    #sub_07 .pd_title_con h3{}
+    #sub_07 .pd_detail_con {margin-top: 100px;}
+    .pd_title_con {opacity: 0; transform: translateY(100px); transition: 0.3s;}
+    .pd_title_con.active {opacity: 1; transform: translateY(0);}
+
+    #sub_08 {padding-bottom: 50px;}
+        
+    #sub_09 .img_detail_01 {margin-bottom: 100px;}
+
+    #sub_10 .slidePdSwiper {margin: 0 0 100px;}
+    #sub_10 .pd_detail_con .hover_con .img_detail_01 {position: sticky; top: 50px; filter: brightness(0.9);}
+    #sub_10 .pd_detail_con .hover_con .img_detail_02, #sub_12 .pd_detail_con .hover_con .img_detail_02{padding-bottom: 70px; position: relative; z-index: 2;}
+
+    #sub_12 .pd_detail_con .hover_con .img_detail_01 {margin-top: -100px; position: sticky; top: -100px;}
+
+    #sub_10, #sub_11 {padding-bottom: 100px;}
+    #sub_07{ padding: 0 0 138px;}
+
+    .hover_con{ position: relative;}
+    .hover_con .hover_posi{ text-align: center;}
+    .hover_con .hover_posi .hover_active a.hover_btn{ position: absolute; display: inline-block; width: 15px; height: 15px; border-radius: 50%; cursor: pointer; background: #fff; box-shadow: 0px 0px 7px #fff;}
+    .hover_con .hover_posi .hover_active a.hover_btn:hover::after{ display: none;}
+    .hover_con .hover_posi .hover_active .info{ position: absolute; width: 147px; padding: 20px 20px; opacity: 0; visibility: hidden; pointer-events: none; z-index: 9;}
+    .hover_con .hover_posi .hover_active .info.show{ opacity: 1; visibility: visible; pointer-events: auto;}
+    .hover_con .hover_posi .hover_active .info a{ display: block; padding: 12px 12px; background-color: #fff; color: #000; box-shadow: 3px 0 7px rgba(0, 0, 0, 0.1);}
+    .hover_con .hover_posi .hover_active .info a img{ width: 100%; margin: 0 0 10px;}
+    .hover_con .hover_posi .hover_active .info a h6{ font-size: 1.2em; font-weight: 400; text-align: left;}
+    .hover_con .hover_posi .hover_active .info a h6 span{ font-weight: 500; color: #000;}
+
+    .hover_con .hover_posi.area01 .hover_btn{ top: 24%; left: 39%;}
+    .hover_con .hover_posi.area01 .info{ top: 16%; right: 33%;}
+
+    .hover_con .hover_posi.area02 .hover_btn{ top: 66%; left: 57%;}
+    .hover_con .hover_posi.area02 .info{ top: 61%; left: 32%;}
+
+    .hover_con .hover_posi.area03 .hover_btn{ top: 18%; right: 54%;}
+    .hover_con .hover_posi.area03 .info{ top: 14%; right: 55.5%;}
+
+    .hover_con .hover_posi.area04 .hover_btn{ top: 12.5%; right: 64%;}
+    .hover_con .hover_posi.area04 .info{ top: 4%; right: 64%;}
+
+    .hover_con .hover_posi.area05 .hover_btn{ top: 60%; right: 78%;}
+    .hover_con .hover_posi.area05 .info{ top: 61%; right: 63%;}
+
+    .hover_con .hover_posi.area06 .hover_btn{ top: 74%; right: 20%;}
+    .hover_con .hover_posi.area06 .info{ top: 74.5%; right: 3%;}
+
+    .hover_con .hover_posi.area07 .hover_btn{ top: 84%; right: 30%;}
+    .hover_con .hover_posi.area07 .info{ top: 73.5%; right: 31%;}
+
+    .hover_con .hover_posi.area08 .hover_btn{ top: 7%; left: 42%;}
+    .hover_con .hover_posi.area08 .info{ top: -1%; right: 31%;}
+
+    .hover_con .hover_posi.area09 .hover_btn{ top: 22%; left: 20%;}
+    .hover_con .hover_posi.area09 .info{ top: 23%; left: 4%;}
+
+    .hover_con .hover_posi.area10 .hover_btn{ top: 26.5%; right: 25%;}
+    .hover_con .hover_posi.area10 .info{ top: 17%; right: 0%;}
+
+    .hover_con .hover_posi.area11 .hover_btn{ top: 40%; left: 46%;}
+    .hover_con .hover_posi.area11 .info{ top: 31%; right: 53%;}
+
+    .hover_con .hover_posi.area12 .hover_btn{ top: 68%; right: 42%;}
+    .hover_con .hover_posi.area12 .info{ top: 58%; right: 17%;}
+
+    .hover_con .hover_posi.area13 .hover_btn{ top: 80%; left: 41%;}
+    .hover_con .hover_posi.area13 .info{ top: 74%; left: 16%;}
+
+    .hover_con .hover_posi.area14 .hover_btn{ top: 14%; left: 53%;}
+    .hover_con .hover_posi.area14 .info{ top: 1%; left: 54%;}
+
+    .hover_con .hover_posi.area15 .hover_btn{ top: 61%; left: 30%;}
+    .hover_con .hover_posi.area15 .info{ top: 51%; left: 6%;}
+
+    .hover_con .hover_posi.area16 .hover_btn{ top: 67%; right: 18%;}
+    .hover_con .hover_posi.area16 .info{ top: 37%; right: 0%;}
+
+    .hover_con .hover_posi.area17 .hover_btn{ top: 74%; left: 57%;}
+    .hover_con .hover_posi.area17 .info{ top: 63%; left: 33%;}
+
+    .hover_con .hover_posi.area18 .hover_btn{ top: 10%; left: 43%;}
+    .hover_con .hover_posi.area18 .info{ top: 0%; left: 45%;}
+
+    .hover_con .hover_posi.area19 .hover_btn{ top: 73%; left: 54%;}
+    .hover_con .hover_posi.area19 .info{ top: 62%; left: 30%;}
+
+    /* 판매 예정 */
+    /* .hover_con .hover_posi.area18 .info,
+    .hover_con .hover_posi.area19 .info {pointer-events: none;}
+    .hover_con .hover_posi.area18 .info img,
+    .hover_con .hover_posi.area19 .info img{filter: brightness(0.4);}
+
+    .hover_con .hover_posi.area18 .info::after,
+    .hover_con .hover_posi.area19 .info::after {content: "판매 예정"; position: absolute; top: 38%; color: #fff; font-size: 18px; left: 50%; transform: translateX(-50%);}
+
+    #sub_12 .slidePdSwiper .swiper-wrapper .swiper-slide a {pointer-events: none;} */
+    /* 판매 예정 end */
+
+    #event{ padding: 50px 30px; text-align: center; color: #fff; background: #000;}
+    #event h2{ margin: 0 0 20px; }
+    #event h5{ margin: 0 0 30px; font-weight: 300; font-size: 20px;}
+    #event h6{ font-size: 2.0em; font-weight: 300;}
+    #event .event_con{ margin: 0 0 84px; border-top: 1px solid #fff; border-bottom: 1px solid #fff;}
+    #event .event_con .event_flex_con{ display: flex; align-items: center; padding: 32px 36px; border-bottom: 1px solid #747474;}
+    #event .event_con .event_flex_con:last-child{ border-bottom: none;}
+    #event .event_con h6{ margin: 0 auto 0 0; font-weight: 100;}
+    #event .event_con h4{}
+    #event .date_con{ margin: 43px 0 84px; text-align: center;}
+    #event .btn_ey{ width: 398px; height: 89px; margin: 0 auto; line-height: 89px; text-align: center; font-size: 2.6em; font-weight: 500; color: #fff; background: #494949; cursor: pointer;}
+
+    .tab_down > *{ margin: 0 0 12px; cursor: pointer; overflow: hidden; transition: all 300ms linear;}
+    .tab_down > * .ttl{ height: 35px; margin: 0; padding: 0 5px; line-height: 35px; font-size: 1.8em; font-weight: 400; color: #fff;}
+    .tab_down > * .conts{ padding: 10px 0; line-height: 1.65em; font-size: 1.6em; color: #fff;}
+
+    @media (max-width: 980px) {
+        .header_sh{ background-image: linear-gradient(rgba(0,0,0,.5) 0%, transparent 100%);}
+        .main_cont .brand_cont .brand_prd_box > div p{ width: 60px; height: 60px; line-height: 60px;}
+        .main_cont .brand_cont .brand_event .brand_sub{ font-size: 1.8em;}
+        /* .main_cont .brand_cont .brand_btn_con{ display: flex;} */
+        /* .main_cont .brand_cont .brand_btn_con > *{ width: 33.33%; margin: 0px 10px 0 0;} */
+        .main_cont .brand_cont .brand_btn_con > *:first-child{ margin-top: 20px;}
+        .main_cont .brand_cont .brand_btn_con > *:last-child{ margin: 0 0 60px !important;}
+        .main_cont .brand_cont .brand_btn_con > * .brand_btn{ width: 100%; margin: 0 0;}
+        .main_cont .brand_cont .brand_btn_con > * span{ display: none;}
+        .main_cont .brand_cont .brand_btn{ height: 120px; padding: 0 0; line-height: 120px; font-size: 2em;}
+        .main_cont .brand_cont .brand_btn_con .btn_group .btn_mg{ margin-left: -20px;}
+        .main_cont .brand_cont .brand_btn_con .btn_group .btn_mg .btn_flx > *{ margin: 20px 0 0 20px;}
+
+        .event_area{ background-position: center top; /*background-size: 1040px;*/}
+        .event_area .event_cont_sh{ display: flex; flex-direction: column;}
+        .event_area .event_cont_sh .txt_box_m{ padding-bottom: 0; order: 1;}
+        .event_area .event_cont_sh .txt_box_m .txt_02{ margin-bottom: 50px; font-size: 1.8em;}
+        .event_area .event_cont_sh .box_giftimg{ min-height: auto; margin: 50px 0 0; order: 3;}
+        .event_area .event_cont_sh .box_giftimg .giftimg_cont{ padding-bottom: 80px;}
+        .event_area .event_cont_sh .box_giftimg .giftimg_cont .giftimg{ width: 100%; padding: 0;}
+        .event_area .box_giftimg .giftimg_cont .giftimg img{ margin-bottom: 0;}
+        .event_area .box_giftimg .giftimg_cont .giftimg .gift_txt_sub{ top: 0; right: -10px;}
+        .event_area .event_cont_sh .caution_con{ margin-bottom: auto; order: 2;}
+
+        .autoSwiper .swiper-wrapper .swiper-slide img{ width: 100%; height: 100%; margin: 0 auto; object-fit: cover;}
+        
+        /* #visual{ height: calc(100vh - 106px);} */
+        #visual .text_con h1.rugged_ele{ bottom: 177px; left: 80px;}
+        #visual .text_con h1.house_ele{ bottom: 45px; right: 91px;}
+
+        .flow-text {font-size: 2rem; height: 60px; line-height: 60px; transform: translateY(40px);}
+
+        .sub_04_title h1{font-size: 6em; margin-top: -10px;}
+        #sub_04 .swiper-slide {margin-right: -10px!important;}
+        #sub_05 .sub_05_sticky .sticky_box {top: 200px;}
+        
+        .pd_title_con h4 {font-size: 1.75em;}
+
+        #sub_01 h5 {font-size: 26px;}
+        #sub_04 .comment h5 {font-size: 26px; width: 70%; margin: 0 auto; word-break: keep-all;}
+        #sub_08 .img_detail_01 {top: 300px;}
+        #sub_08 .img_detail_01 .pd02_model {top: 0.5%;}
+
+        #sub_06.title_con h3{ font-size: 2.6em;}
+
+        #sub_10 .pd_detail_con .hover_con .img_detail_01 {top: 200px;}
+
+        .hover_con .hover_posi .hover_active .info{ width: 460px;}
+        .hover_con .hover_posi .hover_active .info2{ width: 390px;}
+        .hover_con .hover_posi .hover_active .info a{ display: flex; align-items: center;}
+        .hover_con .hover_posi .hover_active .info a img{ width: 140px; margin: 0 10px 0 0;}
+        .hover_con .hover_posi .hover_active .info a h6{ font-size: 1.8em;}
+        .hover_con .hover_posi .hover_active a.hover_btn{ width: 25px; height: 25px;}
+        .hover_con .hover_posi .hover_active a.hover_btn::before{ width: 30px; margin-left: -15px}
+        .hover_con .hover_posi .hover_active a.hover_btn::after{ height: 30px; margin-top: -15px}
+
+        .hover_con .hover_posi.area01 .info {top: 2%; right: 19%;}
+        .hover_con .hover_posi.area02 .info {top: 68%; right: 24%;}
+        .hover_con .hover_posi.area03 .info {top: 6.5%; right: 36.5%;}
+        .hover_con .hover_posi.area04 .info {top: 14.5%; right: 40%;}
+        .hover_con .hover_posi.area05 .info {top: 62%; right: 40%;}
+        .hover_con .hover_posi.area06 .info {top: 53.5%; right: 4%;}
+        .hover_con .hover_posi.area07 .info {top: 74.5%; right: 33%;}
+        .hover_con .hover_posi.area08 .info {top: -11%; right: 23%;}
+        .hover_con .hover_posi.area09 .info {top: 24%; left: 0%;}
+        .hover_con .hover_posi.area10 .info {top: 8%; right: 0%;}
+        .hover_con .hover_posi.area11 .info {top: 42%; right: 30%;}
+        .hover_con .hover_posi.area12 .info {top: 50%; right: 3%;}
+        .hover_con .hover_posi.area13 .info {top: 82%; right: 6%;}
+        .hover_con .hover_posi.area14 .info {top: -10%; left: 36%;}
+        .hover_con .hover_posi.area15 .info {top: 64%; left: 1%;}
+        .hover_con .hover_posi.area16 .info {top: 43%; left: 44%;}
+        .hover_con .hover_posi.area17 .info {top: 76%; left: 33%;}
+        .hover_con .hover_posi.area18 .info {top: -14%; left: 17%;}
+        .hover_con .hover_posi.area19 .info {top: 75%; left: 19%;}
+
+        .tab_down > * .ttl{ padding: 0 5%;}
+        .tab_down > * .conts{ padding: 10px 5%; font-size: 1.7em;}
+
+        .pc_ele{ display: none;}
+
+        #event h5 {font-size: 28px;}
+
+        /* 판매 예정 */
+        /* .hover_con .hover_posi.area18 .info::after,
+        .hover_con .hover_posi.area19 .info::after {top: 46%; color: #fff; font-size: 24px; left: 12%; transform: translateX(0);} */
+        /* 판매 예정 end */
+    }
+</style>
+<!--본문시작-->
+<div class="header_sh">
+    <a href="/">
+        <h1 class="logo_m">
+            <span class="blind">4xr</span>
+            <img src="https://cdn-tgreen.bizhost.kr/tgreen09/2021/00/logo.png">
+        </h1>
+    </a>
+    <a href="#" class="btn-info">
+        <h1 class="info_m">
+            <span class="blind">brand_info</span>
+            <img src="https://cdn-tgreen.bizhost.kr/tgreen09/2021/00/cont.png">
+        </h1>
+    </a>
+</div>
+<div class="main_cont">
+    <!--왼쪽이벤트창-->
+    <div class="brand_cont">
+        <button type="button" class="btn-x">레이어닫기</button>
+        <div class="brand_txt">
+            <p class="txt_title">버닝카포네 24 Fall</p>
+            <p class="txt_sub">SENSUAL ARTWORK</p>
+            <p class="txt_ex"></p>
+        </div>
+        <div class="brand_prd_box mb20">
+            <div>
+                <a href="/shop/view.php?index_no=668833" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/event/img_event_prd02.jpg"></a>
+                <p>3명</p>
+            </div>
+        </div>
+        <div class="brand_event">
+            <div class="mb30">
+                <p class="brand_title mb10">Event 1.</p>
+                <p class="brand_sub">감상 댓글 작성, 적립금 1,000원 지급</p>
+                <br><br>
+                <p class="brand_title mb10">Event 2.</p>
+                <p class="brand_sub">댓글 추첨을 통해 3명에게 신상 제품 증정</p>
+				<br>
+                <p class="brand_sub">기간 | 2024.09.19(목) - 09.25(수)</p>
+                <p class="brand_sub">발표 | 2024.09.26(목)</p>
+				<br>
+				<br>
+            </div>
+        </div>
+        <div class="brand_btn_con">
+            <div class="btn_group">
+                <div class="btn_mg">
+                    <div class="btn_flx">
+                        <div class="brand_btn btn-reply-02">댓글</div>
+                        <a href="/bbs/read.php?index_no=19092&amp;boardid=lookbook" target="_blank">
+                            <div class="brand_btn">룩북</div>
+                        </a>
+                        <a href="/shop/brand_goods.php?brand=40" target="_blank">
+                            <div class="brand_btn">브랜드</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="event_area">
+        <button type="button" class="btn-x">레이어닫기</button>
+        <div class="event_cont_sh">
+            <div class="txt_box_m">
+                <p class="txt_01">showcase <br class="pc_ele">event</p>
+                <p class="txt_02">Event 1. 감상 댓글 작성, 적립금 1,000원 지급<br>
+                    Event 2. 댓글 추첨을 통해 3명에게 신상 제품 증정
+					<br><br>이벤트 기간 : 24.09.19(목) - 24.09.25(수)<br>당첨자 발표 : 24.09.26(목)
+                    <br><br>* 당첨을 축하 드립니다 *<br>김승* (kisec**)<br>강진* (rkdwlstj**)<br>이* (gurdl20**)<br>
+                </p>
+            </div>
+            <div class="box_giftimg">
+                <p class="giftimg_box">이벤트 상품</p>
+                <div class="giftimg_cont">
+                    <div class="giftimg">
+                        <div class="gift_txt_sub">3명</div>
+                        <a href="/shop/view.php?index_no=668833" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/event/img_event_prd.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="caution_con">
+                <div class="tab_down">
+                    <div>
+                        <h2 class="ttl">주의사항 ▼</h2>
+                        <div class="conts">
+                            - 이벤트 사은품은 추후 개별 통지후 지급됩니다.<br>
+                            - 법적, 윤리적 문제가 되는 댓글은 추첨 대상에서 제외합니다.<br>
+                            - 브랜드 사정에 따라 이벤트 제품과 다른 제품으로 제공될 수 있습니다.<br>
+                            - 이벤트 상품 수령 후 교환 및 환불은 불가능하며, 배송은 국내로 한정됩니다.<br>
+                            - 적립금은 상품 금액의 최대 7% 까지 사용 가능하며 보유 적립금은 1년 후 자동 소멸 됩니다.<br>
+                            - 보유 적립금은 1년 후 자동 소멸 됩니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--슬라이드시작-->
+    <div class="slide_cont">
+        <div id="wrap_sh">
+            <div id="visual" class="sections_ey loading">
+                <div class="swiper-container autoSwiper"> 
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase//burningcapone/24fall/top/top01.jpg" alt="버닝카포네 24fall 쇼케이스 메인 탑 이미지1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase//burningcapone/24fall/top/top02.jpg" alt="버닝카포네 24fall 쇼케이스 메인 탑 이미지2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase//burningcapone/24fall/top/top03.jpg" alt="버닝카포네 24fall 쇼케이스 메인 탑 이미지3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase//burningcapone/24fall/top/top04.jpg" alt="버닝카포네 24fall 쇼케이스 메인 탑 이미지4">
+                        </div>
+                    </div>  
+                </div>
+                <div class="text_con">
+                    <img class="main_text" src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/top/main_text.png" alt="burningcapone 타이포그래피">
+                    <img class="top_text" src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/top/top_text.png" alt="상단 top text">
+                </div>
+            </div>
+            <div id="sub_01" class="sections_ey">
+                <div class="sub_01_text">
+                    <h4>BURNING CAPONE</h4>
+                    <h5>버닝카포네의 24FW 시즌은 미래 지향적이며<br>
+                        복합적이고 입체적인 디자인을 담아보았습니다.</h5>
+                </div>
+                <video controls="" muted="" autoplay="" loop="" playsinline="" class="show_pc">
+                    <source src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24spring/vd/BURNINGCAPON_24ss_symbol.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="sub_02" class="sections_ey">
+                <div class="swiper-container autoSwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub02/img_sub02-01.jpg"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub02/img_sub02-02.jpg"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub02/img_sub02-03.jpg"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub02/img_sub02-04.jpg"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub02/img_sub02-05.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="sub_04" class="sections_ey">
+                <div class="sub_04_title">
+                    <h1>SENSUAL ARTWORK</h1>  
+                </div>
+                <div class="swiper-container slideSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub04/img_sub04_slide01.jpg"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub04/img_sub04_slide02.jpg"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub04/img_sub04_slide03.jpg"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub04/img_sub04_slide04.jpg"></div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <h5>
+                        빈티지 감성과 감각적인 아트웍으로 스트릿과 레트로 매력을 강조했습니다.<br>
+                        자유롭고 편안한 일상을 표현한 상품들을 지금 바로 만나보세요.
+                    </h5>
+                </div>
+            </div>
+            <div id="sub_05" class="sections_ey">
+                <div class="sub_05_sticky wait_scroll">
+                    <div class="show_trigger"></div>
+                    <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub05/img_sub05_bg.jpg" alt="" class="sticky_box">
+
+                    <div class="fade_img">
+                        <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub05/img_sub05_01.jpg" class="img_detail_01">
+                        <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub05/img_sub05_02.jpg" class="img_detail_02">
+                        <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/sub/sub05/img_sub05_03.jpg" class="img_detail_03">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 제품1 BC Windbreaker-->
+            <div id="sub_07" class="sections_ey">
+                <div class="pd_main_title">
+                    <h2>BURNING CAPONE 24 FALL</h2>
+                    <h3>01 / 06</h3>
+                </div>
+
+                <div class="pd_main">
+                    <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd01/pd_main01.jpg" alt="BC Match Windbreaker 블랙">
+                </div>
+
+                <div class="pd_title_con wait_scroll">
+                    <div class="show_trigger"></div>
+                    <h3>BC Windbreaker</h3>
+                    <!-- <h4>Flavor Black / Match Black</h4> -->
+                </div>
+                <div class="swiper-container slidePdSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668724" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd01/pd_small02.jpg" alt="BC Flavor Windbreaker 블랙"><h6>Flavor</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668723" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd01/pd_small01.jpg" alt="BC Match Windbreaker"><h6>Match</h6></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pd_detail_con img_fade wait_scroll">
+                    <div class="show_trigger"></div>
+                    <div class="hover_con">
+                        <div class="img_detail_01">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd01/img_detail_01.png" alt="BC Windbreaker">
+                        </div>
+
+                        <div class="hover_posi area01">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=668723" target="_blank">
+                                        <img src="https://cdn-tgreen.bizhost.kr/files/goods/668723/1724227246_0.webp" alt="BC Match Windbreaker 블랙 상품페이지 연결">
+                                        <h6>BC Match<br> Windbreaker 블랙<br><span>99,000원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hover_posi area02">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=668724" target="_blank">
+                                        <img src="https://cdn-tgreen.bizhost.kr/files/goods/668724/1725437041_0.webp" alt="BC Flavor Windbreaker 블랙 상품페이지 연결">
+                                        <h6>BC Flavor<br> Windbreaker 블랙<br><span>99,000원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 제품2 BC Tornado Sweatshirt -->
+            <div id="sub_08" class="sections_ey">
+                <div class="pd_main_title">
+                    <h2>BURNING CAPONE 24 FALL</h2>
+                    <h3>02 / 06</h3>
+                </div>
+                <div class="swiper-container autoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd02/pd_main01.jpg" alt="BC Tornado Sweatshirt"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd02/pd_main02.jpg" alt="BC Tornado Sweatshirt"></div>
+                    </div>
+                </div>
+                <div class="pd_title_con wait_scroll">
+                    <div class="show_trigger"></div>
+                    <h3>BC Tornado Sweatshirt</h3>
+                    <!-- <h4>White Melange / Brown / Charcoal / Black</h4> -->
+                </div>
+                <div class="swiper-container slidePdSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668829" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd02/pd_small01.jpg" alt="BC Tornado Sweatshirt-White Melange"><h6>White Melange</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668826" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd02/pd_small02.jpg" alt="BC Tornado Sweatshirt-Black"><h6>Black</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668828" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd02/pd_small03.jpg" alt="BC Tornado Sweatshirt-Brown"><h6>Brown</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668827" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd02/pd_small04.jpg" alt="BC Tornado Sweatshirt-Charcoal"><h6>Charcoal</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pd_detail_con img_fade wait_scroll">
+                    <div class="show_trigger"></div>
+                    <div class="hover_con">
+                        <div class="img_detail_01">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd02/img_detail_01.png" alt="">
+                        </div>
+    
+                        <div class="hover_posi area04">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=668827" target="_blank">
+                                        <img src="	https://cdn-tgreen.bizhost.kr/files/goods/668827/1724918508_0.webp" alt="BC Tornado Sweatshirt 챠콜 상품페이지 연결">
+                                        <h6>BC Tornado<br> Sweatshirt 챠콜<br><span>58,500원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="hover_posi area05">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=668829" target="_blank">
+                                        <img src="https://cdn-tgreen.bizhost.kr/files/goods/668829/1724918633_0.webp" alt="BC Tornado Sweatshirt 백염 상품페이지 연결">
+                                        <h6>BC Tornado<br> Sweatshirt 백염<br><span>58,500원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="hover_posi area06">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=668828" target="_blank">
+                                        <img src="https://cdn-tgreen.bizhost.kr/files/goods/668828/1724918573_0.webp" alt="BC Tornado Sweatshirt 브라운 상품페이지 연결">
+                                        <h6>BC Tornado<br> Sweatshirt 브라운<br><span>58,500원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hover_posi area07">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=668631" target="_blank">
+                                        <img src="https://cdn-tgreen.bizhost.kr/files/goods/668631/1724227094_0.webp" alt="BC String Cargo Pants 챠콜 상품페이지 연결">
+                                        <h6>BC String Cargo<br> Pants 챠콜<br><span>69,500원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 제품3 BC Graphics Layered T-shirt -->
+            <div id="sub_09" class="sections_ey">
+                <div class="pd_main_title">
+                    <h2>BURNING CAPONE 24 FALL</h2>
+                    <h3>03 / 06</h3>
+                </div>
+                <div class="pd_main">
+                    <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd03/pd_main01.jpg" alt="BC Graphics Layered T-shirt">
+                </div>
+                <div class="pd_title_con wait_scroll">
+                    <div class="show_trigger"></div>
+                    <h3>BC Graphics<br> Layered T-shirt</h3>
+                    <!-- <h4>charcoal / black / white / khaki</h4> -->
+                </div>
+                <div class="swiper-container slidePdSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=669242" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd03/pd_small02.jpg" alt="BC Graphics Layered T-shirt-black"><h6>black</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=669244" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd03/pd_small01.jpg" alt="BC Graphics Layered T-shirt-charcoal"><h6>charcoal</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=669243" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd03/pd_small03.jpg" alt="BC Graphics Layered T-shirt-white"><h6>white</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=669245" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd03/pd_small04.jpg" alt="BC Graphics Layered T-shirt-khaki"><h6>khaki</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pd_detail_con">
+                    <div class="hover_con">
+                        <div class="img_detail_01">
+                            <div class="swiper-container swiper_01">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd03/img_detail_01-1.jpg" alt="BC Tornado Sweatshirt"></div>
+                                    <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd03/img_detail_01-2.jpg" alt="BC Tornado Sweatshirt"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 제품4 BC Camo Incision Pants -->
+            <div id="sub_10" class="sections_ey">
+                <div class="pd_main_title">
+                    <h2>BURNING CAPONE 24 FALL</h2>
+                    <h3>04 / 06</h3>
+                </div>
+                <div class="swiper-container autoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd04/pd_main01.jpg" alt="BC Camo Incision Pants"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd04/pd_main02.jpg" alt="BC Camo Incision Pants"></div>
+                    </div>
+                </div>
+                <div class="pd_title_con wait_scroll">
+                    <div class="show_trigger"></div>
+                    <h3>BC Camo Incision Pants</h3>
+                    <!-- <h4>khaki / charcoal / beige</h4> -->
+                </div>
+                <div class="swiper-container slidePdSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=669239" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd04/pd_small01.jpg" alt="BC Camo Incision Pants-khaki"><h6>khaki</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=669240" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd04/pd_small02.jpg" alt="BC Camo Incision Pants-charcoal"><h6>charcoal</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=669238" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd04/pd_small03.jpg" alt="BC Camo Incision Pants-beige"><h6>beige</h6></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pd_detail_con">
+                    <div class="show_trigger"></div>
+                    <div class="hover_con">
+                        <div class="img_detail_01">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd04/img_detail_01.jpg" alt="BC 인서트 이미지">
+                        </div>
+                        <div class="img_detail_02">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd04/img_detail_02.png" alt="BC Patch Shirt Jacket">
+
+                            <div class="hover_posi area08">
+                                <div class="hover_active">
+                                    <a class="hover_btn"></a>
+                                    <div class="info info2">
+                                        <a href="/shop/view.php?index_no=669236" target="_blank">
+                                            <img src="https://cdn-tgreen.bizhost.kr/files/goods/669236/1725259476_0.webp" alt="BC Patch Shirt Jacket 베이지 상품페이지 연결">
+                                            <h6>BC Patch Shirt<br> Jacket 베이지<br><span>79,500원</span></h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hover_posi area09">
+                                <div class="hover_active">
+                                    <a class="hover_btn"></a>
+                                    <div class="info info2">
+                                        <a href="/shop/view.php?index_no=669238" target="_blank">
+                                            <img src="https://cdn-tgreen.bizhost.kr/files/goods/669238/1725258593_0.webp" alt="BC Camo Incision Pants 베이지 상품페이지 연결">
+                                            <h6>BC Camo Incision<br> Pants 베이지<br><span>79,500원</span></h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hover_posi area10">
+                                <div class="hover_active">
+                                    <a class="hover_btn"></a>
+                                    <div class="info info2">
+                                        <a href="/shop/view.php?index_no=669635" target="_blank">
+                                            <img src="https://cdn-tgreen.bizhost.kr/files/goods/669635/1725511429_0.webp" alt="BC CREATE Hoodie Anorak 카키베이지 상품페이지 연결">
+                                            <h6>BC CREATE Hoodie<br> Anorak 카키베이지<br><span>74,500원</span></h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hover_posi area12">
+                                <div class="hover_active">
+                                    <a class="hover_btn"></a>
+                                    <div class="info info2">
+                                        <a href="/shop/view.php?index_no=668775" target="_blank">
+                                            <img src="	https://cdn-tgreen.bizhost.kr/files/goods/668775/1725436865_0.webp" alt="BC Line Hoodie Anorak 브라운 상품페이지 연결">
+                                            <h6>BC Line Hoodie<br> Anorak 브라운<br><span>89,500원</span></h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hover_posi area13">
+                                <div class="hover_active">
+                                    <a class="hover_btn"></a>
+                                    <div class="info info2">
+                                        <a href="/shop/view.php?index_no=669239" target="_blank">
+                                            <img src="https://cdn-tgreen.bizhost.kr/files/goods/669239/1725258647_0.webp" alt="BC Camo Incision Pants 카키 상품페이지 연결">
+                                            <h6>BC Camo Incision<br> Pants 카키<br><span>79,500원</span></h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 제품5 BC Track Cargo Pants -->
+            <div id="sub_11" class="sections_ey">
+                <div class="pd_main_title">
+                    <h2>BURNING CAPONE 24 FALL</h2>
+                    <h3>05 / 06</h3>
+                </div>
+                <div class="pd_main">
+                    <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd05/pd_main01.jpg" alt="BC Track Cargo Pants">
+                </div>
+                <div class="pd_title_con wait_scroll">
+                    <div class="show_trigger"></div>
+                    <h3>BC Track Cargo Pants</h3>
+                    <!-- <h4>black / navy</h4> -->
+                </div>
+                <div class="swiper-container slidePdSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668239" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd05/pd_small01.jpg" alt="BC Track Cargo Pants-black"><h6>black</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668240" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd05/pd_small02.jpg" alt="BC Track Cargo Pants-navy"><h6>navy</h6></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pd_detail_con img_fade wait_scroll">
+                    <div class="show_trigger"></div>
+                    <div class="hover_con">
+                        <div class="img_detail_01">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd05/img_detail_01.png" alt="BC Match Windbreaker">
+                        </div>
+
+                        <div class="hover_posi area14">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=669619" target="_blank">
+                                        <img src="https://cdn-tgreen.bizhost.kr/files/goods/669619/1725414378_0.webp" alt="BC Front Nylon Anorak 블랙 상품페이지 연결">
+                                        <h6>BC Front Nylon<br> Anorak 블랙<br><span>59,500원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hover_posi area15">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=668239" target="_blank">
+                                        <img src="https://cdn-tgreen.bizhost.kr/files/goods/668239/1724136841_0.webp" alt="BC Track Cargo Pants 블랙 상품페이지 연결">
+                                        <h6>BC Track Cargo<br> Pants 블랙<br><span>59,500원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hover_posi area16">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=669625" target="_blank">
+                                        <img src="https://cdn-tgreen.bizhost.kr/files/goods/669625/1725414469_0.webp" alt="BC Front Nylon Anorak 네이비 상품페이지 연결">
+                                        <h6>BC Front Nylon<br> Anorak 네이비<br><span>59,500원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hover_posi area17">
+                            <div class="hover_active">
+                                <a class="hover_btn"></a>
+                                <div class="info info2">
+                                    <a href="/shop/view.php?index_no=668240" target="_blank">
+                                        <img src="https://cdn-tgreen.bizhost.kr/files/goods/668240/1724136948_0.webp" alt="BC Track Cargo Pants 네이비 상품페이지 연결">
+                                        <h6>BC Track Cargo<br> Pants 네이비<br><span>59,500원</span></h6>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 제품6 BC Vintage Crack Hoodie -->
+            <div id="sub_12" class="sections_ey">
+                <div class="pd_main_title">
+                    <h2>BURNING CAPONE 24 FALL</h2>
+                    <h3>06 / 06</h3>
+                </div>
+                <div class="swiper-container autoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd06/pd_main01.jpg" alt="BC Vintage Crack Hoodie"></div>
+                        <div class="swiper-slide"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd06/pd_main02.jpg" alt="BC Vintage Crack Hoodie"></div>
+                    </div>
+                </div>
+                <div class="pd_title_con wait_scroll">
+                    <div class="show_trigger"></div>
+                    <h3>BC Vintage Crack Hoodie</h3>
+                    <!-- <h4>charcoal / deep khaki</h4> -->
+                </div>
+                <div class="swiper-container slidePdSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668974" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd06/pd_small01.jpg" alt="BC Vintage Crack Hoodie"><h6>charcoal</h6></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="/shop/view.php?index_no=668975" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd06/pd_small02.jpg" alt="BC Vintage Crack Hoodie"><h6>deep khaki</h6></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pd_detail_con">
+                    <div class="show_trigger"></div>
+                    <div class="hover_con">
+                        <div class="img_detail_01">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd06/img_detail_01.png" alt="BC Match Windbreaker">
+                        </div>
+                        <div class="img_detail_02">
+                            <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd06/img_detail_02.png" alt="BC Match Windbreaker">
+
+                            <div class="hover_posi area18">
+                                <div class="hover_active">
+                                    <a class="hover_btn"></a>
+                                    <div class="info info2">
+                                        <a href="/shop/view.php?index_no=668975" target="_blank">
+                                            <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd06/pd_thumb02.jpg" alt="BC Vintage Crack Hoodie 딥카키 상품페이지 연결">
+                                            <h6>BC Vintage Crack Hoodie 딥카키<br><span>69,500원</span></h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hover_posi area19">
+                                <div class="hover_active">
+                                    <a class="hover_btn"></a>
+                                    <div class="info info2">
+                                        <a href="/shop/view.php?index_no=668974" target="_blank">
+                                            <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd06/pd_thumb01.jpg" alt="BC Vintage Crack Hoodie 챠콜 상품페이지 연결">
+                                            <h6>BC Vintage Crack Hoodie 챠콜<br><span>69,500원</span></h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/pd/pd06/img_detail_03.jpg">
+                </div>
+            </div>
+
+            <div id="event" class="sections_ey">
+                <h2>event</h2>
+                <h5>버닝카포네 24FALL 쇼케이스가 오픈 되었습니다.<br>컬렉션을 보신 후 댓글로 감상평을 남겨주세요.</h5>
+                <div class="event_con">
+                    <div class="event_flex_con">
+                        <h6>event 1</h6>
+                        <h4>감상 댓글 작성, 적립금 1,000원 지급</h4>
+                    </div>
+                    <div class="event_flex_con">
+                        <h6>event 2</h6>
+                        <h4>댓글 추첨을 통해 3명에게 신상 제품 증정</h4>
+                    </div>
+                </div>
+                <a href="/shop/view.php?index_no=668833" target="_blank"><img src="https://cdn-tgreen.bizhost.kr/showcase/burningcapone/24fall/event/img_event_prd.png"></a>
+                <div class="date_con">
+                    <h6>기간 : 24.09.19(목) - 24.09.25(수)<br>발표 : 24.09.26(목)</h6>
+                </div>
+                <div class="btn_ey btn-reply-02">댓글 달러가기</div>
+            </div>
+        </div>
+     </div>
+</div>
+
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+<script>
+    // AOS.init({
+    //     container: ".slide_cont"
+    // });
+
+    $(function(){
+        $('.slide_cont').on('scroll', function(){
+            var wait_Scroll = $('.wait_scroll');
+            wait_Scroll.each(function(idx, val){
+                var scroll_offset = $(this).offset().top - 500;
+                var trigger_parent = $(this).find('.show_trigger').parent();
+
+                if(scroll_offset <= 0){
+                    trigger_parent.addClass('active');
+                } else {
+                    trigger_parent.removeClass('active');
+                }
+            });
+        });
+    });
+    
+    autoSwiper();
+    autoSwiper2();
+    //autoSwiper3();
+    slideSwiper();
+
+    var $ttl_h = $(".tab_down > div .ttl").outerHeight();
+
+    if($(window).width() < 760){
+        $(".tab_down > div").addClass("on");   
+        $(".tab_down > div").height(347);
+    } else {
+        $(".tab_down > div").height($ttl_h + 3);
+    }
+    $(".tab_down > div").on("click", function(){
+        if($(this).hasClass("on")){
+            $(this).removeClass("on");
+            $(this).height($ttl_h + 3);
+        } else {
+            $(this).addClass("on");
+            $(this).height($ttl_h + $(this).find(".conts").outerHeight());
+        }
+    });
+    
+    window.addEventListener("DOMContentLoaded", function(){
+        let visual = document.getElementById("visual");
+        visual.classList.remove("loading");
+    });
+
+    const h_info = document.querySelectorAll(".hover_posi .hover_active .info");
+    let arr_info = Array.from(h_info);
+    arr_info.forEach((ele, idx, array) => {
+        array[idx].parentElement.onmouseover = function(){ mouseOver()};
+        array[idx].parentElement.onmouseout = function(){ mouseOut()};
+
+        function mouseOver(){
+            array[idx].classList.add("show");
+        }
+        function mouseOut(){
+            array[idx].classList.remove("show");
+        }
+    });
+
+    const Swiper_sub02 = new Swiper('.slideSwiper', {
+        slidesPerView: 1.5,
+        spaceBetween: 30,
+        centeredSlides: false,
+        loop: false,
+    });
+
+    function slideSwiper(){
+        const slide_Sw = document.getElementsByClassName("slidePdSwiper");
+        let arr_slide = Array.from(slide_Sw);
+        arr_slide.forEach((ele, idx, array) => {
+            array[idx].classList.add("slideIndx" + idx);
+
+            const Swiper_sub07 = new Swiper('.slideIndx' + idx, {
+                slidesPerView: 1.9,
+                centeredSlides: true,
+                loop: false,
+            });
+        });
+    }
+    
+    function autoSwiper(){
+        const auto_Sw = document.getElementsByClassName("autoSwiper");
+        let arr_slide = Array.from(auto_Sw);
+        arr_slide.forEach((ele, idx, array) => {
+            array[idx].classList.add("type" + idx);
+
+            const Swiper_sub01 = new Swiper( '.type' + idx, {
+                effect : 'fade',
+                loop : true,
+                autoplay: {
+                    delay: 1200,
+                },
+            });
+        });
+    }
+    function autoSwiper2(){
+        const auto_Sw2 = document.getElementsByClassName("autoSwiper2");
+        let arr_slide2 = Array.from(auto_Sw2);
+        arr_slide2.forEach((ele, idx, array) => {
+            array[idx].classList.add("kind" + idx);
+
+            const Swiper_sub02 = new Swiper( '.kind' + idx, {
+                effect : 'fade',
+                loop : true,
+                autoplay: {
+                    delay: 400,
+                },
+            });
+        });
+    }
+
+    var Swiper_01 = new Swiper ('.swiper_01', {
+        speed: 1000,
+        spacebetween: 0,
+        //effect : 'fade',
+        loop: true,
+        autoplay: { delay: 1000, disableOnInteraction: false, },
+
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    });
+
+    $(function(){
+        var count = 0;
+        var frame;
+        var autoPl = true;
+        var autoPlt;
+
+        function auto_slide() {
+            count++;
+            if (count % (60 * 7) === 0) {
+                screenStep++;
+                if (screenStep > 11) {
+                    screenStep = 0;
+                }
+
+                $.fn.fullpage.moveTo(screenStep);
+                count = 0;
+            }
+            frame = requestAnimationFrame(auto_slide);
+        }
+
+        function stop_slide() {
+            cancelAnimationFrame(frame);
+        }
+
+        $('.dots li, .list-items li').on('click', function () {
+            var thisCount1 = $(this).index() + 1;
+            if (autoPl) {
+                cancelAnimationFrame(frame);
+                clearTimeout(autoPlt);
+                autoPlt = setTimeout(function () {
+                    auto_slide();
+                }, 700);
+            }
+            $.fn.fullpage.moveTo(thisCount1);
+            $('.btn-x').trigger('click');
+
+        });
+
+        $('.page-control .btn-play').on('click', function (e) {
+            $(".page-control .btn-play").hide();
+            $(".page-control .btn-pause").css('display', 'block');
+            auto_slide();
+            autoPl = true;
+            return false;
+        });
+
+        $('.page-control .btn-pause').on('click', function (e) {
+            $(".page-control .btn-play").css('display', 'block');
+            $(".page-control .btn-pause").hide();
+            stop_slide();
+            autoPl = false;
+            return false;
+        });
+
+        $('.btn-sns').on('click', function (e) {
+            e.preventDefault();
+            $(".layer-sns").toggle();
+        });
+
+        $('.btn-x').on('click', function () {
+            $(this).parent().hide();
+        });
+
+        $('.btn-reply').on('click', function (e) {
+            e.preventDefault();
+            $(".layer-reply").is(":visible") ? $(".layer-reply").hide(0) : $(".layer-reply").show(0);
+        })
+
+        $('.btn-cont').on('click', function (e) {
+            e.preventDefault();
+            $(".layer-contents-list").is(":visible") ? $(".layer-contents-list").hide(0) : $(".layer-contents-list").show(0);
+        });
+    });
+
+    function bgmPlay() {
+        try {
+            document.getElementById("bgm01") && (document.getElementById("bgm01").play(), $(".bgm-sound").addClass('bgm_on').removeClass('bgm_off'));
+        } catch (e) { }
+    }
+
+    function bgmPause() {
+        try {
+            document.getElementById("bgm01") && (document.getElementById("bgm01").pause(), $(".bgm-sound").addClass('bgm_off').removeClass('bgm_on'));
+        } catch (e) { }
+    }
+
+    //쿠폰 유의사항
+    $(function(){
+        $('.notice_list .ttl span').on('click', function(){
+            $('.notice_list').toggleClass('on');
+        });
+    });
+    
+</script>

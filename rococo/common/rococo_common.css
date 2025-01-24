@@ -9,6 +9,7 @@
   }
 
 /* 모바일 css */
+html {scroll-behavior: smooth;}
 body::-webkit-scrollbar {display: none;}
 img {width: auto;}
 section {width: 95vw; margin: 0 auto;}

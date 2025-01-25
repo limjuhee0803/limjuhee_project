@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+.top_slide { display: flex; height: 100vh; padding: 2vw 0;}
+.top_slide .txt_section {padding:5vw; border-right: 1px solid var(--white); width: 45%;}
+.top_slide .txt_section h1 {font-size: 3.5rem;}
+
+.top_slide .best_pd {width: 55%; }
+.top_slide .best_pd .best_txt { display: flex; justify-content: space-between; margin-top: 50px; padding: 0 5vw 0 1vw;}
+
+.best_pd .marquee__group .marqueee_box {width: 350px;}
+.best_pd .marquee__group img {transition: 0.3s;}
+.best_pd .marquee__group img:hover {transform: scale(1.05);}
+
+/* .lookbook {position: sticky; top: 0;} */
+/* .lookbook_content {height: 85vh;}
+.lookbook_txt {display: flex; justify-content: space-between; align-items: end;}
+.lookbook_txt h2{font-size: 2rem;}
+.lookbook_txt h4{font-size: 0.8rem; color: #696969;}
+
+.lookbook_content .lt_lookbook {padding: 20px;}
+.lookbook_content .lt_lookbook, .lookbook_content .rt_lookbook {width: 50%;}
+.lookbook_content {flex-direction: row;} */
+
+/* pd_section */
+.pd_swiper {width: 40%; margin: 0 auto;}

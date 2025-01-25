@@ -41,3 +41,20 @@ function autoSwiper(){
         });
     });
 }
+
+//상품 스와이퍼
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3.5,
+    spaceBetween: 20,
+    slideToClickedSlide : true,
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 8.5,
+        spaceBetween: 20.
+      }
+  }
+});

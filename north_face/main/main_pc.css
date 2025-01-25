@@ -23,6 +23,11 @@
 
 .card {width: 850px; height: 85vh;}
 .rt_card {height: 240px;}
+.rt_card .arrow_circle {margin-left: 10%;}
+.rt_txt {border-left: 1px solid var(--white); margin-left: 3%; height: 100%; padding-left: 3%; display: flex; flex-direction: column; justify-content: center;}
+.rt_txt h4{font-size: 1rem; margin-bottom: 10px;}
+.rt_txt h5{font-size: 1.8rem; margin-bottom: 10px;}
+.rt_txt h6{font-size: 0.9rem; color: #696969;}
 
 /* pd_section */
 .pd_swiper {width: 40%; margin: 0 auto;}

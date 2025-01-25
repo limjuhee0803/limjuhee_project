@@ -21,5 +21,8 @@
 .lookbook_content .lt_lookbook, .lookbook_content .rt_lookbook {width: 50%;}
 .lookbook_content {flex-direction: row;} */
 
+.card {width: 850px; height: 85vh;}
+.rt_card {height: 240px;}
+
 /* pd_section */
 .pd_swiper {width: 40%; margin: 0 auto;}

@@ -19,7 +19,7 @@ img {width: 100%;}
 .best_pd .marquee { display: flex; overflow: hidden; user-select: none; gap: var(--gap);}
 .best_pd .marquee__group { flex-shrink: 0; display: flex; align-items: center; justify-content: space-around; gap: var(--gap); min-width: 100%; animation: scroll-x var(--duration) linear infinite; }
 .best_pd .marquee__group .marqueee_txt {display: flex; justify-content: space-between; margin-top: 15px; padding: 0 10px;}
-.best_pd .marquee__group .marqueee_txt h2{font-size: 0.8rem; color: #919191;}
+.best_pd .marquee__group .marqueee_txt h2{font-size: 0.8rem; color: #919191; width: 170px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .best_pd .marquee__group .marqueee_txt h3{font-size: 0.8rem; color: #ddd;}
 
 .best_pd .marquee__group .marqueee_box {background-color: rgba(255, 255, 255, 0.05); border: 1px solid var(--white); border-radius: 5%; width: 250px; padding: 30px 30px 20px;}

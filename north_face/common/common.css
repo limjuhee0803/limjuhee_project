@@ -25,6 +25,7 @@ img {width: auto;}
 .mo_blind {display: none;}
 
 .section {width: 90vw; margin: 0 auto;}
+.line {border-top: 1px solid var(--white_bg); width: 90%; margin: 0 auto;}
 
 .view_more { display: flex; justify-content: center; gap: 10px; font-size: 0.7rem; border: 1px solid var(--white); width: 110px; height: 30px; line-height: 30px; border-radius: 50px;  background-color: var(--white_bg); transition: 0.3s; position: relative; z-index: 5; font-family: var(--kr-font);}
 .view_more img { width: 18px; object-fit: contain; border: none!important;}
@@ -42,6 +43,6 @@ img {width: auto;}
   .view_more {font-size: 0.9rem; width: 140px; height: 40px; line-height: 40px;}
   .view_more img { width: 24px;}
 
-  .view_more:hover , .arrow_circle:hover {border-color: #fff;}
+  .view_more:hover , .arrow_circle:hover {border-color: #fff; background-color: #ffffff28;}
 
 }

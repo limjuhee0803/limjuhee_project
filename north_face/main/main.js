@@ -1,3 +1,18 @@
+//부드러운 스크롤
+/*
+const lenis = new Lenis({
+    duration: 2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  });
+  
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+*/
+  
+
 //카드 이펙트
 document.getElementById("cards").onmousemove = e => {
     for(const card of document.getElementsByClassName("card")) {
@@ -32,7 +47,7 @@ function autoSwiper(){
 //상품 스와이퍼
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 2.5,
-    spaceBetween: 20,
+    spaceBetween: 10,
     slideToClickedSlide : true,
     navigation:{
         nextEl:".swiper-button-next",

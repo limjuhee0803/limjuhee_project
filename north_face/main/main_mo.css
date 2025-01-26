@@ -8,11 +8,11 @@ img {width: 100%;}
 
 .top_slide {background: url(../images/top_slide_background.jpg) no-repeat 50% 50%;}
 .top_slide .best_pd {margin-top: 20px;}
-.top_slide .best_pd .best_txt { margin-top: 20px; padding: 0 5vw; padding-bottom: 50px;}
+.top_slide .best_pd .best_txt { margin-top: 20px; padding: 0 5vw; padding-bottom: 100px;}
 .top_slide .best_pd .best_txt .lt_txt{ }
 .top_slide .best_pd .best_txt .lt_txt h3{font-size: 1.2rem; }
 .top_slide .best_pd .best_txt .lt_txt h4{ font-size: 0.9rem; color: #919191; margin-top: 10px; line-height: 1.4; font-family: var(--kr-font);}
-.top_slide .view_more {margin-top: 20px;}
+.top_slide .view_more {margin-top: 20px; float: right;}
 
 
 /* 상품 슬라이드 */
@@ -22,7 +22,7 @@ img {width: 100%;}
 .best_pd .marquee__group .marqueee_txt h2{font-size: 0.8rem; color: #919191; width: 170px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .best_pd .marquee__group .marqueee_txt h3{font-size: 0.8rem; color: #ddd;}
 
-.best_pd .marquee__group .marqueee_box {background-color: rgba(255, 255, 255, 0.05); border: 1px solid var(--white); border-radius: 5%; width: 250px; padding: 30px 30px 20px;}
+.best_pd .marquee__group .marqueee_box {background-color: rgba(255, 255, 255, 0.05); border: 1px solid var(--white); border-radius: 5%; width: 200px; padding: 30px 30px 20px;}
 
 .best_pd .marquee__group img {width: 100%; margin: 0 auto; display: block;}
 .best_pd .wrapper { display: flex; flex-direction: column; gap: var(--gap); margin: auto; max-width: 100vw;}
@@ -56,7 +56,7 @@ grid-template-areas:
 .box3 {grid-area: box3;}
 .box4 {grid-area: box4;}
 
-.card { background-color: rgba(255, 255, 255, 0.1); border-radius: 10px; cursor: pointer; height: 60vh;
+.card { background-color: rgba(255, 255, 255, 0.1); border-radius: 10px; cursor: pointer; height: 500px;
  position: relative; width: 100%;}
 .rt_card {height: 27vh;}
 .card:hover::before { opacity: 1 }
@@ -79,7 +79,7 @@ grid-template-areas:
     ); z-index: 1;
 }
   
-.card > .card-content { background-color: var(--card-color); border-radius: inherit; display: flex; flex-direction: column; flex-grow: 1; inset: 1px; position: absolute; z-index: 2; padding: 20px;}
+.card > .card-content { background-color: var(--card-color); border-radius: inherit; display: flex; flex-direction: column; flex-grow: 1; inset: 1px; position: absolute; z-index: 5; padding: 20px;}
 .card > .card-content img {border: 1px solid #ffffff0e;}
 .card-image { align-items: center; display: flex; height: 140px; justify-content: center; overflow: hidden;}
 .card-info-wrapper { align-items: center; display: flex; flex-grow: 1; justify-content: flex-start; padding: 0px 20px;}
@@ -87,8 +87,8 @@ grid-template-areas:
   
 .rt_box li:nth-child(2){margin: 20px 0;}
 .lookbook_box .more_btn {display: flex; gap: 10px; justify-content: end; margin: 20px 0 0;}
-.lt_lookbook .main_lookbook {margin-bottom: 20px;}
-.lt_lookbook h3 { font-size: 1.2rem; margin: 20px 0 10px;}
+/* .lt_lookbook .main_lookbook {margin-bottom: 20px;} */
+.lt_lookbook h3 { font-size: 1.2rem; margin: 10px 0;}
 .lt_lookbook h4 { font-size: 0.9rem; color: #919191; line-height: 1.5; font-family: var(--kr-font);}
 .lt_lookbook .main_lookbook img {width: 100%; border-radius: 10px;}
 .rt_card .card-content {display: flex; flex-direction: row!important; align-items: center;}
@@ -103,8 +103,11 @@ grid-template-areas:
 .pd_like h2 {font-size: 1.4rem; }
 
 .pd_like .pd_like_swiper {margin: 30px 0 50px;}
-.pd_like .swiper-slide {padding: 2% 1.5%; border: 1px solid var(--white); border-radius: 20px; background-color: var(--white_bg);}
+
 .pd_like .siwper-slide img{}
 .pd_like .pd_txt { display: flex; justify-content: space-between; margin-top: 10px; font-family: var(--kr-font);}
-.pd_like .pd_txt h3 {font-size: 0.7rem; width: 120px; color: #ddd; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.pd_like .pd_txt h3 {font-size: 0.7rem; width: 160px; color: #ddd; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .pd_like .pd_txt h4 {font-size: 0.7rem; color: #919191;}
+
+.pd_like .swiper-button-next, .swiper-button-prev {display: none;}

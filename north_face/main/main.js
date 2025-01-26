@@ -1,17 +1,4 @@
-// 상품 무한 슬라이드
-/*
-const control = document.getElementById("direction-toggle");
-    const marquees = document.querySelectorAll(".marquee");
-    const wrapper = document.querySelector(".wrapper");
-
-    control.addEventListener("click", () => {
-    control.classList.toggle("toggle--vertical");
-    wrapper.classList.toggle("wrapper--vertical");
-    [...marquees].forEach((marquee) =>
-        marquee.classList.toggle("marquee--vertical")
-    );
-    });
-*/
+//카드 이펙트
 document.getElementById("cards").onmousemove = e => {
     for(const card of document.getElementsByClassName("card")) {
         const rect = card.getBoundingClientRect(),
@@ -36,7 +23,7 @@ function autoSwiper(){
             effect : 'fade',
             loop : true,
             autoplay: {
-                delay: 1200,
+                delay: 2000,
             },
         });
     });
@@ -44,7 +31,7 @@ function autoSwiper(){
 
 //상품 스와이퍼
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3.5,
+    slidesPerView: 2.5,
     spaceBetween: 20,
     slideToClickedSlide : true,
     navigation:{
@@ -53,7 +40,7 @@ var swiper = new Swiper(".mySwiper", {
     },
     breakpoints: {
       768: {
-        slidesPerView: 8.5,
+        slidesPerView: 7,
         spaceBetween: 20.
       }
   }

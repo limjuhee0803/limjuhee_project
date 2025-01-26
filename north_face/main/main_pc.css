@@ -11,16 +11,6 @@
 .best_pd .marquee__group img {transition: 0.3s;}
 .best_pd .marquee__group img:hover {transform: scale(1.05);}
 
-/* .lookbook {position: sticky; top: 0;} */
-/* .lookbook_content {height: 85vh;}
-.lookbook_txt {display: flex; justify-content: space-between; align-items: end;}
-.lookbook_txt h2{font-size: 2rem;}
-.lookbook_txt h4{font-size: 0.8rem; color: #696969;}
-
-.lookbook_content .lt_lookbook {padding: 20px;}
-.lookbook_content .lt_lookbook, .lookbook_content .rt_lookbook {width: 50%;}
-.lookbook_content {flex-direction: row;} */
-
 .card {width: 850px; height: 85vh;}
 .rt_card {height: 240px;}
 .rt_card .arrow_circle {margin-left: 10%;}

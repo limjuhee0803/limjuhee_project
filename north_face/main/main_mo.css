@@ -11,14 +11,14 @@ img {width: 100%;}
 .top_slide .best_pd .best_txt { margin-top: 20px; padding: 0 5vw; padding-bottom: 50px;}
 .top_slide .best_pd .best_txt .lt_txt{ }
 .top_slide .best_pd .best_txt .lt_txt h3{font-size: 1.2rem; }
-.top_slide .best_pd .best_txt .lt_txt h4{ font-size: 0.9rem; color: #919191; margin-top: 10px; line-height: 1.4;}
+.top_slide .best_pd .best_txt .lt_txt h4{ font-size: 0.9rem; color: #919191; margin-top: 10px; line-height: 1.4; font-family: var(--kr-font);}
 .top_slide .view_more {margin-top: 20px;}
 
 
 /* 상품 슬라이드 */
 .best_pd .marquee { display: flex; overflow: hidden; user-select: none; gap: var(--gap);}
 .best_pd .marquee__group { flex-shrink: 0; display: flex; align-items: center; justify-content: space-around; gap: var(--gap); min-width: 100%; animation: scroll-x var(--duration) linear infinite; }
-.best_pd .marquee__group .marqueee_txt {display: flex; justify-content: space-between; margin-top: 15px; padding: 0 10px;}
+.best_pd .marquee__group .marqueee_txt {display: flex; justify-content: space-between; margin-top: 15px; padding: 0 10px; font-family: var(--kr-font);}
 .best_pd .marquee__group .marqueee_txt h2{font-size: 0.8rem; color: #919191; width: 170px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .best_pd .marquee__group .marqueee_txt h3{font-size: 0.8rem; color: #ddd;}
 
@@ -89,7 +89,7 @@ grid-template-areas:
 .lookbook_box .more_btn {display: flex; gap: 10px; justify-content: end; margin: 20px 0 0;}
 .lt_lookbook .main_lookbook {margin-bottom: 20px;}
 .lt_lookbook h3 { font-size: 1.2rem; margin: 20px 0 10px;}
-.lt_lookbook h4 { font-size: 0.9rem; color: #919191; line-height: 1.5;}
+.lt_lookbook h4 { font-size: 0.9rem; color: #919191; line-height: 1.5; font-family: var(--kr-font);}
 .lt_lookbook .main_lookbook img {width: 100%; border-radius: 10px;}
 .rt_card .card-content {display: flex; flex-direction: row!important; align-items: center;}
 .rt_card img {width: 200px; border-radius: 10px;}
@@ -105,6 +105,6 @@ grid-template-areas:
 .pd_like .pd_like_swiper {margin: 30px 0 50px;}
 .pd_like .swiper-slide {padding: 2% 1.5%; border: 1px solid var(--white); border-radius: 20px; background-color: var(--white_bg);}
 .pd_like .siwper-slide img{}
-.pd_like .pd_txt { display: flex; justify-content: space-between; margin-top: 10px;}
+.pd_like .pd_txt { display: flex; justify-content: space-between; margin-top: 10px; font-family: var(--kr-font);}
 .pd_like .pd_txt h3 {font-size: 0.7rem; width: 120px; color: #ddd; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .pd_like .pd_txt h4 {font-size: 0.7rem; color: #919191;}

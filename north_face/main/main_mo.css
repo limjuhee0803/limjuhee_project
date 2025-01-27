@@ -130,11 +130,11 @@ grid-template-areas:
 }
 
 .lt_box01 {grid-area: lt_box01;}
-.lt_box01 .lt_box01_txt {position: absolute; top: 5%; left: 3%; z-index: 2; font-size: 2rem; line-height: 1.2;}
+.lt_box01 .lt_box01_txt {position: absolute; top: 50%; transform: translateY(-50%); left: 3%; z-index: 2; font-size: 2rem; line-height: 1.2;}
 .lt_box02 {grid-area: lt_box02;}
 .lt_box03 {grid-area: lt_box03;}
 
-.img_section .arrow_circle {position: absolute; right: 0 ; top: 50%; transform: translateY(-50%); right: 3%; z-index: 2;}
+.img_section .arrow_circle {position: absolute;  right: 20px; bottom: 20px; z-index: 2;}
 
 .img_section .img_box .rt_box {width: 100%;}
 .img_section .img_box .hover_img {object-fit: cover;}

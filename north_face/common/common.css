@@ -22,6 +22,13 @@ body::-webkit-scrollbar {display: none;}
 body {font-family: var(--en-font); background-color: #08090B; color: #fff; --framer-will-change-override: none}
 img {width: auto;}
 
+header {position: fixed; top: 0; width: 90%; margin: 0 auto; z-index: 10;}
+header .logo{}
+header .logo img{height: 40px; object-fit: contain;}
+header .menu{display: flex; border: 1px solid var(--white); background-color: var(--white_bg); border-radius: 10px; width: 100px; justify-content: center; text-align: center; align-items: center;}
+header .menu svg{}
+header .menu h2{font-family: var(--kr-font); margin-left: 10px;}
+
 .mo_blind {display: none;}
 
 .section {width: 90vw; margin: 0 auto;}

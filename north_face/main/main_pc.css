@@ -10,6 +10,7 @@
 .best_pd .marquee__group .marqueee_box {width: 350px;}
 .best_pd .marquee__group img {transition: 0.3s;}
 .best_pd .marquee__group img:hover {transform: scale(1.05);}
+.top_slide .best_pd .best_txt .lt_txt h3 {font-size: 1.2rem;}
 
 .card {width: 850px; height: 85vh;}
 .rt_card {height: 240px;}
@@ -21,6 +22,7 @@
 
 .lookbook {padding-bottom: 60px;}
 .lookbook_txt h2 {font-size: 2.5rem;}
+.lt_lookbook h3 {font-size: 1.2rem;}
 
 /* pd_section */
 .pd_swiper {width: 40%; margin: 0 auto;}
@@ -31,6 +33,7 @@
 .pd_like .swiper-slide:hover {transform: translateY(-10px);}
 .pd_like .swiper-button-next, .swiper-button-prev {display: block; color: #fff; transform: scale(0.5);} 
 .pd_like .swiper-button-prev {}
+.pd_like h2 {font-size: 1.4rem; }
 
 /* img_section */
 .img_section .full_text{margin-bottom: 30px; height: auto;}

@@ -23,23 +23,23 @@ body {font-family: var(--en-font); background-color: #08090B; color: #fff; --fra
 img {width: auto;}
 
 header {position: fixed; top: 0; left: 50%; transform: translate(-50%); width: 95%; margin: 0 auto; z-index: 10; transition: 0.3s;}
-header .header_flex {display: flex; justify-content: space-between; align-items: center; height: 100px; line-height: 100px;}
+header .header_flex {display: flex; justify-content: space-between; align-items: center; height: 60px; line-height: 60px;}
 header .logo{}
-header .logo img{height: 40px;display: block; object-fit: contain; cursor: pointer;}
-header .menu_btn{display: flex; background-color: #323234; border-radius: 10px; width: 100px; justify-content: center; text-align: center; align-items: center; height: 40px; line-height: 40px; cursor: pointer;}
+header .logo img{height: 30px; display: block; object-fit: contain; cursor: pointer;}
+header .menu_btn{display: flex; background-color: #323234; border-radius: 10px; width: 100px; justify-content: center; text-align: center; align-items: center; height: 30px; line-height: 30px; cursor: pointer;}
 header .menu_btn svg{}
 header .menu_btn h2{font-family: var(--kr-font); margin-left: 10px;}
 
 /****** menu ******/
-.menu { width: 25vw; height: 100vh;position: fixed; right: -25vw; z-index: 5; border-left: 1px solid var(--white); transition: 0.4s; background-color: #08090B;}
+.menu { width: 45vw; height: 100vh;position: fixed; right: -45vw; z-index: 5; border-left: 1px solid var(--white); transition: 0.4s; background-color: #08090B;}
 .menu.change-menu { right: 0; }
 .menu menu {} 
 .menu menu li {}
 
-.contents {transition: 0.3s;}
+.contents {transition: 0.3s; width: 100%; overflow: hidden;}
 .contents.dark {filter: brightness(0.7);}
 
-.mo_blind {display: none;}
+.mo_blind {display: none!important;}
 
 .section {width: 90vw; margin: 0 auto;}
 .line {border-top: 1px solid var(--white_bg); width: 90%; margin: 0 auto;}
@@ -48,7 +48,7 @@ header .menu_btn h2{font-family: var(--kr-font); margin-left: 10px;}
 .wait_scroll.scroll_ey .fade_up{ opacity: 0; transform: translateY(100px);}
 .scroll_ey .fade_up{ opacity: 1; transform: translateX(0); transition: all 0.6s ease-in-out;}
 
-.view_more { display: flex; justify-content: center; gap: 10px; font-size: 0.7rem; border: 1px solid var(--white); width: 110px; height: 33px; line-height: 30px; border-radius: 50px;  background-color: var(--white_bg); transition: 0.3s; position: relative; z-index: 5; font-family: var(--kr-font);}
+.view_more { display: flex; justify-content: center; gap: 10px; font-size: 0.7rem; border: 1px solid var(--white); width: 110px; height: 33px; line-height: 30px; border-radius: 50px;  background-color: var(--white_bg); transition: 0.3s; position: relative; z-index: 5; font-family: var(--kr-font); align-items: center;}
 .view_more img { width: 18px; object-fit: contain; border: none!important;}
 
 .arrow_circle {width: 30px; height: 30px; border: 1px solid var(--white); background-color: var(--white_bg); border-radius: 50%; display: flex; justify-content: center; align-items: center; transition: 0.3s;}
@@ -56,10 +56,27 @@ header .menu_btn h2{font-family: var(--kr-font); margin-left: 10px;}
 
 .section {font-size: 2rem;}
 
+footer {font-family: var(--kr-font); padding: 5% 0 2%;}
+footer .flex_box { width: 90%; margin: 0 auto; display: flex; justify-content: center; align-items: start;}
+footer .flex_box img {width: 80px; object-fit: contain; }
+footer .flex_box h2 strong {margin-bottom: 20px; font-size: 0.9rem; color: #fff;}
+footer .flex_box h2 {font-size: 0.8rem; color: #919191;}
+.footer_box {display: flex; flex-direction: column; gap: 5px;}
+footer h3 {text-align: center; font-size: 0.6rem; margin: 20px 0 10px; color: #3b3b3b;}
+footer .logo_img {display: flex; gap: 15px; margin-top: 10px;}
+footer .logo_img img {height: 30px; width: 30px; object-fit: contain;}
+footer li {cursor: pointer;}
+
 /* pc css */
 @media (width >=1200px){
-  .mo_blind {display: block;}
+  .mo_blind {display: block!important;}
   .pc_blind {display: none;}
+
+  header .logo img {height: 40px;}
+  header .header_flex {height: 100px; line-height: 100px;}
+  header .menu_btn {height: 40px; line-height: 40px;}
+
+  .menu { width: 25vw; right: -25vw; } 
 
   .view_more {font-size: 0.9rem; width: 140px; height: 35px; line-height: 35px;}
   .view_more img { width: 24px;}
@@ -69,5 +86,8 @@ header .menu_btn h2{font-family: var(--kr-font); margin-left: 10px;}
   .arrow_circle {width: 40px; height: 40px;}
   .arrow_circle img {width: 14px!important;}
 
+  footer .flex_box {justify-content: space-between;}
+  footer .flex_box .footer_logo {width: 150px;}
 
+  footer h3 {font-size: 0.8rem; margin-top: 80px;}
 }

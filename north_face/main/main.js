@@ -76,7 +76,7 @@ document.getElementById("cards").onmousemove = e => {
         card.style.setProperty("--mouse-x", `${x}px`);
         card.style.setProperty("--mouse-y", `${y}px`);
     };
-    }
+}
     
 //상품 오토 스와이퍼
 autoSwiper();

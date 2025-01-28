@@ -94,7 +94,6 @@ grid-template-areas:
   
 
 /* pd_section */
-/* .pd_section { background: url(../images/pd_section_bg.jpg) no-repeat 50% 50% / cover; position: relative; border-top-left-radius: 20px; border-top-right-radius: 20px;} */
 .pd_section {position: relative; border-top-left-radius: 20px; border-top-right-radius: 20px;}
 .pd_swiper {width: 100%; margin: 0 auto; padding-top: 4%; cursor: pointer;}
 
@@ -119,7 +118,7 @@ grid-template-areas:
 
 .img_section .box {overflow: hidden; border-radius: 10px; border: 1px solid var(--white); position: relative;}
 
-.img_section .img_box {display: flex; flex-direction: column; margin-bottom: 200px; gap: 10px;}
+.img_section .img_box {display: flex; flex-direction: column; margin-bottom: 200px; gap: 10px; cursor: pointer;}
 .img_section .img_box .lt_box {width: 100%; display: grid;
   grid-template-rows: repeat(2/50%); grid-template-columns: repeat(3/33.3333%); gap: 10px;
 
@@ -158,6 +157,7 @@ footer .flex_box img {width: 150px; object-fit: contain; }
 footer .flex_box h2 strong {margin-bottom: 20px; font-size: 0.9rem; color: #fff;}
 footer .flex_box h2 {font-size: 0.8rem; color: #919191;}
 .footer_box {display: flex; flex-direction: column; gap: 5px;}
-footer h3 {text-align: center; font-size: 0.8rem; margin-top: 80px; color: #ddd;}
+footer h3 {text-align: center; font-size: 0.8rem; margin-top: 80px; color: #3b3b3b;}
 footer .logo_img {display: flex; gap: 15px; margin-top: 10px;}
 footer .logo_img img {height: 30px; width: 30px; object-fit: contain;}
+footer li {cursor: pointer;}

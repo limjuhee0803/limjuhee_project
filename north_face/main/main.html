@@ -11,8 +11,9 @@
   <meta property="og:title" content="north face redesign">
   <meta property="og:description" content="노스페이스 리디자인입니다.">
   <meta property="og:image" content="./main-portfolio/main-images/ux_design1.png">
-  <!-- <meta property="og:url" content="https://limjuhee0803.github.io/limjuhee-portfolio/index.html"> -->
+  <meta property="og:url" content="https://limjuhee0803.github.io/limjuhee_project/north_face/main/main.html">
 
+  <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
@@ -25,44 +26,56 @@
   <!-- 모바일 버전 -->
   <link rel="stylesheet" href="./main_mo.css">
 
-  <!-- tablet 버전 -->
-  <!-- <link rel="stylesheet" href="./main_tablet.css" media="(width >=768px)"> -->
-
   <!-- pc 버전-->
   <link rel="stylesheet" href="./main_pc.css" media="(width >=1200px)">
 
   <!-- script-->
   <script src="../../common/jquery-3.7.0.min.js"></script>
   <script src="../../common/swiper-bundle.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
   <!-- <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> -->
-
-
   <script src="./main.js"></script>
 </head>
 
 <body>
     <!-- header -->
     <header>
-        <div class="logo">
-            <img src="../images/wt_logo.png" alt="north face logo">
-        </div>
-
-        <div class="menu">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M160-269.23v-40h640v40H160ZM160-460v-40h640v40H160Zm0-190.77v-40h640v40H160Z"/></svg>
-            <h2>MENU</h2>
-        </div>
+        <div class="header_flex">
+            <div class="logo">
+                <img src="../images/wt_logo.png" alt="north face logo">
+            </div>
+    
+            <div class="menu_btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M160-269.23v-40h640v40H160ZM160-460v-40h640v40H160Zm0-190.77v-40h640v40H160Z"/></svg>
+                <h2>MENU</h2>
+            </div>
+        </div> 
     </header>
 
-  <!-- main top -->
+    <!-- menu -->
+    <div class="menu">
+        <menu>
+            <li><a href="../shop/shop.html">WEEKLY</a></li>
+            <li><a href="../shop/shop.html">ALL</a></li>
+            <li><a href="../shop/shop.html">OUTERWEAR</a></li>
+            <li><a href="../shop/shop.html">SETS</a></li>
+            <li><a href="../shop/shop.html">TOPS</a></li>
+            <li><a href="../shop/shop.html">BOTTOMS</a></li>
+            <li><a href="../shop/shop.html">DRESSES</a></li>
+            <li><a href="../shop/shop.html">ACCESSORIES</a></li>
+        </menu>
+    </div>
+
+    <div class="contents">
+    <!-- main top -->
     <div class="main_top">
-        <!-- <img src="../images/pc_background_test.jpg" alt="" class="mo_blind">
-        <img src="../images/mo_background_test.jpg" alt="" class="pc_blind"> -->
+        <img src="../images/pc_background_test.jpg" alt="" class="mo_blind">
+        <img src="../images/mo_background_test.jpg" alt="" class="pc_blind">
     </div>
 
     <!-- top_slide -->
-    <div class="top_slide">
-        <div class="txt_section mo_blind">
+    <div class="top_slide wait_scroll scroll_ey">
+        <div class="show_trigger"></div>
+        <div class="txt_section mo_blind fade_up">
             <h1>SUSTAINABLY-</h1>
             <h1>CONSCIOUS INSIDE</h1>
             <h1>AND OUT</h1>
@@ -206,13 +219,15 @@
     </div>
 
     <!-- lookbook -->
-    <div class="lookbook">
+    <div class="lookbook wait_scroll scroll_ey">
+        <div class="show_trigger"></div>
+
         <div class="lookbook_txt">
             <h2>NORTH FACE LOOKBOOK</h2>
             <h4 class="mo_blind">Winter Collection</h4>
         </div>
 
-        <div id="cards">
+        <div id="cards" class="fade_up">
             <div class="card box1">
               <div class="card-content">
                 <div class="lt_lookbook lookbook_box">
@@ -330,9 +345,10 @@
             </div>
         </div>
 
-        <div class="pd_like">
-            <h2>YOU MAY ALSO LIKE</h2>
-            <div class="pd_like_swiper">
+        <div class="pd_like wait_scroll scroll_ey">
+            <div class="show_trigger"></div>
+            <h2 class="fade_up">YOU MAY ALSO LIKE</h2>
+            <div class="pd_like_swiper fade_up">
                 <!-- 상품 -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
@@ -559,6 +575,8 @@
         
         <h3>©2025 Design & Published By Lim Juhee. All Rights Reserved.</h3>
     </footer>
+
+    </div>
 
     <script src="./main.js"></script>
 </body>

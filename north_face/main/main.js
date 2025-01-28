@@ -12,22 +12,6 @@ const lenis = new Lenis({
   requestAnimationFrame(raf);
 */
 
-//header
-/*
-let prevScroll = window.scrollY;
-
-$(window).on('scroll', () => {
-  let currentScroll = window.scrollY;
-
-  if (prevScroll > currentScroll) {
-    $('header').css({ top: 0 });
-  } else {
-    $('header').css({ top: -100 });
-  }
-  prevScroll = currentScroll;
-});
-*/
-
 //menu
 $('.menu_btn').on('click', () => {
     $('.menu').toggleClass('change-menu');

@@ -22,7 +22,7 @@ body::-webkit-scrollbar {display: none;}
 body {font-family: var(--en-font); background-color: #08090B; color: #fff; --framer-will-change-override: none}
 img {width: auto;}
 
-header {position: fixed; top: 0; left: 50%; transform: translate(-50%); width: 95%; margin: 0 auto; z-index: 5; transition: 0.3s;}
+header {position: fixed; top: 0; left: 50%; transform: translate(-50%); width: 95%; margin: 0 auto; z-index: 5; transition: 0.3s; background: linear-gradient(#000000b6, #00000000);}
 header .header_flex {display: flex; justify-content: space-between; align-items: center; height: 60px; line-height: 60px;}
 header .logo{}
 header .logo img{height: 30px; display: block; object-fit: contain; cursor: pointer;}
@@ -61,8 +61,8 @@ header .logo img{height: 30px; display: block; object-fit: contain; cursor: poin
 footer {font-family: var(--kr-font); padding: 5% 0 2%;}
 footer .flex_box { width: 90%; margin: 0 auto; display: flex; justify-content: center; align-items: start;}
 footer .flex_box img {width: 80px; object-fit: contain; }
-footer .flex_box h2 strong {margin-bottom: 20px; font-size: 0.9rem; color: #fff;}
-footer .flex_box h2 {font-size: 0.8rem; color: #919191;}
+footer .flex_box h2 strong {margin-bottom: 20px; font-size: 0.9rem; color: #c7c7c7;}
+footer .flex_box h2 {font-size: 0.8rem; color: #616161;}
 .footer_box {display: flex; flex-direction: column; gap: 5px;}
 footer h3 {text-align: center; font-size: 0.6rem; margin: 20px 0 10px; color: #3b3b3b;}
 footer .logo_img {display: flex; gap: 20px; margin-top: 10px;}

@@ -22,8 +22,8 @@ body::-webkit-scrollbar {display: none;}
 body {font-family: var(--en-font); background-color: #08090B; color: #fff; --framer-will-change-override: none}
 img {width: auto;}
 
-header {position: fixed; top: 0; left: 50%; transform: translate(-50%); width: 95%; margin: 0 auto; z-index: 5; transition: 0.3s; background: linear-gradient(#000000b6, #00000000);}
-header .header_flex {display: flex; justify-content: space-between; align-items: center; height: 60px; line-height: 60px;}
+header {position: fixed; top: 0; left: 50%; transform: translate(-50%); width: 100%; margin: 0 auto; z-index: 5; transition: 0.3s; background: linear-gradient(#000000b6, #00000000);}
+header .header_flex {display: flex; justify-content: space-between; align-items: center; height: 60px; line-height: 60px; width: 95%; margin: 0 auto;}
 header .logo{}
 header .logo img{height: 30px; display: block; object-fit: contain; cursor: pointer;}
 .menu_btn{display: flex; background-color: #323234; border-radius: 10px; width: 100px; justify-content: center; text-align: center; align-items: center; height: 30px; line-height: 30px; cursor: pointer;}

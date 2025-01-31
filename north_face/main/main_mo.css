@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* main_top */
-.main_top {width: 100%; overflow: hidden;}
+.main_top {height: 85vh; overflow: hidden;}
 .main_top img {width: 100%;}
 
 img {width: 100%;}

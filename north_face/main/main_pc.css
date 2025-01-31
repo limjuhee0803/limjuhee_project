@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.top_slide { display: flex; height: 100vh; padding: 2vw 0;}
+.top_slide { display: flex; height: 100vh; padding: 3vw 0;}
 .top_slide .txt_section {padding:5vw; border-right: 1px solid var(--white); width: 45%; height: 85vh;}
 .top_slide .txt_section h1 {font-size: 5rem;}
 

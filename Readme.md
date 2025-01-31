@@ -31,6 +31,14 @@
 #### 2. 스크롤 기반 애니메이션
 
 # **North Face Web Site Redisgn**
-- 로코코 시대의 미술을 감상할 수 있는 온라인 아트갤러리
+- 노스페이스 웹 페이지 리디자인 프로젝트
 - 2025년 디자인 / 제작
 ### https://limjuhee0803.github.io/limjuhee_project/north_face/main/main.html
+
+### Publishing
+#### 1. 오토 스와이퍼
+- 페이드 효과가 있는 스와이퍼를 적용하여 자연스러운 강조 효과를 사용함
+
+#### 2. 커서에 반응하는 박스
+- 룩북 영역에서 사용자의 클릭과 관심을 유도할 수 있게 적용함
+

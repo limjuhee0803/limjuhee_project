@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mouse_svg</title>
+
+  <style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f8f9fa;
+    margin: 0;
+    }
+
+    .face {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #ffcccc;
+    border-radius: 50%;
+    }
+
+    .eye {
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform-origin: center;
+    pointer-events: none;
+    transition: transform 0.05s linear;
+    }
+
+    .left-eye {
+    left: 40px;
+    }
+
+    .right-eye {
+    left: 120px;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="face">
+        <div class="eye left-eye"></div>
+        <div class="eye right-eye"></div>
+      </div>
+
+    <script>
+        const eyes = document.querySelectorAll(".eye");
+
+document.addEventListener("mousemove", (event) => {
+  eyes.forEach((eye) => {
+    const rect = eye.getBoundingClientRect();
+    const eyeX = rect.left + rect.width / 2;
+    const eyeY = rect.top + rect.height / 2;
+
+    const deltaX = event.clientX - eyeX;
+    const deltaY = event.clientY - eyeY;
+    const angle = Math.atan2(deltaY, deltaX);
+
+    // 눈동자 움직임 범위 제한
+    const moveX = Math.cos(angle) * 10;
+    const moveY = Math.sin(angle) * 10;
+
+    eye.style.transform = `translate(${moveX}px, ${moveY}px)`;
+  });
+});
+    </script>
+</body>
+
+</html>

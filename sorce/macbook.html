@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macbook Concept Portfolio</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            width: 100%;
+            gap: 4%;
+            justify-content: center;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 450px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            height: 500px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar ul li{
+            width: 100px;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        .sidebar ul li img {width: 60px; margin-bottom: 10px;}
+
+
+        .sidebar .tab {
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar .tab:hover {
+            background-color: #555;
+        }
+
+        .sidebar .tab.active {
+            background-color: #444;
+        }
+
+        /* Right Content Window */
+        .content-window {
+            /* flex-grow: 1; */
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 80vh;
+            width: 50%;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+        .content {
+            display: none;
+        }
+
+        #hobby-content {
+            display: block; /* Default content */
+        }
+
+        .content p {
+            font-size: 1.2em;
+        }
+
+        .content ul {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li class="tab active" id="hobby-tab">
+                    <img src="./image/folder.png" alt="folder">
+                    Hobby
+                </li>
+                <li class="tab" id="like-tab">
+                    <img src="./image/folder.png" alt="folder">
+                    Like
+                </li>
+                <li class="tab" id="personality-tab">
+                    <img src="./image/folder.png" alt="folder">
+                    Personality
+                </li>
+                <li class="tab" id="mbti-tab">
+                    <img src="./image/folder.png" alt="folder">
+                    MBTI
+                </li>
+                <li class="tab" id="qa-tab">
+                    <img src="./image/folder.png" alt="folder">
+                    Q&A
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Content Window -->
+        <div class="content-window">
+            <div id="hobby-content" class="content">
+                <h2>Hobbies</h2>
+                <p>I enjoy various activities in my free time. Here are some of my hobbies:</p>
+                <ul>
+                    <li>Fashion</li>
+                    <li>Beauty</li>
+                    <li>Photography</li>
+                    <li>Traveling</li>
+                </ul>
+
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+                <h1>folder</h1>
+            </div>
+
+            <div id="like-content" class="content">
+                <h2>Things I Like</h2>
+                <p>Some of the things that I truly enjoy are:</p>
+                <ul>
+                    <li>Creative expression</li>
+                    <li>Learning new technologies</li>
+                    <li>Exploring new places</li>
+                    <li>Reading books</li>
+                </ul>
+            </div>
+
+            <div id="personality-content" class="content">
+                <h2>Personality</h2>
+                <p>I have an ISTJ personality type. This means I am:</p>
+                <ul>
+                    <li>Detail-oriented</li>
+                    <li>Organized</li>
+                    <li>Logical and analytical</li>
+                    <li>Reliable and responsible</li>
+                </ul>
+            </div>
+
+            <div id="mbti-content" class="content">
+                <h2>MBTI</h2>
+                <p>My MBTI personality type is ISTJ, which stands for:</p>
+                <ul>
+                    <li>I: Introversion</li>
+                    <li>S: Sensing</li>
+                    <li>T: Thinking</li>
+                    <li>J: Judging</li>
+                </ul>
+            </div>
+
+            <div id="qa-content" class="content">
+                <h2>Q&A</h2>
+                <p>Here are some questions I often get asked:</p>
+                <ul>
+                    <li><strong>Q:</strong> What is your favorite book?</li>
+                    <li><strong>A:</strong> I love reading self-improvement books.</li>
+                    <li><strong>Q:</strong> How do you stay motivated?</li>
+                    <li><strong>A:</strong> By setting small achievable goals and staying organized.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to display the selected content
+        function showContent(tabId) {
+            // Hide all contents
+            const allContent = document.querySelectorAll('.content');
+            allContent.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Show the selected content
+            const selectedContent = document.getElementById(tabId);
+            selectedContent.style.display = 'block';
+
+            // Change the active state of the tabs
+            const allTabs = document.querySelectorAll('.tab');
+            allTabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId + '-tab').classList.add('active');
+        }
+
+        // Add event listeners to the tabs
+        document.getElementById('hobby-tab').addEventListener('click', function() {
+            showContent('hobby-content');
+        });
+        document.getElementById('like-tab').addEventListener('click', function() {
+            showContent('like-content');
+        });
+        document.getElementById('personality-tab').addEventListener('click', function() {
+            showContent('personality-content');
+        });
+        document.getElementById('mbti-tab').addEventListener('click', function() {
+            showContent('mbti-content');
+        });
+        document.getElementById('qa-tab').addEventListener('click', function() {
+            showContent('qa-content');
+        });
+    </script>
+
+</body>
+</html>

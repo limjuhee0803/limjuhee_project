@@ -214,35 +214,33 @@
         function showContent(tabId) {
             // Hide all contents
             const allContent = document.querySelectorAll('.content');
-            allContent.forEach(content => {
-                content.style.display = 'none';
-            });
+            allContent.forEach(content => content.style.display = 'none');
 
             // Show the selected content
-            const selectedContent = document.getElementById(tabId);
-            selectedContent.style.display = 'block';
+            const selectedContent = document.getElementById(tabId + '-content');
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
 
             // Change the active state of the tabs
             const allTabs = document.querySelectorAll('.tab');
             allTabs.forEach(tab => tab.classList.remove('active'));
-            document.getElementById(tabId + '-tab').classList.add('active');
+
+            const activeTab = document.getElementById(tabId + '-tab');
+            if (activeTab) {
+                activeTab.classList.add('active');
+            }
         }
 
         // Add event listeners to the tabs
-        document.getElementById('hobby-tab').addEventListener('click', function() {
-            showContent('hobby-content');
-        });
-        document.getElementById('like-tab').addEventListener('click', function() {
-            showContent('like-content');
-        });
-        document.getElementById('personality-tab').addEventListener('click', function() {
-            showContent('personality-content');
-        });
-        document.getElementById('mbti-tab').addEventListener('click', function() {
-            showContent('mbti-content');
-        });
-        document.getElementById('qa-tab').addEventListener('click', function() {
-            showContent('qa-content');
+        const tabIds = ['hobby', 'like', 'personality', 'mbti', 'qa'];
+        tabIds.forEach(tabId => {
+            const tabElement = document.getElementById(tabId + '-tab');
+            if (tabElement) {
+                tabElement.addEventListener('click', function () {
+                    showContent(tabId);
+                });
+            }
         });
     </script>
 

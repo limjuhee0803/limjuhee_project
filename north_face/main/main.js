@@ -1,16 +1,24 @@
 //부드러운 스크롤
-/*
-const lenis = new Lenis({
-    duration: 2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-  });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Lenis 초기화
+    if (!window.lenisInstance) {
+      const lenis = new Lenis({
+        duration: 4,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
   
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-*/
+      window.lenisInstance = lenis;
+  
+      // 애니메이션 프레임 연결
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+  
+      requestAnimationFrame(raf);
+    }
+  });
 
 //menu
 $('.menu_btn').on('click', () => {
@@ -51,6 +59,7 @@ $(function(){
 });
 
 //카드 이펙트
+/*
 document.getElementById("cards").onmousemove = e => {
     for(const card of document.getElementsByClassName("card")) {
         const rect = card.getBoundingClientRect(),
@@ -61,6 +70,26 @@ document.getElementById("cards").onmousemove = e => {
         card.style.setProperty("--mouse-y", `${y}px`);
     };
 }
+    */
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cardsElement = document.getElementById("cards");
+
+    if (cardsElement) {
+        cardsElement.onmousemove = e => {
+            for(const card of document.getElementsByClassName("card")) {
+                const rect = card.getBoundingClientRect(),
+                    x = e.clientX - rect.left,
+                    y = e.clientY - rect.top;
+
+                card.style.setProperty("--mouse-x", `${x}px`);
+                card.style.setProperty("--mouse-y", `${y}px`);
+            }
+        };
+    } else {
+        console.error('Element with id "cards" not found.');
+    }
+});
     
 //상품 오토 스와이퍼
 autoSwiper();

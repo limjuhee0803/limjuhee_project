@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Minimal Loading</title>
+    <style>
+        /* 기본 리셋 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;  /* 아이폰과 같은 밝은 배경 */
+            overflow: hidden;
+        }
+
+        /* 전체 로딩 화면 */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.15); /* 살짝 어두운 배경으로 분위기 조성 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 로딩 스피너 (아이폰 스타일) */
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 255, 255, 0.3); /* 밝은 회색 배경 */
+            border-top: 6px solid #007AFF; /* 아이폰 특유의 파란색 */
+            border-radius: 50%;
+            animation: spin 1.2s linear infinite; /* 부드러운 회전 애니메이션 */
+        }
+
+        /* 스피너 애니메이션 */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 로딩 완료 후 처리 */
+        .loaded .loading-screen {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* 메인 콘텐츠 스타일 */
+        #content {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 로딩 화면 -->
+    <div class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+    <div id="content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Enjoy exploring my work and creativity.</p>
+    </div>
+
+    <script>
+        // 페이지가 로드된 후 로딩 화면 숨기기
+        /*
+        window.addEventListener('load', function () {
+            setTimeout(function() {
+                document.body.classList.add('loaded');
+                document.getElementById('content').style.display = 'block'; // 콘텐츠 표시
+            }, 500); // 로딩 화면 표시 후 0.5초 뒤에 콘텐츠 표시
+        });
+        */
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macbook Concept Portfolio</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <style>
+        /* 기본적인 레이아웃 스타일 (PC와 모바일 공통) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            width: 100%;
+            gap: 4%;
+            justify-content: center;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 450px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            height: 500px;
+        }
+
+        /* Sidebar Slider (for mobile) */
+        .swiper-container {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .sidebar ul li {
+            width: 100px;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+
+        .sidebar ul li img {
+            width: 60px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .tab {
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar .tab.active {
+            background-color: #444;
+        }
+
+        /* Right Content Window */
+        .content-window {
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 80vh;
+            width: 50%;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+        .content {
+            display: none;
+        }
+
+        #hobby-content {
+            display: block; /* Default content */
+        }
+
+        .content p {
+            font-size: 1.2em;
+        }
+
+        .content ul {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        /* 모바일 스타일 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                overflow: hidden;
+            }
+
+            .content-window {
+                width: 100%;
+            }
+
+            /* 모바일에서 Swiper 적용 */
+            .swiper-container {
+                width: 100%;
+                padding-bottom: 20px;
+            }
+
+            .swiper-slide {
+                width: 40%; /* 2.5개 슬라이드 보여주기 */
+                text-align: center;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                flex-direction: column;
+            }
+
+            .swiper-slide img {
+                width: 70px;
+                margin-bottom: 10px;
+            }
+
+            .sidebar ul {
+                display: none; /* 모바일에서는 스와이퍼로 대체 */
+            }
+        }
+
+        /* PC 스타일 */
+        @media (min-width: 769px) {
+            .pc_blind {display: none;}
+
+            .container {
+                flex-direction: row;
+            }
+
+            .sidebar {
+                width: 400px;
+                height: 500px;
+            }
+
+            .content-window {
+                width: 50%;
+            }
+
+            /* PC에서는 기존 레이아웃 유지 */
+            .sidebar ul {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .sidebar ul li div {
+                display: flex; flex-direction: column; align-items: center; justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <!-- Swiper Container for Mobile -->
+            <div class="swiper-container pc_blind">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-content="hobby">
+                        <img src="./image/folder.png" alt="">
+                        Hobby
+                    </div>
+                    <div class="swiper-slide" data-content="like">
+                        <img src="./image/folder.png" alt="">
+                        Like
+                    </div>
+                    <div class="swiper-slide" data-content="personality">
+                        <img src="./image/folder.png" alt="">
+                        Personality
+                    </div>
+                    <div class="swiper-slide" data-content="mbti">
+                        <img src="./image/folder.png" alt="">
+                        MBTI
+                    </div>
+                    <div class="swiper-slide" data-content="qa">
+                        <img src="./image/folder.png" alt="">
+                        Q&A
+                    </div>
+                </div>
+            </div>
+
+            <!-- PC에서는 기존 리스트로 표시 -->
+            <ul>
+                <li><div class="tab" onclick="showContent('hobby')">
+                    <img src="./image/folder.png" alt="">
+                    Hobby</div>
+                </li>
+                <li><div class="tab" onclick="showContent('like')">
+                    <img src="./image/folder.png" alt="">
+                    Like</div>
+                </li>
+                <li><div class="tab" onclick="showContent('personality')">
+                    <img src="./image/folder.png" alt="">
+                    Personality</div>
+                </li>
+                <li><div class="tab" onclick="showContent('mbti')">
+                    <img src="./image/folder.png" alt="">
+                    MBTI</div>
+                </li>
+                <li><div class="tab" onclick="showContent('qa')">
+                    <img src="./image/folder.png" alt="">
+                    Q&A</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Content Window -->
+        <div class="content-window">
+            <div id="hobby-content" class="content">
+                <h2>Hobbies</h2>
+                <p>I enjoy various activities in my free time. Here are some of my hobbies:</p>
+                <ul>
+                    <li>Fashion</li>
+                    <li>Beauty</li>
+                    <li>Photography</li>
+                    <li>Traveling</li>
+                </ul>
+            </div>
+
+            <div id="like-content" class="content">
+                <h2>Things I Like</h2>
+                <p>Some of the things that I truly enjoy are:</p>
+                <ul>
+                    <li>Creative expression</li>
+                    <li>Learning new technologies</li>
+                    <li>Exploring new places</li>
+                    <li>Reading books</li>
+                </ul>
+            </div>
+
+            <div id="personality-content" class="content">
+                <h2>Personality</h2>
+                <p>I have an ISTJ personality type. This means I am:</p>
+                <ul>
+                    <li>Detail-oriented</li>
+                    <li>Organized</li>
+                    <li>Logical and analytical</li>
+                    <li>Reliable and responsible</li>
+                </ul>
+            </div>
+
+            <div id="mbti-content" class="content">
+                <h2>MBTI</h2>
+                <p>My MBTI personality type is ISTJ, which stands for:</p>
+                <ul>
+                    <li>I: Introversion</li>
+                    <li>S: Sensing</li>
+                    <li>T: Thinking</li>
+                    <li>J: Judging</li>
+                </ul>
+            </div>
+
+            <div id="qa-content" class="content">
+                <h2>Q&A</h2>
+                <p>Here are some questions I often get asked:</p>
+                <ul>
+                    <li><strong>Q:</strong> What is your favorite book?</li>
+                    <li><strong>A:</strong> I love reading self-improvement books.</li>
+                    <li><strong>Q:</strong> How do you stay motivated?</li>
+                    <li><strong>A:</strong> By setting small achievable goals and staying organized.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper for mobile
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3.5, // 2.5개 슬라이드 보여주기
+            spaceBetween: 10, // 슬라이드 간격
+        });
+
+        // Function to display the selected content
+        function showContent(tabId) {
+            // Hide all contents
+            const allContent = document.querySelectorAll('.content');
+            allContent.forEach(content => content.style.display = 'none');
+
+            // Show the selected content
+            const selectedContent = document.getElementById(tabId + '-content');
+            if (selectedContent) {
+                selectedContent.style.display = 'block';
+            }
+
+            // Change the active state of the tabs
+            const allTabs = document.querySelectorAll('.tab');
+            allTabs.forEach(tab => tab.classList.remove('active'));
+
+            const activeTab = document.querySelector(`[data-tab="${tabId}"]`);
+            if (activeTab) {
+                activeTab.classList.add('active');
+            }
+        }
+
+        // Function to handle swiper slide click
+        document.querySelectorAll('.swiper-slide').forEach(slide => {
+            slide.addEventListener('click', () => {
+                const contentId = slide.getAttribute('data-content');
+                showContent(contentId);
+            });
+        });
+
+        // Default content
+        showContent('hobby');
+    </script>
+</body>
+</html>

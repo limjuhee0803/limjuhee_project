@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Menu</title>
+    <style>
+        /* 기본 스타일 */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #f7f7f7;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background-color: transparent;
+            border: 2px solid #333;
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #333;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover,
+        .nav-btn.active {
+            background-color: #333;
+            color: white;
+        }
+
+        .nav-btn:focus {
+            outline: none;
+        }
+
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <button class="nav-btn" id="home">Home</button>
+            <button class="nav-btn" id="about">About</button>
+            <button class="nav-btn" id="work">Work</button>
+            <button class="nav-btn" id="process">Process</button>
+        </nav>
+    </header>
+
+    <script>
+        const buttons = document.querySelectorAll('.nav-btn');
+
+        // 클릭 이벤트 핸들러
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 모든 버튼에서 active 클래스 제거
+                buttons.forEach(btn => btn.classList.remove('active'));
+                // 클릭된 버튼에 active 클래스 추가
+                button.classList.add('active');
+            });
+        });
+
+        // 드래그 이벤트 핸들러
+        let isDragging = false;
+
+        buttons.forEach(button => {
+            button.addEventListener('mousedown', () => {
+                isDragging = true;
+                button.classList.add('active');
+            });
+
+            button.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            button.addEventListener('mouseleave', () => {
+                if (isDragging) {
+                    button.classList.add('active');
+                }
+            });
+
+            // 드래그 시작 위치 확인
+            button.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    // 버튼 위치로 드래그 방향 인식
+                    const rect = button.getBoundingClientRect();
+                    const isInButton = e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom;
+                    if (isInButton) {
+                        button.classList.add('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

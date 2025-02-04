@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Transition</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    .first_interface,
+    .main_interface {
+      width: 100vw; /* 부모 요소의 너비를 100vw로 설정 */
+      height: 100vh;
+      position: absolute;
+    }
+    .first_interface {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.8s ease-in-out;
+    }
+    .main_interface {
+      background: #fff;
+      transform: translateX(100%);
+      transition: transform 0.8s ease-in-out;
+    }
+    /* Sticky 요소 예시 */
+    .sticky-element {
+      position: sticky;
+      top: 0;
+      background: #ff0;
+      padding: 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="first_interface">
+    <p>Click to transition to the main interface</p>
+  </div>
+
+  <div class="main_interface">
+    <div class="sticky-element">
+      <h1>Welcome to the Main Interface</h1>
+    </div>
+    <p>Content continues...</p>
+  </div>
+
+  <script>
+    // 컨텐츠 전환 로직
+    const firstInterface = document.querySelector('.first_interface');
+    const mainInterface = document.querySelector('.main_interface');
+
+    // 첫 화면에서 클릭 이벤트 리스너 추가
+    firstInterface.addEventListener('click', () => {
+      firstInterface.style.transform = 'translateX(-100%)';
+      mainInterface.style.transform = 'translateX(0)';
+    });
+  </script>
+
+</body>
+</html>

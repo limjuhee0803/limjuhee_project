@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Fade Up</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 100vh;
+    }
+    .content {
+      margin: 100px 0 1500px; 
+      font-size: 5rem;
+      text-align: center;
+      height: 150px; /* 높이를 설정하여 화면을 넘지 않게 */
+    }
+
+    /* fade_up 애니메이션 */
+    .fade_up {
+      opacity: 0;
+      transform: translateY(80px); /* 요소가 화면 밖에서 더 멀리 시작하도록 */
+      transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); /* 애플처럼 부드럽고 자연스러운 타이밍 함수 */
+    }
+    .fade_up.visible {
+      opacity: 1;
+      transform: translateY(0); /* 최종 위치는 원래대로 */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content fade_up">
+    <p>This text will fade up when it reaches the viewport</p>
+  </div>
+  <div class="content fade_up">
+    <p>Another element that fades up on scroll</p>
+  </div>
+  <div class="content fade_up">
+    <p>More text that fades up when scrolled into view</p>
+  </div>
+  <div class="content">
+
+  </div>
+
+  <script>
+    // IntersectionObserver 설정
+    const fadeUpElements = document.querySelectorAll('.fade_up');
+  
+    const observerOptions = {
+      root: null, // viewport가 기준
+      rootMargin: '0px 0px -30% 0px', // 요소가 화면 중앙에 가까워지면 이벤트 발생
+      threshold: 0.1 // 요소가 10% 화면에 들어오면 이벤트 발생
+    };
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible'); // 요소가 화면에 보이면 visible 클래스 추가
+          observer.unobserve(entry.target); // 한 번만 동작하도록 설정
+        }
+      });
+    }, observerOptions);
+  
+    fadeUpElements.forEach(element => {
+      observer.observe(element); // 모든 fade_up 요소 관찰 시작
+    });
+  </script>
+  
+
+</body>
+</html>

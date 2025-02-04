@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Header Color Change</title>
+  <style>
+    /* 기본 스타일 */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 200vh;
+      background: linear-gradient(#ddd, #999); /* 배경 테스트용 */
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 20px;
+      background-color: transparent;
+      color: #2C2C2C;
+      font-size: 18px;
+      z-index: 999;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    .project {
+      height: 100vh;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .logo {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url('a_image.jpg') no-repeat center/contain;
+      transition: background-image 0.3s;
+    }
+
+    .scroll-active {
+      color: #fff;
+    }
+
+    .scroll-active .logo {
+      background: url('b_image.jpg') no-repeat center/contain;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"></div>
+    Header Text
+  </header>
+
+  <div class="content">
+    <p>Scroll down to see the effect...</p>
+  </div>
+
+  <div class="project">
+    <h1>Project Section</h1>
+  </div>
+
+  <script>
+    // 요소 선택
+    const header = document.querySelector('header');
+    const projectSection = document.querySelector('.project');
+    
+    // 헤더 색상 변경 함수
+    window.addEventListener('scroll', () => {
+      const projectTop = projectSection.getBoundingClientRect().top;
+
+      if (projectTop <= 0) {
+        header.classList.add('scroll-active');
+      } else {
+        header.classList.remove('scroll-active');
+      }
+    });
+  </script>
+
+</body>
+</html>

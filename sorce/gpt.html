@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Fade Up</title>
+  <style>
+    :root {
+        --kr-font: 'Spoqa Han Sans Neo', -apple-system, BlinkMacSystemFont, system-ui,
+        Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+        'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        sans-serif;
+        --en-font: "Inter", Arial, Helvetica, sans-serif;
+        --bk-font: rgba(44, 44, 44, 1);
+        --blue : rgba(33, 129, 250, 1);
+    }
+
+    body {font-family: var(--en-font);}
+    body::-webkit-scrollbar {display: none;}
+
+    /* fade_up 애니메이션 */
+    .fade_up {
+        opacity: 0;
+        transform: translateY(80px); /* 요소가 화면 밖에서 더 멀리 시작하도록 */
+        transition: opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); /* 애플처럼 부드럽고 자연스러운 타이밍 함수 */
+        }
+    .fade_up.visible {
+        opacity: 1;
+        transform: translateY(0); /* 최종 위치는 원래대로 */
+    }
+
+    /* header */
+    header { color: var(--bk-font); position: fixed; top: 0; z-index: 90; height: 50px; line-height: 50px; width: 100vw; transition: color 0.3s, background-color 0.3s;}
+    header .header_flex {width: 98%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;}
+    .time-container {display: flex; gap: 20px; font-size: 0.9rem;}
+    .status { width: 60px; height: 30px; background: url('../../asset/image/status_bk.png') no-repeat center/contain; transition: background-image 0.3s; }
+    .scroll-active { color: #fff; }
+    .scroll-active .status {background: url('../../asset/image/status_wt.png') no-repeat center/contain;}
+    
+
+    /* PC (1024px 이상) */
+    @media only screen and (min-width: 1024px) {
+        /* PC 전용 스타일 */
+        body {
+        
+        }
+    }
+    
+    /* Tablet (768px ~ 1023px) */
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        /* 태블릿 전용 스타일 */
+        body {
+        
+        }
+    }
+    
+    /* Mobile (최대 767px) */
+    @media only screen and (max-width: 767px) {
+        /* 모바일 전용 스타일 */
+        .mo_blind {display: none!important;}
+        body {
+        
+        }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 영역 -->
+  <header class="mo_blind">
+    <!-- 시간, 날짜 -->
+    <div class="header_flex">
+      <div class="time-container">
+        <div id="current-time" class="time"></div>
+        <div id="current-date" class="date"></div>
+      </div>
+  
+      <!-- 스테이터스바 -->
+      <div class="status_bar">
+        <div class="status">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 영역 -->
+  <main>
+    <!-- 인터페이스 -->
+    <div class="first_interface">
+    </div>
+
+
+    <!-- 본문 시작 -->
+    <div class="main_interface">
+
+      <div class="top_interface">
+        <div class="main_txt">
+          <h1 class="fade_up">HELLO IT'S MY</h1>
+          <h1 class="fade_up">DESIGN PORTFLIO</h1>
+        </div>
+      </div>
+
+      <!-- 어바웃 미 -->
+      <div class="about">
+        <h1 class="fade_up">About Me</h1>
+      </div>
+
+      <!-- 프로젝트 -->
+      <div class="project">
+        <h1>Project Section</h1>
+      </div>
+
+      <!-- 프로세스 -->
+    </div>
+  </main>
+
+  <!-- 푸터 영역 -->
+  <footer class="footer">
+  </footer>
+
+
+  <script>
+//부드러운 스크롤
+document.addEventListener("DOMContentLoaded", function () {
+    // Lenis 초기화
+    if (!window.lenisInstance) {
+      const lenis = new Lenis({
+        duration: 3,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
+  
+      window.lenisInstance = lenis;
+  
+      // 애니메이션 프레임 연결
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+  
+      requestAnimationFrame(raf);
+    }
+  });
+
+
+// time / date
+  function updateTimeAndDate() {
+    const now = new Date();
+
+    // Format time as AM/PM (12-hour format)
+    let hours = now.getHours();
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    let period = hours >= 12 ? '오후' : '오전';
+
+    // Convert 24-hour format to 12-hour format
+    hours = hours % 12;
+    hours = hours ? hours : 12;  // 0 becomes 12
+    const timeString = `${period} ${hours}:${minutes}`;
+
+    // Format date as Month Day Weekday
+    const months = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
+    const weekdays = ["일", "월", "화", "수", "목", "금", "토"];
+    const month = months[now.getMonth()];
+    const day = now.getDate();
+    const weekday = weekdays[now.getDay()];
+    const dateString = `${month} ${day}일 ${weekday}요일`;
+
+    // Update the HTML elements
+    document.getElementById("current-time").textContent = timeString;
+    document.getElementById("current-date").textContent = dateString;
+}
+
+// Update time and date every second
+setInterval(updateTimeAndDate, 1000);
+
+// Initialize immediately
+updateTimeAndDate();
+
+
+$(function() {
+  let ticking = false; // requestAnimationFrame을 중복 실행하지 않도록 관리
+  const windowHeight = $(window).height(); // 창의 높이 한번만 계산
+  const scrollTriggerOffset = 150; // 화면에 요소가 나타나기 위한 추가 오프셋
+
+  // 스크롤 이벤트 처리 함수
+  function onScroll() {
+      const scrollPos = window.scrollY; // 현재 스크롤 위치
+
+      $(".show_trigger").each(function() {
+          checkElementVisibility($(this), scrollPos, windowHeight);
+      });
+  }
+
+  // 요소가 화면에 보일 때 처리 함수
+  function checkElementVisibility($element, scrollPos, windowHeight) {
+      const elementOffsetTop = $element.offset().top; // 요소의 화면에서의 위치
+
+      // 스크롤이 해당 요소를 지나쳤을 때
+      if (scrollPos > elementOffsetTop - windowHeight + scrollTriggerOffset) {
+          $element.parent().removeClass("wait_scroll"); // 부모 요소에서 .wait_scroll 클래스 제거
+          $element.remove(); // 요소 삭제
+      }
+  }
+
+  // 스크롤 이벤트 리스너
+  $(window).on('scroll', function() {
+      if (!ticking) {
+          window.requestAnimationFrame(function() {
+              onScroll(); // 스크롤 이벤트 처리
+              ticking = false; // 처리 완료
+          });
+          ticking = true; // 처리 중
+      }
+  });
+});
+
+
+// IntersectionObserver 설정
+  const fadeUpElements = document.querySelectorAll('.fade_up');
+  
+  const observerOptions = {
+    root: null, // viewport가 기준
+    rootMargin: '0px 0px -30% 0px', // 요소가 화면 중앙에 가까워지면 이벤트 발생
+    threshold: 0.1 // 요소가 10% 화면에 들어오면 이벤트 발생
+  };
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible'); // 요소가 화면에 보이면 visible 클래스 추가
+        observer.unobserve(entry.target); // 한 번만 동작하도록 설정
+      }
+    });
+  }, observerOptions);
+  
+  fadeUpElements.forEach(element => {
+    observer.observe(element); // 모든 fade_up 요소 관찰 시작
+  });
+
+
+  // 컨텐츠 전환 로직
+const firstInterface = document.querySelector('.first_interface');
+const mainInterface = document.querySelector('.main_interface');
+
+// 첫 화면에서 클릭 이벤트 리스너 추가
+firstInterface.addEventListener('click', () => {
+  firstInterface.style.transform = 'translateX(-100%)';
+  mainInterface.style.transform = 'translateX(0)';
+});
+
+// 요소 선택
+const header = document.querySelector('header');
+const projectSection = document.querySelector('.project');
+    
+// 헤더 색상 변경 함수
+window.addEventListener('scroll', () => {
+  const projectTop = projectSection.getBoundingClientRect().top;
+
+  if (projectTop <= 0) {
+    header.classList.add('scroll-active');
+  } else {
+    header.classList.remove('scroll-active');
+  }
+});
+  </script>
+  
+
+</body>
+</html>

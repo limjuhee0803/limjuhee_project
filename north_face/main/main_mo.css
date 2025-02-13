@@ -6,7 +6,7 @@
 img {width: 100%;}
 
 .top_slide {background: url(../images/top_slide_background03.jpg) no-repeat 50% 50%;}
-.top_slide .best_pd {margin-top: 20px;}
+.top_slide .best_pd {margin-top: 80px;}
 .top_slide .best_pd .best_txt { margin-top: 20px; padding: 0 5vw; padding-bottom: 100px;}
 .top_slide .best_pd .best_txt .lt_txt{ }
 .top_slide .best_pd .best_txt .lt_txt h3{font-size: 1rem; }
@@ -87,7 +87,7 @@ grid-template-areas:
 .rt_box li:nth-child(2){margin: 20px 0;}
 .lookbook_box .more_btn {display: flex; gap: 10px; justify-content: end; margin: 20px 0 0;}
 .lt_lookbook h3 { font-size: 1rem; margin: 10px 0;}
-.lt_lookbook h4 { font-size: 0.9rem; color: #919191; line-height: 1.5; font-family: var(--kr-font);}
+.lt_lookbook h4 { font-size: 0.8rem; color: #919191; line-height: 1.5; font-family: var(--kr-font);}
 .lt_lookbook .main_lookbook img {width: 100%; border-radius: 10px;}
 .rt_card .card-content {display: flex; flex-direction: row!important; align-items: center;}
 .rt_card img {width: 200px; border-radius: 10px;}
@@ -95,9 +95,9 @@ grid-template-areas:
 
 /* pd_section */
 .pd_section {position: relative; border-top-left-radius: 20px; border-top-right-radius: 20px;}
-.pd_swiper {width: 100%; margin: 0 auto; padding-top: 4%; cursor: pointer;}
+.pd_swiper {width: 90%; margin: 0 auto; padding-top: 80px; cursor: pointer;}
 
-.pd_like {margin-top: 50px; padding-left: 5vw; padding-bottom: 3%;}
+.pd_like {margin-top: 50px; padding-left: 5vw; padding-bottom: 50px;}
 .pd_like h2 {font-size: 1.2rem; }
 
 .pd_like .pd_like_swiper {margin: 20px 0 50px;}

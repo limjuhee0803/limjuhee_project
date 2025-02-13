@@ -4,7 +4,7 @@
 .top_slide .txt_section {padding:5vw; border-right: 1px solid var(--white); width: 45%; height: 85vh;}
 .top_slide .txt_section h1 {font-size: 5rem;}
 
-.top_slide .best_pd {width: 55%; }
+.top_slide .best_pd {width: 55%; margin-top: 20px;}
 .top_slide .best_pd .best_txt { display: flex; justify-content: space-between; margin-top: 50px; padding: 0 5vw 0 1vw;}
 
 .best_pd .marquee__group .marqueee_box {width: 350px;}

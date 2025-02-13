@@ -1,5 +1,4 @@
 //부드러운 스크롤
-
 document.addEventListener("DOMContentLoaded", function () {
     // Lenis 초기화
     if (!window.lenisInstance) {
@@ -72,6 +71,8 @@ document.getElementById("cards").onmousemove = e => {
 }
     */
 
+
+//카드 이펙트
 document.addEventListener("DOMContentLoaded", function() {
     const cardsElement = document.getElementById("cards");
 

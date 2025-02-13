@@ -86,7 +86,7 @@ grid-template-areas:
   
 .rt_box li:nth-child(2){margin: 20px 0;}
 .lookbook_box .more_btn {display: flex; gap: 10px; justify-content: end; margin: 20px 0 0;}
-.lt_lookbook h3 { font-size: 1rem; margin: 10px 0;}
+.lt_lookbook h3 { font-size: 1rem; margin: 30px 0 10px;}
 .lt_lookbook h4 { font-size: 0.8rem; color: #919191; line-height: 1.5; font-family: var(--kr-font);}
 .lt_lookbook .main_lookbook img {width: 100%; border-radius: 10px;}
 .rt_card .card-content {display: flex; flex-direction: row!important; align-items: center;}

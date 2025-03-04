@@ -11,7 +11,7 @@ img {width: 100%;}
 .top_slide .best_pd .best_txt .lt_txt{ }
 .top_slide .best_pd .best_txt .lt_txt h3{font-size: 1rem; }
 .top_slide .best_pd .best_txt .lt_txt h4{ font-size: 0.9rem; color: #919191; margin-top: 10px; line-height: 1.4; font-family: var(--kr-font);}
-.top_slide .view_more {margin-top: 20px; float: right;}
+.top_slide .view_more {margin-top: 20px; float: right; cursor: pointer;}
 
 
 /* 상품 슬라이드 */
